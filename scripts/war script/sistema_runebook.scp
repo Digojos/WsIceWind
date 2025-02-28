@@ -1,0 +1,2615 @@
+////////////// Sistema de Runebook ////////////////
+/////////////////////////////// By Taz_______
+/////////////Como instalar:
+////////////////////////No sphere_skills.scp coloque abaixo do on=@login a seguinte function: primeira_vez_gate
+////////////////No sphere_spells.scp: adcione a seguinte linha de codigo na magia de dispel:
+///////////////////////////////////////////ON=@effect
+///////////////////////////////////////////If (<baseid>==i_x_rbgate)
+///////////////////////////////////////////Effect 2,i_fx_sparkle_2,1,16,0
+///////////////////////////////////////////sound 528
+///////////////////////////////////////////remove
+///////////////////////////////////////////link.Effect 2,i_fx_sparkle_2,1,16,0
+///////////////////////////////////////////link.sound 528
+///////////////////////////////////////////link.remove
+///////////////////////////////////////////endif
+///////////////Comandos : .oogates (opcao de ativar e desativar confirmacao de gates)
+//////////Para mudar o delay do recall e do gate travel procure aqui por "Gate Travel Delay" e "Recall Delay"
+//////////logo abaixo deles existem um timer, basta altera-los para o delay de sua escolha.
+////Como desativar o runebook em eventos? Coloque uma tag de evento no player e abaixo no on=@Dclick do item i_runebook
+////tire a as duas barras (//) e altere a tag para a que voce adcionou no player.
+
+
+
+[ITEMDEF i_runebook]
+ID=i_spellbook
+TYPE=t_script
+WEIGHT=1
+LAYER=1
+NAME=Rune Book
+VALUE=30000
+DYE=1
+
+ON=@DClick
+  if !(<attr> & attr_newbie)
+    attr attr_newbie|attr_identified|attr_magic
+  endif
+
+  //if (<src.tag0.evento> == 1)
+  //src.sysmessage @0790 Voce nao pode usar o Rune Book em um evento.
+  //return 1
+  //endif
+
+src.sound 85
+dialog d_runebook
+return 1
+
+ON=@TargOn_Char
+  src.sysmessage @0790 Alvo Invalido.
+  return 1
+
+ON=@TargOn_Item
+  if (<src.targ.type> != t_rune)
+    src.sysmessage @0790 Isso nao eh uma runa.
+    return 1
+  endif
+  if (<src.targ.morex> == 0)
+    src.sysmessage Essa runa nao esta marcada.
+    return 1
+  endif
+
+  if !(<tag.pos1_p> != 0)
+    src.sysmessage Voce marcou a slot 1
+    src.sound 79
+    tag.pos1_n=<src.targ.name>
+    tag.pos1_p=<src.targ.morep>
+  elseif !(<tag.pos2_p> != 0)
+    src.sysmessage Voce marcou a slot 2
+    src.sound 79
+    tag.pos2_n=<src.targ.name>
+    tag.pos2_p=<src.targ.morep>
+  elseif !(<tag.pos3_p> != 0)
+    src.sysmessage Voce marcou a slot 3
+    src.sound 79
+    tag.pos3_n=<src.targ.name>
+    tag.pos3_p=<src.targ.morep>
+  elseif !(<tag.pos4_p> != 0)
+    src.sysmessage Voce marcou a slot 4
+    src.sound 79
+    tag.pos4_n=<src.targ.name>
+    tag.pos4_p=<src.targ.morep>
+  elseif !(<tag.pos5_p> != 0)
+    src.sysmessage Voce marcou a slot 5
+    src.sound 79
+    tag.pos5_n=<src.targ.name>
+    tag.pos5_p=<src.targ.morep>
+  elseif !(<tag.pos6_p> != 0)
+    src.sysmessage Voce marcou a slot 6
+    src.sound 79
+    tag.pos6_n=<src.targ.name>
+    tag.pos6_p=<src.targ.morep>
+  elseif !(<tag.pos7_p> != 0)
+    src.sysmessage Voce marcou a slot 7
+    src.sound 79
+    tag.pos7_n=<src.targ.name>
+    tag.pos7_p=<src.targ.morep>
+  elseif !(<tag.pos8_p> != 0)
+    src.sysmessage Voce marcou a slot 8
+    src.sound 79
+    tag.pos8_n=<src.targ.name>
+    tag.pos8_p=<src.targ.morep>
+  elseif !(<tag.pos9_p> != 0)
+    src.sysmessage Voce marcou a slot 9
+    src.sound 79
+    tag.pos9_n=<src.targ.name>
+    tag.pos9_p=<src.targ.morep>
+  elseif !(<tag.pos10_p> != 0)
+    src.sysmessage Voce marcou a slot 10
+    src.sound 79
+    tag.pos10_n=<src.targ.name>
+    tag.pos10_p=<src.targ.morep>
+  elseif !(<tag.pos11_p> != 0)
+    src.sysmessage Voce marcou a slot 11
+    src.sound 79
+    tag.pos11_n=<src.targ.name>
+    tag.pos11_p=<src.targ.morep>
+  elseif !(<tag.pos12_p> != 0)
+    src.sysmessage Voce marcou a slot 12
+    src.sound 79
+    tag.pos12_n=<src.targ.name>
+    tag.pos12_p=<src.targ.morep>
+  elseif !(<tag.pos13_p> != 0)
+    src.sysmessage Voce marcou a slot 13
+    src.sound 79
+    tag.pos13_n=<src.targ.name>
+    tag.pos13_p=<src.targ.morep>
+  elseif !(<tag.pos14_p> != 0)
+    src.sysmessage Voce marcou a slot 14
+    src.sound 79
+    tag.pos14_n=<src.targ.name>
+    tag.pos14_p=<src.targ.morep>
+  elseif !(<tag.pos15_p> != 0)
+    src.sysmessage Voce marcou a slot 15
+    src.sound 79
+    tag.pos15_n=<src.targ.name>
+    tag.pos15_p=<src.targ.morep>
+  elseif !(<tag.pos16_p> != 0)
+    src.sysmessage Voce marcou a slot 16
+    src.sound 79
+    tag.pos16_n=<src.targ.name>
+    tag.pos16_p=<src.targ.morep>
+  elseif !(<tag.pos17_p> != 0)
+    src.sysmessage Voce marcou a slot 17
+    src.sound 79
+    tag.pos17_n=<src.targ.name>
+    tag.pos17_p=<src.targ.morep>
+  elseif !(<tag.pos18_p> != 0)
+    src.sysmessage Voce marcou a slot 18
+    src.sound 79
+    tag.pos18_n=<src.targ.name>
+    tag.pos18_p=<src.targ.morep>
+  elseif !(<tag.pos19_p> != 0)
+    src.sysmessage Voce marcou a slot 19
+    src.sound 79
+    tag.pos19_n=<src.targ.name>
+    tag.pos19_p=<src.targ.morep>
+  elseif !(<tag.pos20_p> != 0)
+    src.sysmessage Voce marcou a slot 20
+    src.sound 79
+    tag.pos20_n=<src.targ.name>
+    tag.pos20_p=<src.targ.morep>
+  elseif !(<tag.pos21_p> != 0)
+    src.sysmessage Voce marcou a slot 21
+    src.sound 79
+    tag.pos21_n=<src.targ.name>
+    tag.pos21_p=<src.targ.morep>
+  elseif !(<tag.pos22_p> != 0)
+    src.sysmessage Voce marcou a slot 22
+    src.sound 79
+    tag.pos22_n=<src.targ.name>
+    tag.pos22_p=<src.targ.morep>
+  elseif !(<tag.pos23_p> != 0)
+    src.sysmessage Voce marcou a slot 23
+    src.sound 79
+    tag.pos23_n=<src.targ.name>
+    tag.pos23_p=<src.targ.morep>
+  elseif !(<tag.pos24_p> != 0)
+    src.sysmessage Voce marcou a slot 24
+    src.sound 79
+    tag.pos24_n=<src.targ.name>
+    tag.pos24_p=<src.targ.morep>
+  elseif !(<tag.pos25_p> != 0)
+    src.sysmessage Voce marcou a slot 25
+    src.sound 79
+    tag.pos25_n=<src.targ.name>
+    tag.pos25_p=<src.targ.morep>
+  elseif !(<tag.pos26_p> != 0)
+    src.sysmessage Voce marcou a slot 26
+    src.sound 79
+    tag.pos26_n=<src.targ.name>
+    tag.pos26_p=<src.targ.morep>
+  elseif !(<tag.pos27_p> != 0)
+    src.sysmessage Voce marcou a slot 27
+    src.sound 79
+    tag.pos27_n=<src.targ.name>
+    tag.pos27_p=<src.targ.morep>
+  elseif !(<tag.pos28_p> != 0)
+    src.sysmessage Voce marcou a slot 28
+    src.sound 79
+    tag.pos28_n=<src.targ.name>
+    tag.pos28_p=<src.targ.morep>
+  elseif !(<tag.pos29_p> != 0)
+    src.sysmessage Voce marcou a slot 29
+    src.sound 79
+    tag.pos29_n=<src.targ.name>
+    tag.pos29_p=<src.targ.morep>
+  elseif !(<tag.pos30_p> != 0)
+    src.sysmessage Voce marcou a slot 30
+    src.sound 79
+    tag.pos30_n=<src.targ.name>
+    tag.pos30_p=<src.targ.morep>
+  elseif !(<tag.pos31_p> != 0)
+    src.sysmessage Voce marcou a slot 31
+    src.sound 79
+    tag.pos31_n=<src.targ.name>
+    tag.pos31_p=<src.targ.morep>
+  elseif !(<tag.pos32_p> != 0)
+    src.sysmessage Voce marcou a slot 32
+    src.sound 79
+    tag.pos32_n=<src.targ.name>
+    tag.pos32_p=<src.targ.morep>
+  else
+    src.sysmessage @0790 O RuneBook esta lotado!
+    return 1
+  endif
+  src.targ.remove
+  return 1
+
+ON=@Create
+COLOR=0fb
+ATTR=attr_magic|attr_newbie
+tag.pos1_p=0
+tag.pos2_p=0
+tag.pos3_p=0
+tag.pos4_p=0
+tag.pos5_p=0
+tag.pos6_p=0
+tag.pos7_p=0
+tag.pos8_p=0
+tag.pos9_p=0
+tag.pos10_p=0
+tag.pos11_p=0
+tag.pos12_p=0
+tag.pos13_p=0
+tag.pos14_p=0
+tag.pos15_p=0
+tag.pos16_p=0
+tag.pos17_p=0
+tag.pos18_p=0
+tag.pos19_p=0
+tag.pos20_p=0
+tag.pos21_p=0
+tag.pos22_p=0
+tag.pos23_p=0
+tag.pos24_p=0
+tag.pos25_p=0
+tag.pos26_p=0
+tag.pos27_p=0
+tag.pos28_p=0
+tag.pos29_p=0
+tag.pos30_p=0
+tag.pos31_p=0
+tag.pos32_p=0
+
+[ITEMDEF i_x_rbgate]
+ID=01afb
+TYPE=t_telepad
+
+ON=@Timer
+  Effect 2,i_fx_sparkle_2,1,16,0
+  sound 528
+  remove
+return 1
+
+On=@Click
+If (<color>==05)
+message @05 <link.region.name>
+message @05 [Com Guards]
+return 1
+endif
+If (<color>==025)
+message @025 <link.region.name>
+message @025 [Sem Guards]
+return 1
+endif
+message @07a1 <link.region.name>
+
+ON=@Create
+attr=010
+
+ON=@Step
+   if (<ARGN>=1)
+      return 1
+   endif
+
+    SERV.NEWITEM=i_gold
+    new.attr=090
+    NEW.P=<morep>
+    IF (<NEW.isneartype t_spell 1>)
+      src.sysmessage @0790 Existe algo bloqueando a sua passagem!
+    NEW.REMOVE
+    RETURN 1
+    else
+      NEW.REMOVE
+    endif
+
+If (<src.tag.gates.cg>==1)
+ If (<color>==05)
+   if (<ARGN>=0)
+      sdialog d_gatetravel
+      return 1
+   endif
+   if (<ARGN>=1)
+      return 1
+   endif
+ Endif
+Endif
+
+If (<src.tag.gates.sg>==1)
+ If (<color>==025)
+   if (<ARGN>=0)
+      sdialog d_gatetravel
+      return 1
+   endif
+   if (<ARGN>=1)
+      return 1
+   endif
+ Endif
+Endif
+
+If (<src.tag.gates.tg>==1)
+   if (<ARGN>=0)
+      sdialog d_gatetravel
+      return 1
+   endif
+   if (<ARGN>=1)
+      return 1
+   endif
+Endif
+
+If (<src.tag.gates.ng>==1)
+ return 0
+Endif
+
+
+
+[DIALOG d_runebook]
+0, 90
+gumppic 100 10 2201
+gumppic 125 50 57
+gumppic 145 50 58
+gumppic 160 50 58
+gumppic 175 50 58
+gumppic 190 50 58
+gumppic 205 50 58
+gumppic 220 50 58
+gumppic 230 50 59
+gumppic 290 50 57
+gumppic 310 50 58
+gumppic 325 50 58
+gumppic 340 50 58
+gumppic 355 50 58
+gumppic 370 50 58
+gumppic 385 50 58
+gumppic 395 50 59
+
+page 0
+
+button 125 65 2103 2104 1 0 1
+button 125 80 2103 2104 1 0 2
+button 125 95 2103 2104 1 0 3
+button 125 110 2103 2104 1 0 4
+button 125 125 2103 2104 1 0 5
+button 125 140 2103 2104 1 0 6
+button 125 155 2103 2104 1 0 7
+button 125 170 2103 2104 1 0 8
+
+button 135 65 2103 2104 1 0 17
+button 135 80 2103 2104 1 0 18
+button 135 95 2103 2104 1 0 19
+button 135 110 2103 2104 1 0 20
+button 135 125 2103 2104 1 0 21
+button 135 140 2103 2104 1 0 22
+button 135 155 2103 2104 1 0 23
+button 135 170 2103 2104 1 0 24
+
+button 240 65 2103 2104 1 0 25
+button 240 80 2103 2104 1 0 26
+button 240 95 2103 2104 1 0 27
+button 240 110 2103 2104 1 0 28
+button 240 125 2103 2104 1 0 29
+button 240 140 2103 2104 1 0 30
+button 240 155 2103 2104 1 0 31
+button 240 170 2103 2104 1 0 32
+
+//Renomear Runas
+button 250 65 2103 2104 1 0 51
+button 250 80 2103 2104 1 0 52
+button 250 95 2103 2104 1 0 53
+button 250 110 2103 2104 1 0 54
+button 250 125 2103 2104 1 0 55
+button 250 140 2103 2104 1 0 56
+button 250 155 2103 2104 1 0 57
+button 250 170 2103 2104 1 0 58
+/////
+
+button 285 65 2103 2104 1 0 9
+button 285 80 2103 2104 1 0 10
+button 285 95 2103 2104 1 0 11
+button 285 110 2103 2104 1 0 12
+button 285 125 2103 2104 1 0 13
+button 285 140 2103 2104 1 0 14
+button 285 155 2103 2104 1 0 15
+button 285 170 2103 2104 1 0 16
+
+button 295 65 2103 2104 1 0 33
+button 295 80 2103 2104 1 0 34
+button 295 95 2103 2104 1 0 35
+button 295 110 2103 2104 1 0 36
+button 295 125 2103 2104 1 0 37
+button 295 140 2103 2104 1 0 38
+button 295 155 2103 2104 1 0 39
+button 295 170 2103 2104 1 0 40
+
+button 400 65 2103 2104 1 0 41
+button 400 80 2103 2104 1 0 42
+button 400 95 2103 2104 1 0 43
+button 400 110 2103 2104 1 0 44
+button 400 125 2103 2104 1 0 45
+button 400 140 2103 2104 1 0 46
+button 400 155 2103 2104 1 0 47
+button 400 170 2103 2104 1 0 48
+
+//Renomear Runas
+button 410 65 2103 2104 1 0 59
+button 410 80 2103 2104 1 0 60
+button 410 95 2103 2104 1 0 61
+button 410 110 2103 2104 1 0 62
+button 410 125 2103 2104 1 0 63
+button 410 140 2103 2104 1 0 64
+button 410 155 2103 2104 1 0 65
+button 410 170 2103 2104 1 0 66
+////
+
+button 345 38 4033 4033 1 0 49
+button 395 15 2206 2206 1 0 50
+
+croppedtext 145 60 95 17 50 0
+croppedtext 145 75 95 17 50 1
+croppedtext 145 90 95 17 50 2
+croppedtext 145 105 95 17 50 3
+croppedtext 145 120 95 17 50 4
+croppedtext 145 135 95 17 50 5
+croppedtext 145 150 95 17 50 6
+croppedtext 145 165 95 17 50 7
+
+croppedtext 305 60 95 17 50 8
+croppedtext 305 75 95 17 50 9
+croppedtext 305 90 95 17 50 10
+croppedtext 305 105 95 17 50 11
+croppedtext 305 120 95 17 50 12
+croppedtext 305 135 95 17 50 13
+croppedtext 305 150 95 17 50 14
+croppedtext 305 165 95 17 50 15
+
+text 128 180 50 16
+text 309 15 50 17
+text 128 193 50 18
+
+[DIALOG d_runebook TEXT]
+<tag.pos1_n>
+<tag.pos2_n>
+<tag.pos3_n>
+<tag.pos4_n>
+<tag.pos5_n>
+<tag.pos6_n>
+<tag.pos7_n>
+<tag.pos8_n>
+<tag.pos9_n>
+<tag.pos10_n>
+<tag.pos11_n>
+<tag.pos12_n>
+<tag.pos13_n>
+<tag.pos14_n>
+<tag.pos15_n>
+<tag.pos16_n>
+| ' Gate  Tirar ' |
+Inserir Nova
+ Recall   Rename
+
+[FUNCTION f_runebook_recall]
+  if (<morex> < 1)
+    src.sysmessage Nao ha runas aqui.
+    return 1
+  endif
+  if !<src.isgm>
+    if (<SRC.REGION.FLAGS>&region_antimagic_all) || (<SRC.REGION.FLAGS>&region_antimagic_recall_out) 
+      src.sysmessage An anti-magic field disturbs the spells.
+      src.sound 85
+      return 1
+    endif
+    if (<serv.reagentsrequired> = 1) &! (<src.restest 1 i_reag_black_pearl>) |! (<src.restest 1 i_reag_mandrake_root>) |! (<src.restest 1 i_reag_blood_moss>)
+      src.sysmessage You lack reagents for this spell
+      return 1
+    endif
+    if (<src.mana> < 11)
+      src.sound 0108
+      src.sysmessage You lack sufficient mana for this spell
+      return 1
+    endif
+    if (<src.magery> <= 400)
+      src.sound 0108
+      src.sysmessage This is beyond your ability.
+      src.sound 85
+      return 1
+    endif
+    if (<src.findid.i_x_rbdelay>) || (<src.findid.i_x_rbdelaygate>)
+      src.message The spell fizzles.
+      src.effect 3,i_fx_smoke_small,6,15,1
+        If (<src.findid(i_x_rbdelay).uid>)
+        src.findid(i_x_rbdelay).remove
+        endif
+        If (<src.findid(i_x_rbdelaygate).uid>)
+        src.findid(i_x_rbdelaygate).remove
+        endif
+       src.events -e_x_breakspell
+    endif
+    src.newitem i_x_research
+    src.act.p <morep>
+    if (<src.act.region.flags> == 01092)
+      src.sysmessage That area is currently blocked!
+      return 1
+    endif
+    if (<src.findlayer(1)>)
+	src.findlayer(1).unequip
+     endif
+    if (<src.findlayer(2)>)
+	src.findlayer(2).unequip
+    endif
+    src.say @<serv.wopcolor>,<serv.wopfont> Kal Ort Por
+    src.anim 17
+        if (<serv.reagentsrequired> = 1)
+      src.consume 1 i_reag_black_pearl
+      src.consume 1 i_reag_blood_moss
+      src.consume 1 i_reag_mandrake_root
+    endif
+  endif
+  serv.newitem i_x_rbdelay
+  new.morep <morep>
+  src.equip <new.uid>
+  src.sound 85
+  return 1
+
+
+[FUNCTION f_runebook_gatetravel]
+  if (<morex> < 1)
+    src.sysmessage @0790 Nao ha runas aqui.
+    return 1
+  endif
+  if !<src.isgm>
+    if (<SRC.REGION.FLAGS>&region_antimagic_all) || (<SRC.REGION.FLAGS>&region_antimagic_gate) || (<SRC.REGION.FLAGS>&region_flag_safe)
+      src.sysmessage An anti-magic field disturbs the spells.
+      src.sound 85
+      return 1
+    endif
+    if (<serv.reagentsrequired> = 1) &! (<src.restest 1 i_reag_black_pearl>) |! (<src.restest 1 i_reag_mandrake_root>) |! (<src.restest 1 i_reag_blood_moss>)
+      src.sysmessage You lack reagents for this spell
+      return 1
+    endif
+    if (<src.mana> < 40)
+      src.sound 0108
+      src.sysmessage You lack sufficient mana for this spell
+      return 1
+    endif
+    if (<src.magery> <= 400)
+      src.sound 0108
+      src.sysmessage This is beyond your ability.
+      src.sound 85
+      return 1
+    endif
+    src.newitem i_x_research
+    src.act.p <morep>
+    if (<src.act.region.flags> == 01092)
+      src.sysmessage That area is currently blocked!
+      return 1
+    endif
+    if (<src.findid.i_x_rbdelay>) || (<src.findid.i_x_rbdelaygate>)
+      src.message The spell fizzles.
+      src.effect 3,i_fx_smoke_small,6,15,1
+        If (<src.findid(i_x_rbdelay).uid>)
+        src.findid(i_x_rbdelay).remove
+        endif
+        If (<src.findid(i_x_rbdelaygate).uid>)
+        src.findid(i_x_rbdelaygate).remove
+        endif
+       src.events -e_x_breakspell
+    endif
+    src.say @<serv.wopcolor>,<serv.wopfont> Vas Rel Por
+    src.anim 17
+        if (<src.findlayer(1)>)
+	src.findlayer(1).unequip
+     endif
+    if (<src.findlayer(2)>)
+	src.findlayer(2).unequip
+    endif
+    if (<serv.reagentsrequired> = 1)
+      src.consume 1 i_reag_black_pearl
+      src.consume 1 i_reag_blood_moss
+      src.consume 1 i_reag_mandrake_root
+    endif
+  endif
+  serv.newitem i_x_rbdelaygate
+  new.morep <morep>
+  src.equip <new.uid>
+  src.sound 85
+  return 1
+
+[FUNCTION f_runebook_delete]
+  if (<morex> < 1)
+    src.sysmessage Nao ha runa aqui.
+    return 1
+  endif
+  src.sound 43
+  src.sysmessage Voce tirou a runa do livro.
+  src.newitem i_rune_marker
+  src.act.morep <morep>
+  src.act.name <tag.runename>
+  tag.runename
+  src.act.more1 0a
+  src.act.bounce
+
+
+[DIALOG d_runebook BUTTON]
+ONBUTTON=0
+src.sysmessage O Rune Book foi fechado.
+src.sound 85
+return 1
+
+ONBUTTON=1
+  morep <tag.pos1_p>
+  f_runebook_recall
+
+ONBUTTON=2
+  morep <tag.pos2_p>
+  f_runebook_recall
+
+ONBUTTON=3
+  morep <tag.pos3_p>
+  f_runebook_recall
+
+ONBUTTON=4
+  morep <tag.pos4_p>
+  f_runebook_recall
+
+ONBUTTON=5
+  morep <tag.pos5_p>
+  f_runebook_recall
+
+ONBUTTON=6
+  morep <tag.pos6_p>
+  f_runebook_recall
+
+ONBUTTON=7
+  morep <tag.pos7_p>
+  f_runebook_recall
+
+ONBUTTON=8
+  morep <tag.pos8_p>
+  f_runebook_recall
+
+ONBUTTON=9
+  morep <tag.pos9_p>
+  f_runebook_recall
+
+ONBUTTON=10
+  morep <tag.pos10_p>
+  f_runebook_recall
+
+ONBUTTON=11
+  morep <tag.pos11_p>
+  f_runebook_recall
+
+ONBUTTON=12
+  morep <tag.pos12_p>
+  f_runebook_recall
+
+ONBUTTON=13
+  morep <tag.pos13_p>
+  f_runebook_recall
+
+ONBUTTON=14
+  morep <tag.pos14_p>
+  f_runebook_recall
+
+ONBUTTON=15
+  morep <tag.pos15_p>
+  f_runebook_recall
+
+ONBUTTON=16
+  morep <tag.pos16_p>
+  f_runebook_recall
+
+ONBUTTON=17
+  morep <tag.pos1_p>
+  f_runebook_gatetravel
+
+ONBUTTON=18
+  morep <tag.pos2_p>
+  f_runebook_gatetravel
+
+ONBUTTON=19
+  morep <tag.pos3_p>
+  f_runebook_gatetravel
+
+ONBUTTON=20
+  morep <tag.pos4_p>
+  f_runebook_gatetravel
+
+ONBUTTON=21
+  morep <tag.pos5_p>
+  f_runebook_gatetravel
+
+ONBUTTON=22
+  morep <tag.pos6_p>
+  f_runebook_gatetravel
+
+ONBUTTON=23
+  morep <tag.pos7_p>
+  f_runebook_gatetravel
+
+ONBUTTON=24
+  morep <tag.pos8_p>
+  f_runebook_gatetravel
+
+ONBUTTON=25
+  tag.runename <tag.pos1_n>
+  morep <tag.pos1_p>
+  f_runebook_delete
+  tag.pos1_p 0
+  tag.pos1_n
+  dialog d_runebook
+
+ONBUTTON=26
+  tag.runename <tag.pos2_n>
+  morep <tag.pos2_p>
+  f_runebook_delete
+  tag.pos2_p 0
+  tag.pos2_n
+  dialog d_runebook
+
+ONBUTTON=27
+  tag.runename <tag.pos3_n>
+  morep <tag.pos3_p>
+  f_runebook_delete
+  tag.pos3_p 0
+  tag.pos3_n
+  dialog d_runebook
+
+ONBUTTON=28
+  tag.runename <tag.pos4_n>
+  morep <tag.pos4_p>
+  f_runebook_delete
+  tag.pos4_p 0
+  tag.pos4_n
+  dialog d_runebook
+
+ONBUTTON=29
+  tag.runename <tag.pos5_n>
+  morep <tag.pos5_p>
+  f_runebook_delete
+  tag.pos5_p 0
+  tag.pos5_n
+  dialog d_runebook
+
+ONBUTTON=30
+  tag.runename <tag.pos6_n>
+  morep <tag.pos6_p>
+  f_runebook_delete
+  tag.pos6_p 0
+  tag.pos6_n
+  dialog d_runebook
+
+ONBUTTON=31
+  tag.runename <tag.pos7_n>
+  morep <tag.pos7_p>
+  f_runebook_delete
+  tag.pos7_p 0
+  tag.pos7_n
+  dialog d_runebook
+
+ONBUTTON=32
+  tag.runename <tag.pos8_n>
+  morep <tag.pos8_p>
+  f_runebook_delete
+  tag.pos8_p 0
+  tag.pos8_n
+  dialog d_runebook
+
+ONBUTTON=33
+  morep <tag.pos9_p>
+  f_runebook_gatetravel
+
+ONBUTTON=34
+  morep <tag.pos10_p>
+  f_runebook_gatetravel
+
+ONBUTTON=35
+  morep <tag.pos11_p>
+  f_runebook_gatetravel
+
+ONBUTTON=36
+  morep <tag.pos12_p>
+  f_runebook_gatetravel
+
+ONBUTTON=37
+  morep <tag.pos13_p>
+  f_runebook_gatetravel
+
+ONBUTTON=38
+  morep <tag.pos14_p>
+  f_runebook_gatetravel
+
+ONBUTTON=39
+  morep <tag.pos15_p>
+  f_runebook_gatetravel
+
+ONBUTTON=40
+  morep <tag.pos16_p>
+  f_runebook_gatetravel
+
+ONBUTTON=41
+  tag.runename <tag.pos9_n>
+  morep <tag.pos9_p>
+  f_runebook_delete
+  tag.pos9_p 0
+  tag.pos9_n
+  dialog d_runebook
+
+ONBUTTON=42
+  tag.runename <tag.pos10_n>
+  morep <tag.pos10_p>
+  f_runebook_delete
+  tag.pos10_p 0
+  tag.pos10_n
+  dialog d_runebook
+
+ONBUTTON=43
+  tag.runename <tag.pos11_n>
+  morep <tag.pos11_p>
+  f_runebook_delete
+  tag.pos11_p 0
+  tag.pos11_n
+  dialog d_runebook
+
+ONBUTTON=44
+  tag.runename <tag.pos12_n>
+  morep <tag.pos12_p>
+  f_runebook_delete
+  tag.pos12_p 0
+  tag.pos12_n
+  dialog d_runebook
+
+ONBUTTON=45
+  tag.runename <tag.pos13_n>
+  morep <tag.pos13_p>
+  f_runebook_delete
+  tag.pos13_p 0
+  tag.pos13_n
+  dialog d_runebook
+
+ONBUTTON=46
+  tag.runename <tag.pos14_n>
+  morep <tag.pos14_p>
+  f_runebook_delete
+  tag.pos14_p 0
+  tag.pos14_n
+  dialog d_runebook
+
+ONBUTTON=47
+  tag.runename <tag.pos15_n>
+  morep <tag.pos15_p>
+  f_runebook_delete
+  tag.pos15_p 0
+  tag.pos15_n
+  dialog d_runebook
+
+ONBUTTON=48
+  tag.runename <tag.pos16_n>
+  morep <tag.pos16_p>
+  f_runebook_delete
+  tag.pos16_p 0
+  tag.pos16_n
+  dialog d_runebook
+
+ONBUTTON=49
+  src.sound 85
+  src.sysmessage Qual a runa a ser adcionada?
+  target
+
+ONBUTTON=50
+  src.sound 85
+  dialog d_runebook2
+
+ONBUTTON=51
+  OBJ=<UID>
+  morep <tag.pos1_p>
+  renemeia_runa 1_n
+
+ONBUTTON=52
+  OBJ=<UID>
+  morep <tag.pos2_p>
+  renemeia_runa 2_n
+
+ONBUTTON=53
+  OBJ=<UID>
+  morep <tag.pos3_p>
+  renemeia_runa 3_n
+
+ONBUTTON=54
+  OBJ=<UID>
+  morep <tag.pos4_p>
+  renemeia_runa 4_n
+
+ONBUTTON=55
+  OBJ=<UID>
+  morep <tag.pos5_p>
+  renemeia_runa 5_n
+
+ONBUTTON=56
+  OBJ=<UID>
+  morep <tag.pos6_p>
+  renemeia_runa 6_n
+
+ONBUTTON=57
+  OBJ=<UID>
+  morep <tag.pos7_p>
+  renemeia_runa 7_n
+
+ONBUTTON=58
+  OBJ=<UID>
+  morep <tag.pos8_p>
+  renemeia_runa 8_n
+
+ONBUTTON=59
+  OBJ=<UID>
+  morep <tag.pos9_p>
+  renemeia_runa 9_n
+
+ONBUTTON=60
+  OBJ=<UID>
+  morep <tag.pos10_p>
+  renemeia_runa 10_n
+
+ONBUTTON=61
+  OBJ=<UID>
+  morep <tag.pos11_p>
+  renemeia_runa 11_n
+
+ONBUTTON=62
+  OBJ=<UID>
+  morep <tag.pos12_p>
+  renemeia_runa 12_n
+
+ONBUTTON=63
+  OBJ=<UID>
+  morep <tag.pos13_p>
+  renemeia_runa 13_n
+
+ONBUTTON=64
+  OBJ=<UID>
+  morep <tag.pos14_p>
+  renemeia_runa 14_n
+
+ONBUTTON=65
+  OBJ=<UID>
+  morep <tag.pos15_p>
+  renemeia_runa 15_n
+
+ONBUTTON=66
+  OBJ=<UID>
+  morep <tag.pos16_p>
+  renemeia_runa 16_n
+
+
+[FUNCTION renemeia_runa]
+if (<morex> < 1)
+src.sysmessage Nao ha runa aqui.
+return 1
+endif
+src.tag.runa.nome=
+src.tag.runa.ppp=
+src.tag.runa.ppp=<ARGS>
+src.tag.runa.nome=<tag.pos<ARGS>>
+dialog d_ren_runa
+
+[FUNCTION poem_nome]
+OBJ.tag.pos<ARGS>=<src.tag.runa.nome>
+src.tag.runa.nome=
+src.tag.runa.ppp=
+
+[Dialog d_ren_runa]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite o novo nome da runa:
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+[Dialog d_ren_runa TEXt]
+<src.tag.runa.nome>
+
+[Dialog d_ren_runa BUTTON]
+on=0
+src.tag.runa.nome=
+src.tag.runa.ppp=
+return 0
+on=1
+if <verifica_nomes <argtxt[0]>>
+src.sysmessage @0480 Caracteres invalidos.
+dialog d_ren_runa
+return 1
+endif
+src.tag.runa.nome = <argtxt[0]>
+src.poem_nome <src.tag.runa.ppp>
+on=2
+src.tag.runa.nome=
+src.tag.runa.ppp=
+return 0
+
+[FUNCTION verifica_nomes]
+IF (STRMATCH("*[@!$#%&_-+=9876543210]*","<ARGS>")) || !(STRMATCH("*[qwertyuiopasdfghjklzxcvbnm]*","<ARGS>"))
+return 1
+ELSE
+RETURN 0
+ENDIF
+
+[ITEMDEF i_x_rbdelay]
+NAME=Rune Book Delay
+ID=i_handr_1
+TYPE=T_EQ_SCRIPT
+WEIGHT=0
+LAYER=layer_special
+
+ON=@Create
+  ATTR=attr_invis|attr_decay
+
+ON=@Equip
+    CONT.skill fail
+    CONT.ACTION=-1
+//Recall Delay
+    TIMER=7
+    cont.events e_x_breakspell
+
+//ON=@UNEQUIP
+//    CONT.EVENTS= -e_x_breakspell
+
+ON=@Timer
+If (<cont.REGION.FLAGS>&region_antimagic_all) || (<cont.REGION.FLAGS>&region_antimagic_recall_out) 
+      cont.sysmessage @0790 A area impediu que voce utilize o recall.
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+endif
+
+    cont.newitem i_x_research
+    cont.act.p <morep>
+    if (<cont.act.REGION.FLAGS>&region_antimagic_all) || (<cont.act.REGION.FLAGS>&region_antimagic_gate) || (<cont.act.REGION.FLAGS>&region_flag_safe)
+      Cont.sysmessage @0790 Essa area esta bloqueada!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+    endif
+
+    SERV.NEWITEM=i_gold
+    new.attr=090
+    NEW.P=<morep>
+    IF (<NEW.isneartype t_telepad 1>) || (<NEW.isneartype t_spell 1>)
+      Cont.sysmessage @0790 Existe algo impedindo o seu recall!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+    NEW.REMOVE
+    RETURN 1
+    else
+      NEW.REMOVE
+    endif
+  cont.mana (<cont.mana>+-11)
+  cont.go <morep>
+  cont.events -e_x_breakspell
+  remove
+  return 1
+
+[EVENTS e_x_breakspell]
+
+ON=@SpellCast
+  message The spell fizzles.
+  sound 92
+  effect 3,i_fx_smoke_small,6,15,1
+  If (<findid(i_x_rbdelay).uid>)
+  findid(i_x_rbdelay).remove
+  endif
+  If (<findid(i_x_rbdelaygate).uid>)
+  findid(i_x_rbdelaygate).remove
+  endif
+  events -e_x_breakspell
+  return 0
+
+ON=@GetHit
+  message The spell fizzles.
+  sound 92
+  effect 3,i_fx_smoke_small,6,15,1
+  If (<findid(i_x_rbdelay).uid>)
+  findid(i_x_rbdelay).remove
+  endif
+  If (<findid(i_x_rbdelaygate).uid>)
+  findid(i_x_rbdelaygate).remove
+  endif
+  events -e_x_breakspell
+  return 0
+
+ON=@Hit
+  message The spell fizzles.
+  sound 92
+  effect 3,i_fx_smoke_small,6,15,1
+  If (<findid(i_x_rbdelay).uid>)
+  findid(i_x_rbdelay).remove
+  endif
+  If (<findid(i_x_rbdelaygate).uid>)
+  findid(i_x_rbdelaygate).remove
+  endif
+  return 0
+
+ON=@Death 
+events -e_x_breakspell
+  If (<findid(i_x_rbdelay).uid>)
+  findid(i_x_rbdelay).remove
+  endif
+  If (<findid(i_x_rbdelaygate).uid>)
+  findid(i_x_rbdelaygate).remove
+  endif
+return 0
+
+ON=@SkillStart
+sysmessage You must wait to perform another action.
+return 1
+
+On=@UserWarMode
+  message The spell fizzles.
+  effect 3,i_fx_smoke_small,6,15,1
+  sound 92
+  If (<findid(i_x_rbdelay).uid>)
+  findid(i_x_rbdelay).remove
+  endif
+  If (<findid(i_x_rbdelaygate).uid>)
+  findid(i_x_rbdelaygate).remove
+  endif
+  events -e_x_breakspell
+  return 0
+
+
+[ITEMDEF i_x_research]
+ID=0eed
+NAME=Research Coin
+TYPE=T_GOLD
+VALUE=1
+CATEGORY=Rune Book
+SUBSECTION=Area
+DESCRIPTION=Research Coin
+
+ON=@Timer
+  remove
+  return 1
+
+ON=@Create
+  ATTR=attr_invis|attr_decay
+  timer=1
+
+[ITEMDEF i_x_rbdelaygate]
+NAME=Rune Book Delay (Gate)
+ID=i_handr_1
+TYPE=T_EQ_SCRIPT
+WEIGHT=0
+LAYER=layer_special
+
+ON=@Create
+  ATTR=attr_invis|attr_decay
+
+ON=@Equip
+    CONT.skill fail
+    CONT.ACTION=-1
+//Gate Travel Delay
+    TIMER=10
+    cont.events e_x_breakspell
+
+//ON=@UNEQUIP
+//    CONT.EVENTS= -e_x_breakspell
+
+ON=@Timer
+If (<cont.REGION.FLAGS>&region_antimagic_all) || (<cont.REGION.FLAGS>&region_antimagic_gate) || (<cont.REGION.FLAGS>&region_flag_safe)
+      cont.sysmessage @0790 A area impediu que voce utilize o gate travel.
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+endif
+
+    cont.newitem i_x_research
+    cont.act.p <morep>
+    if (<cont.act.REGION.FLAGS>&region_antimagic_all) || (<cont.act.REGION.FLAGS>&region_antimagic_gate) || (<cont.act.REGION.FLAGS>&region_flag_safe)
+      Cont.sysmessage @0790 Essa area esta bloqueada!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+    endif
+
+    SERV.NEWITEM=i_gold
+    new.attr=090
+    NEW.P=<morep>
+    IF (<NEW.isneartype t_telepad 1>) || (<NEW.isneartype t_spell 1>)
+      Cont.sysmessage @0790 Existe algo bloqueando seu gate!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+    NEW.REMOVE
+    RETURN 1
+    else
+      NEW.REMOVE
+    endif
+
+    IF (<cont.isneartype t_telepad 1>) || (<cont.isneartype t_spell 1>)
+      Cont.sysmessage @0790 Voce esta muito perto de outro gate ou field!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+    RETURN 1
+   endif
+    
+    cont.verid_objs
+     If (<var0.DPTD> == 1)
+      Cont.sysmessage @0790 O local eh muito estreito para abrir um gate!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+     endif 
+     If (<var0.DPT> >= 2)
+      Cont.sysmessage @0790 O local eh muito estreito para abrir um gate!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+     endif  
+    
+    serv.newitem i_gold
+    new.attr=090 //invis and cant move
+    new.p=<morep>
+    new.verid_objs
+    new.remove
+
+If (<var0.DPTD> == 1)
+      Cont.sysmessage @0790 O destino eh muito estreito para abrir um gate!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+endif  
+
+
+ If (<var0.DPT> >= 2)
+      Cont.sysmessage @0790 O destino eh muito estreito para abrir um gate!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      remove
+      return 1
+endif  
+
+
+
+serv.newitem i_gold
+    new.attr=090 
+    new.p=<morep>
+if !(<new.region.flags>&region_flag_guarded)
+if !(<cont.region.flags>&region_flag_guarded)
+new.remove
+
+    serv.newitem i_gold
+    new.attr=090 
+    new.p=<morep>
+    new.move w 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move e 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move n 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move s 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move 3 3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move -3 -3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move -3 3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move 3 -3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 O gate esta muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+else
+   new.remove
+    endif
+else
+new.remove
+endif
+
+//////////////// No proprio player ( cidade )
+
+    serv.newitem i_gold
+    new.attr=090 
+    new.p=<cont.p>
+if !(<cont.region.flags>&region_flag_guarded)
+new.remove
+
+    serv.newitem i_gold
+    new.attr=090 
+    new.p=<cont.p>
+    new.move w 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move e 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move n 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+   new.move s 3
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move 3 3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move -3 -3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move -3 3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+    endif
+
+new.move 3 -3 0
+    if (<new.region.flags>&region_flag_guarded)
+      cont.sysmessage @0790 Voce esta abrindo muito proximo de uma cidade guarded!
+      cont.sound 92
+      cont.events -e_x_breakspell
+      If (<cont.findid(i_x_rbdelay).uid>)
+      cont.findid(i_x_rbdelay).remove
+      endif
+      If (<cont.findid(i_x_rbdelaygate).uid>)
+      cont.findid(i_x_rbdelaygate).remove
+      endif
+      new.remove
+      remove
+      return 1
+else
+   new.remove
+    endif
+else
+new.remove
+endif
+
+
+//////////////////
+
+
+  serv.newitem i_x_rbgate
+  new.p <morep>
+  new.timer 60
+  new.morep <cont.p>
+  new.name <cont.region.name>
+  tag.remotename <new.region.name>
+  local.gateuid <new.uid>
+  OBJ = <new.uid>
+
+  serv.newitem i_x_rbgate
+  local.gatedois <new.uid>
+  new.link <local.gateuid>
+  new.link.link <new.uid>
+  new.timer 60
+  new.morep <morep>
+  new.p <cont.p>
+  new.name <tag.remotename>
+  new.cor_gate
+  OBJ.cor_gate
+  tag.remotename
+  cont.sound 535
+  
+  cont.mana (<cont.mana>+-40)
+  cont.events -e_x_breakspell
+  remove
+  return 1
+
+[DIALOG d_runebook2]
+0, 90
+gumppic 100 10 2201
+gumppic 125 50 57
+gumppic 145 50 58
+gumppic 160 50 58
+gumppic 175 50 58
+gumppic 190 50 58
+gumppic 205 50 58
+gumppic 220 50 58
+gumppic 230 50 59
+
+gumppic 290 50 57
+gumppic 310 50 58
+gumppic 325 50 58
+gumppic 340 50 58
+gumppic 355 50 58
+gumppic 370 50 58
+gumppic 385 50 58
+gumppic 395 50 59
+
+page 0
+
+button 125 65 2103 2104 1 0 1
+button 125 80 2103 2104 1 0 2
+button 125 95 2103 2104 1 0 3
+button 125 110 2103 2104 1 0 4
+button 125 125 2103 2104 1 0 5
+button 125 140 2103 2104 1 0 6
+button 125 155 2103 2104 1 0 7
+button 125 170 2103 2104 1 0 8
+
+button 135 65 2103 2104 1 0 17
+button 135 80 2103 2104 1 0 18
+button 135 95 2103 2104 1 0 19
+button 135 110 2103 2104 1 0 20
+button 135 125 2103 2104 1 0 21
+button 135 140 2103 2104 1 0 22
+button 135 155 2103 2104 1 0 23
+button 135 170 2103 2104 1 0 24
+
+
+///Deletar runa, Pagina um book2
+button 240 65 2103 2104 1 0 25
+button 240 80 2103 2104 1 0 26
+button 240 95 2103 2104 1 0 27
+button 240 110 2103 2104 1 0 28
+button 240 125 2103 2104 1 0 29
+button 240 140 2103 2104 1 0 30
+button 240 155 2103 2104 1 0 31
+button 240 170 2103 2104 1 0 32
+///
+
+button 285 65 2103 2104 1 0 9
+button 285 80 2103 2104 1 0 10
+button 285 95 2103 2104 1 0 11
+button 285 110 2103 2104 1 0 12
+button 285 125 2103 2104 1 0 13
+button 285 140 2103 2104 1 0 14
+button 285 155 2103 2104 1 0 15
+button 285 170 2103 2104 1 0 16
+
+button 295 65 2103 2104 1 0 33
+button 295 80 2103 2104 1 0 34
+button 295 95 2103 2104 1 0 35
+button 295 110 2103 2104 1 0 36
+button 295 125 2103 2104 1 0 37
+button 295 140 2103 2104 1 0 38
+button 295 155 2103 2104 1 0 39
+button 295 170 2103 2104 1 0 40
+
+///Deletar runa, Pagina dois book2
+button 400 65 2103 2104 1 0 41
+button 400 80 2103 2104 1 0 42
+button 400 95 2103 2104 1 0 43
+button 400 110 2103 2104 1 0 44
+button 400 125 2103 2104 1 0 45
+button 400 140 2103 2104 1 0 46
+button 400 155 2103 2104 1 0 47
+button 400 170 2103 2104 1 0 48
+//
+
+//Renomear Runas
+button 250 65 2103 2104 1 0 51
+button 250 80 2103 2104 1 0 52
+button 250 95 2103 2104 1 0 53
+button 250 110 2103 2104 1 0 54
+button 250 125 2103 2104 1 0 55
+button 250 140 2103 2104 1 0 56
+button 250 155 2103 2104 1 0 57
+button 250 170 2103 2104 1 0 58
+/////
+
+//Renomear Runas
+button 410 65 2103 2104 1 0 59
+button 410 80 2103 2104 1 0 60
+button 410 95 2103 2104 1 0 61
+button 410 110 2103 2104 1 0 62
+button 410 125 2103 2104 1 0 63
+button 410 140 2103 2104 1 0 64
+button 410 155 2103 2104 1 0 65
+button 410 170 2103 2104 1 0 66
+////
+
+button 345 38 4033 4033 1 0 49
+
+button 125 15 2205 2205 1 0 50
+
+croppedtext 145 60 110 17 50 0
+croppedtext 145 75 110 17 50 1
+croppedtext 145 90 110 17 50 2
+croppedtext 145 105 110 17 50 3
+croppedtext 145 120 110 17 50 4
+croppedtext 145 135 110 17 50 5
+croppedtext 145 150 110 17 50 6
+croppedtext 145 165 110 17 50 7
+
+croppedtext 305 60 110 17 50 8
+croppedtext 305 75 110 17 50 9
+croppedtext 305 90 110 17 50 10
+croppedtext 305 105 110 17 50 11
+croppedtext 305 120 110 17 50 12
+croppedtext 305 135 110 17 50 13
+croppedtext 305 150 110 17 50 14
+croppedtext 305 165 110 17 50 15
+text 128 180 50 16
+text 309 15 50 17
+text 128 193 50 18
+
+[DIALOG d_runebook2 TEXT]
+<tag.pos17_n>
+<tag.pos18_n>
+<tag.pos19_n>
+<tag.pos20_n>
+<tag.pos21_n>
+<tag.pos22_n>
+<tag.pos23_n>
+<tag.pos24_n>
+<tag.pos25_n>
+<tag.pos26_n>
+<tag.pos27_n>
+<tag.pos28_n>
+<tag.pos29_n>
+<tag.pos30_n>
+<tag.pos31_n>
+<tag.pos32_n>
+| ' Gate  Tirar ' |
+Inserir Nova
+ Recall   Rename
+
+[DIALOG d_runebook2 BUTTON]
+ONBUTTON=0
+src.sysmessage O Rune Book foi fechado.
+src.sound 85
+return 1
+
+ONBUTTON=1
+  morep <tag.pos17_p>
+  f_runebook_recall
+
+ONBUTTON=2
+  morep <tag.pos18_p>
+  f_runebook_recall
+
+ONBUTTON=3
+  morep <tag.pos19_p>
+  f_runebook_recall
+
+ONBUTTON=4
+  morep <tag.pos20_p>
+  f_runebook_recall
+
+ONBUTTON=5
+  morep <tag.pos21_p>
+  f_runebook_recall
+
+ONBUTTON=6
+  morep <tag.pos22_p>
+  f_runebook_recall
+
+ONBUTTON=7
+  morep <tag.pos23_p>
+  f_runebook_recall
+
+ONBUTTON=8
+  morep <tag.pos24_p>
+  f_runebook_recall
+
+ONBUTTON=9
+  morep <tag.pos25_p>
+  f_runebook_recall
+
+ONBUTTON=10
+  morep <tag.pos26_p>
+  f_runebook_recall
+
+ONBUTTON=11
+  morep <tag.pos27_p>
+  f_runebook_recall
+
+ONBUTTON=12
+  morep <tag.pos28_p>
+  f_runebook_recall
+
+ONBUTTON=13
+  morep <tag.pos29_p>
+  f_runebook_recall
+
+ONBUTTON=14
+  morep <tag.pos30_p>
+  f_runebook_recall
+
+ONBUTTON=15
+  morep <tag.pos31_p>
+  f_runebook_recall
+
+ONBUTTON=16
+  morep <tag.pos32_p>
+  f_runebook_recall
+
+ONBUTTON=17
+  morep <tag.pos17_p>
+  f_runebook_gatetravel
+
+ONBUTTON=18
+  morep <tag.pos18_p>
+  f_runebook_gatetravel
+
+ONBUTTON=19
+  morep <tag.pos19_p>
+  f_runebook_gatetravel
+
+ONBUTTON=20
+  morep <tag.pos20_p>
+  f_runebook_gatetravel
+
+ONBUTTON=21
+  morep <tag.pos21_p>
+  f_runebook_gatetravel
+
+ONBUTTON=22
+  morep <tag.pos22_p>
+  f_runebook_gatetravel
+
+ONBUTTON=23
+  morep <tag.pos23_p>
+  f_runebook_gatetravel
+
+ONBUTTON=24
+  morep <tag.pos24_p>
+  f_runebook_gatetravel
+
+ONBUTTON=25
+  tag.runename <tag.pos17_n>
+  morep <tag.pos17_p>
+  f_runebook_delete
+  tag.pos17_p 0
+  tag.pos17_n
+  dialog d_runebook
+
+ONBUTTON=26
+  tag.runename <tag.pos18_n>
+  morep <tag.pos18_p>
+  f_runebook_delete
+  tag.pos18_p 0
+  tag.pos18_n
+  dialog d_runebook
+
+ONBUTTON=27
+  tag.runename <tag.pos19_n>
+  morep <tag.pos19_p>
+  f_runebook_delete
+  tag.pos19_p 0
+  tag.pos19_n
+  dialog d_runebook
+
+ONBUTTON=28
+  tag.runename <tag.pos20_n>
+  morep <tag.pos20_p>
+  f_runebook_delete
+  tag.pos20_p 0
+  tag.pos20_n
+  dialog d_runebook
+
+ONBUTTON=29
+  tag.runename <tag.pos21_n>
+  morep <tag.pos21_p>
+  f_runebook_delete
+  tag.pos21_p 0
+  tag.pos21_n
+  dialog d_runebook
+
+ONBUTTON=30
+  tag.runename <tag.pos22_n>
+  morep <tag.pos22_p>
+  f_runebook_delete
+  tag.pos22_p 0
+  tag.pos22_n
+  dialog d_runebook
+
+ONBUTTON=31
+  tag.runename <tag.pos23_n>
+  morep <tag.pos23_p>
+  f_runebook_delete
+  tag.pos23_p 0
+  tag.pos23_n
+  dialog d_runebook
+
+ONBUTTON=32
+  tag.runename <tag.pos24_n>
+  morep <tag.pos24_p>
+  f_runebook_delete
+  tag.pos24_p 0
+  tag.pos24_n
+  dialog d_runebook
+
+ONBUTTON=33
+  morep <tag.pos25_p>
+  f_runebook_gatetravel
+
+ONBUTTON=34
+  morep <tag.pos26_p>
+  f_runebook_gatetravel
+
+ONBUTTON=35
+  morep <tag.pos27_p>
+  f_runebook_gatetravel
+
+ONBUTTON=36
+  morep <tag.pos28_p>
+  f_runebook_gatetravel
+
+ONBUTTON=37
+  morep <tag.pos29_p>
+  f_runebook_gatetravel
+
+ONBUTTON=38
+  morep <tag.pos30_p>
+  f_runebook_gatetravel
+
+ONBUTTON=39
+  morep <tag.pos31_p>
+  f_runebook_gatetravel
+
+ONBUTTON=40
+  morep <tag.pos32_p>
+  f_runebook_gatetravel
+
+ONBUTTON=41
+  tag.runename <tag.pos25_n>
+  morep <tag.pos25_p>
+  f_runebook_delete
+  tag.pos25_p 0
+  tag.pos25_n
+  dialog d_runebook
+
+ONBUTTON=42
+  tag.runename <tag.pos26_n>
+  morep <tag.pos26_p>
+  f_runebook_delete
+  tag.pos26_p 0
+  tag.pos26_n
+  dialog d_runebook
+
+ONBUTTON=43
+  tag.runename <tag.pos27_n>
+  morep <tag.pos27_p>
+  f_runebook_delete
+  tag.pos27_p 0
+  tag.pos27_n
+  dialog d_runebook
+
+ONBUTTON=44
+  tag.runename <tag.pos28_n>
+  morep <tag.pos28_p>
+  f_runebook_delete
+  tag.pos28_p 0
+  tag.pos28_n
+  dialog d_runebook
+
+ONBUTTON=45
+  tag.runename <tag.pos29_n>
+  morep <tag.pos29_p>
+  f_runebook_delete
+  tag.pos29_p 0
+  tag.pos29_n
+  dialog d_runebook
+
+ONBUTTON=46
+  tag.runename <tag.pos30_n>
+  morep <tag.pos30_p>
+  f_runebook_delete
+  tag.pos30_p 0
+  tag.pos30_n
+  dialog d_runebook
+
+ONBUTTON=47
+  tag.runename <tag.pos31_n>
+  morep <tag.pos31_p>
+  f_runebook_delete
+  tag.pos31_p 0
+  tag.pos31_n
+  dialog d_runebook
+
+ONBUTTON=48
+  tag.runename <tag.pos32_n>
+  morep <tag.pos32_p>
+  f_runebook_delete
+  tag.pos32_p 0
+  tag.pos32_n
+  dialog d_runebook
+
+ONBUTTON=49
+  src.sound 85
+  src.sysmessage Qual a runa a ser adcionada?
+  target
+
+ONBUTTON=50
+  src.sound 85
+  dialog d_runebook
+
+ONBUTTON=51
+  OBJ=<UID>
+  morep <tag.pos17_p>
+  renemeia_runa 17_n
+
+ONBUTTON=52
+  OBJ=<UID>
+  morep <tag.pos18_p>
+  renemeia_runa 18_n
+
+ONBUTTON=53
+  OBJ=<UID>
+  morep <tag.pos19_p>
+  renemeia_runa 19_n
+
+ONBUTTON=54
+  OBJ=<UID>
+  morep <tag.pos20_p>
+  renemeia_runa 20_n
+
+ONBUTTON=55
+  OBJ=<UID>
+  morep <tag.pos21_p>
+  renemeia_runa 21_n
+
+ONBUTTON=56
+  OBJ=<UID>
+  morep <tag.pos22_p>
+  renemeia_runa 22_n
+
+ONBUTTON=57
+  OBJ=<UID>
+  morep <tag.pos23_p>
+  renemeia_runa 23_n
+
+ONBUTTON=58
+  OBJ=<UID>
+  morep <tag.pos24_p>
+  renemeia_runa 24_n
+
+ONBUTTON=59
+  OBJ=<UID>
+  morep <tag.pos25_p>
+  renemeia_runa 25_n
+
+ONBUTTON=60
+  OBJ=<UID>
+  morep <tag.pos26_p>
+  renemeia_runa 26_n
+
+ONBUTTON=61
+  OBJ=<UID>
+  morep <tag.pos27_p>
+  renemeia_runa 27_n
+
+ONBUTTON=62
+  OBJ=<UID>
+  morep <tag.pos28_p>
+  renemeia_runa 28_n
+
+ONBUTTON=63
+  OBJ=<UID>
+  morep <tag.pos29_p>
+  renemeia_runa 29_n
+
+ONBUTTON=64
+  OBJ=<UID>
+  morep <tag.pos30_p>
+  renemeia_runa 30_n
+
+ONBUTTON=65
+  OBJ=<UID>
+  morep <tag.pos31_p>
+  renemeia_runa 31_n
+
+ONBUTTON=66
+  OBJ=<UID>
+  morep <tag.pos32_p>
+  renemeia_runa 32_n
+
+
+[function cor_gate]
+If (<link.REGION.FLAGS>&region_flag_guarded)
+color=05
+return 1
+else
+color=025
+return 1
+endif
+
+[dialog d_gatetravel]
+100,100
+nomove
+
+resizepic 190 165 5120 140 120
+resizepic 200 175 3000 120 100
+htmlgump 215 185 320 20 0 0 0
+
+htmlgump 258 218 80 20 1 0 0
+htmlgump 258 238 80 20 2 0 0
+
+button 225 215 4006 4007 1 0 1
+button 225 235 4018 4019 1 0 2
+
+[dialog d_gatetravel text]
+Entrar no Gate?
+Sim
+Nao
+
+[dialog d_gatetravel button]
+On=0
+src.sysmessage @0790 Voce fechou o menu de gate travel.
+return 0
+
+On=1
+if (strmatch('0<uid>','0'))
+    src.sysmessage @0790 O gate ja fechou.
+elseif (<src.distance <uid>> > 0)
+    src.sysmessage @0790 Voce saiu de cima do gate.
+return 1
+else
+    src.go <morep>
+    src.sysmessage @0790 Voce entrou no gate.
+return 1
+endif
+src.sysmessage @07a1 O gate ja fechou.
+
+On=2
+src.sysmessage @07a1 Voce fechou o menu de gate travel.
+return 0
+
+
+
+///Adcionar a funcao primeira_vez_gate no sphere_skills.scp
+[FUNCTION primeira_vez_gate]
+If (<tag0.gates.primeira>==1)
+return 1
+else
+tag.gates.primeira=1
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+return 1
+endif
+
+///////////////////////
+
+[plevel 1]
+ogates
+cgates
+sgates
+ngates
+tgates
+
+[FUNCTION cgates]
+tag.gates.cg=1
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=0
+sysmessage @07a1 Opcao selecionada.
+
+[FUNCTION sgates]
+tag.gates.cg=0
+tag.gates.sg=1
+tag.gates.tg=0
+tag.gates.ng=0
+sysmessage @07a1 Opcao selecionada.
+
+[FUNCTION ngates]
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=1
+sysmessage @07a1 Opcao selecionada.
+
+[FUNCTION tgates]
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+sysmessage @07a1 Opcao selecionada.
+
+[FUNCTION ogates]
+if (<tag0.gates.tg>==1)
+dialog d_opcao_gates_tg
+return 1
+endif
+if (<tag0.gates.cg>==1)
+dialog d_opcao_gates_cg
+return 1
+endif
+if (<tag0.gates.sg>==1)
+dialog d_opcao_gates_sg
+return 1
+endif
+if (<tag0.gates.ng>==1)
+dialog d_opcao_gates_ng
+return 1
+endif
+dialog d_opcao_gates_tg
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+
+
+[dialog d_opcao_gates_tg]
+0,0
+nomove
+
+resizepic 90 65 5120 540 320
+resizepic 100 75 3000 520 300
+text 125 80 54 0
+
+text 145 110 04 1
+text 145 130 026 2
+text 145 150 00 3
+text 145 170 765 4
+
+button 115 110 000000D2 000000D3 1 0 1
+button 115 130 000000D2 000000D3 1 0 2
+button 115 150 000000D3 000000D2 1 0 3
+button 115 170 000000D2 000000D3 1 0 4
+
+text 125 210 895 5
+text 135 225 895 6
+text 140 260 04 7
+text 140 275 026 8
+text 140 290 00 9
+text 140 305 765 10
+
+[dialog d_opcao_gates_tg text]
+Exibir menu de gate travel:
+Apenas para locais COM protecao dos guardas
+Apenas para locais SEM protecao dos guardas
+Para todos os gates
+Para nenhum gate
+*Comandos para facilitar macro 
+(digite o comando que a opcao eh selecionada automaticamente)
+Seleciona apenas para locais COM protecao dos guards -> .cgates
+Seleciona apenas para locais SEM protecao dos guards -> .sgates
+Seleciona para exibir em todos os gates              -> .tgates
+Seleciona para exibir em nenhum gate               -> .ngates
+
+[dialog d_opcao_gates_tg button]
+On=0
+return 0
+On=1
+tag.gates.cg=1
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_cg
+return 1
+On=2
+tag.gates.cg=0
+tag.gates.sg=1
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_sg
+return 1
+On=3
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+dialog d_opcao_gates_tg
+return 1
+On=4
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=1
+dialog d_opcao_gates_ng
+return 1
+
+[dialog d_opcao_gates_cg]
+0,0
+nomove
+
+resizepic 90 65 5120 540 320
+resizepic 100 75 3000 520 300
+text 125 80 54 0
+
+text 145 110 04 1
+text 145 130 026 2
+text 145 150 00 3
+text 145 170 765 4
+
+button 115 110 000000D3 000000D2 1 0 1
+button 115 130 000000D2 000000D3 1 0 2
+button 115 150 000000D2 000000D3 1 0 3
+button 115 170 000000D2 000000D3 1 0 4
+
+text 125 210 895 5
+text 135 225 895 6
+text 140 260 04 7
+text 140 275 026 8
+text 140 290 00 9
+text 140 305 765 10
+
+[dialog d_opcao_gates_cg text]
+Exibir menu de gate travel:
+Apenas para locais COM protecao dos guardas
+Apenas para locais SEM protecao dos guardas
+Para todos os gates
+Para nenhum gate
+*Comandos para facilitar macro 
+(digite o comando que a opcao eh selecionada automaticamente)
+Seleciona apenas para locais COM protecao dos guards -> .cgates
+Seleciona apenas para locais SEM protecao dos guards -> .sgates
+Seleciona para exibir em todos os gates              -> .tgates
+Seleciona para exibir em nenhum gate               -> .ngates
+
+[dialog d_opcao_gates_cg button]
+On=0
+return 0
+On=1
+tag.gates.cg=1
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_cg
+return 1
+On=2
+tag.gates.cg=0
+tag.gates.sg=1
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_sg
+return 1
+On=3
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+dialog d_opcao_gates_tg
+return 1
+On=4
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=1
+dialog d_opcao_gates_ng
+return 1
+
+
+[dialog d_opcao_gates_sg]
+0,0
+nomove
+
+resizepic 90 65 5120 540 320
+resizepic 100 75 3000 520 300
+text 125 80 54 0
+
+text 145 110 04 1
+text 145 130 026 2
+text 145 150 00 3
+text 145 170 765 4
+
+button 115 110 000000D2 000000D3 1 0 1
+button 115 130 000000D3 000000D2 1 0 2
+button 115 150 000000D2 000000D3 1 0 3
+button 115 170 000000D2 000000D3 1 0 4
+
+text 125 210 895 5
+text 135 225 895 6
+text 140 260 04 7
+text 140 275 026 8
+text 140 290 00 9
+text 140 305 765 10
+
+[dialog d_opcao_gates_sg text]
+Exibir menu de gate travel:
+Apenas para locais COM protecao dos guardas
+Apenas para locais SEM protecao dos guardas
+Para todos os gates
+Para nenhum gate
+*Comandos para facilitar macro 
+(digite o comando que a opcao eh selecionada automaticamente)
+Seleciona apenas para locais COM protecao dos guards -> .cgates
+Seleciona apenas para locais SEM protecao dos guards -> .sgates
+Seleciona para exibir em todos os gates              -> .tgates
+Seleciona para exibir em nenhum gate               -> .ngates
+
+[dialog d_opcao_gates_sg button]
+On=0
+return 0
+On=1
+tag.gates.cg=1
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_cg
+return 1
+On=2
+tag.gates.cg=0
+tag.gates.sg=1
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_sg
+return 1
+On=3
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+dialog d_opcao_gates_tg
+return 1
+On=4
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=1
+dialog d_opcao_gates_ng
+return 1
+
+[dialog d_opcao_gates_ng]
+0,0
+nomove
+
+resizepic 90 65 5120 540 320
+resizepic 100 75 3000 520 300
+text 125 80 54 0
+
+text 145 110 04 1
+text 145 130 026 2
+text 145 150 00 3
+text 145 170 765 4
+
+button 115 110 000000D2 000000D3 1 0 1
+button 115 130 000000D2 000000D3 1 0 2
+button 115 150 000000D2 000000D3 1 0 3
+button 115 170 000000D3 000000D2 1 0 4
+
+text 125 210 895 5
+text 135 225 895 6
+text 140 260 04 7
+text 140 275 026 8
+text 140 290 00 9
+text 140 305 765 10
+
+[dialog d_opcao_gates_ng text]
+Exibir menu de gate travel:
+Apenas para locais COM protecao dos guardas
+Apenas para locais SEM protecao dos guardas
+Para todos os gates
+Para nenhum gate
+*Comandos para facilitar macro 
+(digite o comando que a opcao eh selecionada automaticamente)
+Seleciona apenas para locais COM protecao dos guards -> .cgates
+Seleciona apenas para locais SEM protecao dos guards -> .sgates
+Seleciona para exibir em todos os gates              -> .tgates
+Seleciona para exibir em nenhum gate               -> .ngates
+
+[dialog d_opcao_gates_ng button]
+On=0
+return 0
+On=1
+tag.gates.cg=1
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_cg
+return 1
+On=2
+tag.gates.cg=0
+tag.gates.sg=1
+tag.gates.tg=0
+tag.gates.ng=0
+dialog d_opcao_gates_sg
+return 1
+On=3
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=1
+tag.gates.ng=0
+dialog d_opcao_gates_tg
+return 1
+On=4
+tag.gates.cg=0
+tag.gates.sg=0
+tag.gates.tg=0
+tag.gates.ng=1
+dialog d_opcao_gates_ng
+return 1
+
+
+[FUNCTION verid_objs]
+var.DPT = 0
+var.DPTD = 0
+
+If (<isneartype t_spell 1>) || (<isneartype t_tree 1>) || (<isneartype t_wall 1>) || (<isneartype t_container 1>) || (<isneartype t_rock 1>) || (<isneartype t_window 1>)
+var.DPTD = 1
+endif
+
+FORITEMS 1
+IF (<TYPE> == t_normal) || (<TYPE> == t_wall) || (<TYPE> == t_tree) || (<TYPE> == t_container) || (<TYPE> == t_rock) || (<TYPE> == t_window)
+var.DPT = <eval <var.DPT>+1>
+ENDIF 
+ENDFOR
+
+
+
+[ITEMDEF 03735]
+//animated smoke
+DEFNAME=i_fx_smoke_small
+TYPE=t_coco
+CATEGORY=Animations
+SUBSECTION=Smoke (small)
+DESCRIPTION=@
+DUPELIST=03736
+
+
+[ITEMDEF 03728]
+DEFNAME=i_fx_smoke
+TYPE=t_coco
+CATEGORY=Animations
+SUBSECTION=Smoke
+DESCRIPTION=coco
+DUPELIST=03729,0372a,0372b,0372c,0372d,0372e,0372f,03730,03731,03732,03733,03734
+
+[TYPEDEF t_coco]
+///Apenas para nao ficar dando erro no sphere =D
+
+[EOF]

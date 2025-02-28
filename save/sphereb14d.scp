@@ -1,0 +1,56 @@
+TITLE=Sphere World Script
+VERSION=0.56b-Nightly
+TIME=6599961
+SAVECOUNT=479
+
+[TIMERF]
+CurTick=7
+
+[GLOBALS]
+dpt=00
+dptd=00
+n1="LeBron James"
+n2="BroKeer"
+n3="Nao Ocupada"
+n4="Nao Ocupada"
+n5="Nao Ocupada"
+on=02
+p1=02
+p2=00
+p3=00
+p4=00
+p5=00
+recorde=0a
+sn.novo=03
+sn.pp=01
+sn.ppp=00
+sn.sem1=00
+sn.sem2=00
+sn.smostra=00
+sn.status="Destivado"
+sn1.autor=00
+sn1.data="dd/mm/aa"
+sn1.dataa=00
+sn1.datad=00
+sn1.datam=00
+sn1.msg=00
+sn2.autor="-"
+sn2.data="dd/mm/aa"
+sn2.dataa=09
+sn2.datad=0c
+sn2.datam=0a
+sn2.msg="-"
+snpp=00
+
+[WORLDSCRIPT a_townbritain]
+FLAGS=04180
+
+[WORLDSCRIPT a_britain_fields]
+FLAGS=0180
+
+[GMPAGE igo117]
+REASON=poha gm vem logo aqui seu merda
+TIME=0379a
+P=5422,1106
+
+[EOF]

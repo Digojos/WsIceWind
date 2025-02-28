@@ -1,0 +1,568 @@
+////////////Sistema de news
+/////////////////////////////By Taz
+//////////////////
+//////////Adcione a i_pedra_news
+//////////Coloque no sphere_skills logo abaixo do on=@login a seguinte funcao: verif_novas_news e o events=+e_sn_pega_ip
+////////O comandos para os players eh .news
+/////////////O sistema eh aberto automaticamente qd o player loga e uma nova news foi adcionada ou qd 
+///////o player muda de ip.
+////////////////////////
+
+
+
+/////////////Staff
+
+[ITEMDEF i_pedra_news]
+ID=01184
+Name=Sistema De .News
+
+on=@create
+attr=010
+color=079a
+If (<var0.sn.pp>==1)
+return 1
+else
+var.sn1.autor=Taz
+var.sn1.datad=12
+var.sn1.datam=10
+var.sn1.dataa=09
+var.sn1.msg=Bem Vindo ao sistema de .News, essa eh a noticia mais atual.
+var.sn2.autor=Taz
+var.sn2.datad=11
+var.sn2.datam=10
+var.sn2.dataa=09
+var.sn2.msg=Aqui fica a noticia mais antiga.
+tag.sn.status=Ativado
+var.sn.smostra=1
+var.sn.sem1=0
+var.sn.sem2=0
+var.sn.novo=0
+endif
+
+on=@Click
+message @0480 [<tag.sn.status>]
+message @07a1 <name>
+return 1
+
+on=@DClick
+IF (<src.ISGM>)
+var.sn.pp=1
+DIALOG d_s_news
+return 1
+else
+src.sysmessage @07a1 Apenas staffs podem ter acesso a pedra.
+return 1
+endif
+
+[DIALOG d_s_news]
+15, 10
+resizepic 60 60 3600 460 470
+resizepic 80 100 5054 420 410
+resizepic 80 78 5054 420 20
+text 190 78 1152 0
+text 390 78 650 1
+
+
+////News 1
+dtext 385 104 40 Primeira News:
+dtext 90 104 52 Por: <var0.sn1.autor>
+dtext 245 104 52 Data: <eval <var0.sn1.datad>>/<eval <var0.sn1.datam>>/<eval <var0.sn1.dataa>>
+//dtext 305 104 52 /
+//dtext 335 104 52 /
+dtext 400 130 200 Remover
+dtext 400 155 200 Alterar
+
+dhtmlgump 100 128 280 120 1 1 <var0.sn1.msg>
+
+button 383 134 1209 1210 1 0 1
+button 383 159 1209 1210 1 0 2
+
+////News 2
+dtext 385 254 40 Segunda News:
+dtext 90 254 52 Por: <var0.sn2.autor>
+dtext 245 254 52 Data: <eval <var0.sn2.datad>>/<eval <var0.sn2.datam>>/<eval <var0.sn2.dataa>>
+//dtext 300 254 52 /
+//dtext 330 254 52 /
+dtext 400 280 200 Remover
+dtext 400 305 200 Alterar
+
+dhtmlgump 100 278 280 120 1 1 <var0.sn2.msg>
+
+button 383 284 1209 1210 1 0 3
+button 383 309 1209 1210 1 0 4
+
+
+////Adcionar novas news
+dtext 90 400 1152 *Qd uma news eh adcionada a segunda eh removida.
+dtext 125 430 585 Adcionar uma nova news
+dtext 336 430 585 Ativar/Desativar news
+dtext 366 450 85 (<tag0.sn.status>)
+button 90 430 4005 4007 1 0 5   
+button 302 430 4005 4007 1 0 6    
+
+
+[DIALOG d_s_news TEXT]
+Sistema de .News
+By Taz
+
+[DIALOG d_s_news BUTTON]
+ON=0
+return 0
+
+On=1
+If (<var.sn.sem2>==1)
+var.sn.sem1=1
+else
+var.sn.sem1=0
+endif
+var.sn1.autor=<var.sn2.autor>
+var.sn1.datad=<var.sn2.datad>
+var.sn1.datam=<var.sn2.datam>
+var.sn1.dataa=<var.sn2.dataa>
+var.sn1.msg=<var.sn2.msg>
+var.sn2.autor=0
+var.sn2.datad=0
+var.sn2.datam=0
+var.sn2.dataa=0
+var.sn2.msg=0
+var.sn.sem2=1
+var.sn.novo=<eval <var.sn.novo>+1>
+dialog d_s_news
+src.sysmessage @0790 A news foi deletada.
+return 1
+
+On=2
+tag.snews.autor=<var.sn1.autor>
+tag.snews.datad=<var.sn1.datad>
+tag.snews.datam=<var.sn1.datam>
+tag.snews.dataa=<var.sn1.dataa>
+tag.snews.msg=<var.sn1.msg>
+src.tag.sn.mudanca=1
+dialog d_sn_add
+return 1
+
+On=3
+var.sn2.autor=0
+var.sn2.datad=0
+var.sn2.datam=0
+var.sn2.dataa=0
+var.sn2.msg=0
+dialog d_s_news
+var.sn.novo=<eval <var.sn.novo>+1>
+src.sysmessage @0790 A news foi deletada.
+var.sn.sem2=1
+return 1
+
+On=4
+tag.snews.autor=<var.sn2.autor>
+tag.snews.datad=<var.sn2.datad>
+tag.snews.datam=<var.sn2.datam>
+tag.snews.dataa=<var.sn2.dataa>
+tag.snews.msg=<var.sn2.msg>
+src.tag.sn.mudanca=2
+dialog d_sn_add
+return 1
+
+On=5
+tag.snews.autor=<src.name>
+tag.snews.datad=11
+tag.snews.datam=12
+tag.snews.dataa=09
+tag.snews.msg=Sua noticia aqui.
+src.tag.sn.mudanca=0
+dialog d_sn_add
+return 1
+
+On=6
+If (<var.sn.smostra>==1)
+tag.sn.status=Destivado
+var.sn.smostra=0
+src.sysmessage @0790 O sistema foi desativado.
+dialog d_s_news
+return 1
+else
+tag.sn.status=Ativado
+var.sn.smostra=1
+src.sysmessage @0790 O sistema foi Ativado.
+dialog d_s_news
+return 1
+endif
+
+
+////////Gump Adciona News
+
+[DIALOG d_sn_add]
+15, 10
+noclose
+resizepic 60 60 3600 460 470
+resizepic 80 100 5054 420 410
+resizepic 80 78 5054 420 20
+text 190 78 1152 0
+text 390 78 650 1
+
+dtext 90 104 52 Por: <tag0.snews.autor>
+dtext 90 134 52 Data: <eval <tag0.snews.datad>>/<eval <tag0.snews.datam>>/<eval <tag0.snews.dataa>>
+//dtext 150 134 52 /
+//dtext 182 134 52 /
+dhtmlgump 90 168 280 120 1 1 <tag0.snews.msg>
+
+dtext 250 104 777 Adcionar/Alterar Autor
+dtext 250 134 777 Adcionar/Alterar Data
+dtext 108 296 777 Adcionar/Alterar Noticia
+dtext 228 350 1152 Confirmar
+dtext 228 370 1152 Cancelar
+
+
+button 230 108 1209 1210 1 0 1
+button 230 138 1209 1210 1 0 2
+button 90 300 1209 1210 1 0 3
+button 190 350 4005 4007 1 0 4
+button 190 370 4005 4007 1 0 5
+
+[DIALOG d_sn_add TEXT]
+Sistema de .News
+By Taz
+
+[DIALOG d_sn_add BUTTON]
+On=0
+dialog d_s_news
+return 1
+
+On=1
+dialog d_add_autor_news
+return 1
+On=2
+dialog d_add_data_news
+return 1
+On=3
+dialog d_add_msg_news
+return 1
+
+On=4
+If (<src.tag0.sn.mudanca>==2)
+var.sn2.autor=<tag.snews.autor>
+var.sn2.datad=<tag.snews.datad>
+var.sn2.datam=<tag.snews.datam>
+var.sn2.dataa=<tag.snews.dataa>
+var.sn2.msg=<tag.snews.msg>
+var.sn.sem2=0
+var.sn.novo=<eval <var.sn.novo>+1>
+src.sysmessage @0790 A news foi alterada.
+src.tag.sn.mudanca=0
+dialog d_s_news
+return 1
+endif
+If (<src.tag0.sn.mudanca>==1)
+var.sn1.autor=<tag.snews.autor>
+var.sn1.datad=<tag.snews.datad>
+var.sn1.datam=<tag.snews.datam>
+var.sn1.dataa=<tag.snews.dataa>
+var.sn1.msg=<tag.snews.msg>
+var.sn.sem1=0
+var.sn.novo=<eval <var.sn.novo>+1>
+src.sysmessage @0790 A news foi alterada.
+src.tag.sn.mudanca=0
+dialog d_s_news
+return 1
+else
+var.sn2.autor=<var.sn1.autor>
+var.sn2.datad=<var.sn1.datad>
+var.sn2.datam=<var.sn1.datam>
+var.sn2.dataa=<var.sn1.dataa>
+var.sn2.msg=<var.sn1.msg>
+var.sn1.autor=<tag.snews.autor>
+var.sn1.datad=<tag.snews.datad>
+var.sn1.datam=<tag.snews.datam>
+var.sn1.dataa=<tag.snews.dataa>
+var.sn1.msg=<tag.snews.msg>
+var.sn.novo=<eval <var.sn.novo>+1>
+src.sysmessage @0790 A news foi adicionada.
+dialog d_s_news
+If (<var.sn.sem1>==1)
+var.sn.sem1=0
+else
+var.sn.sem1=0
+var.sn.sem2=0
+endif
+return 1
+endif
+
+ON=5
+dialog d_s_news
+return 1
+
+[Dialog d_add_autor_news]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite o novo nome do autor (19 caracteres):
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+
+[Dialog d_add_autor_news TEXt]
+<tag.snews.autor>
+
+[Dialog d_add_autor_news BUTTON]
+on=0
+dialog d_sn_add
+return 1
+
+on=1
+if (strlen(<argtxt[0]>) > 19)
+    src.sysmessage @0481 O nome digitado possui mais de 19 caracteres.
+    dialog d_add_autor_news
+return 1
+else
+    tag.snews.autor = <argtxt[0]>
+    src.sysmessage @0481 Autor alterado com sucesso!
+    dialog d_sn_add
+return 1
+endif
+
+on=2
+dialog d_sn_add
+return 1
+
+
+[Dialog d_add_data_news]
+15, 10
+resizepic 200 185 3600 350 280
+resizepic 212 199 3000 325 255
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite a nova data (dd/mm/aa):
+dtext 225 230 567 Dia (dd):
+textentry 235 252 253 25 0 0 0
+dtext 225 275 567 Mes (mm):
+resizepic 230 300 3000 270 22
+textentry 235 302 253 25 0 1 0
+dtext 225 325 567 Ano (aa):
+resizepic 230 350 3000 270 22
+textentry 235 352 253 25 0 2 0
+button 250 401 1209 1210 1 0 1
+dtext 267 399 0000 Confirmar
+button 390 401 1209 1210 1 0 2
+dtext 407 399 0000 Cancelar
+
+
+[Dialog d_add_data_news TEXt]
+<tag.snews.datad>
+<tag.snews.datam>
+<tag.snews.dataa>
+
+
+[Dialog d_add_data_news BUTTON]
+on=0
+dialog d_sn_add
+return 1
+
+on=1
+if (strlen(<argtxt[0]>) > 2)
+    src.sysmessage @0481 A formatacao do dia esta errada. 2 caracteres apenas
+    dialog d_add_data_news
+return 1
+endif
+if (strlen(<argtxt[1]>) > 2)
+    src.sysmessage @0481 A formatacao do mes esta errada. 2 caracteres apenas
+    dialog d_add_data_news
+return 1
+endif
+if (strlen(<argtxt[2]>) > 2)
+    src.sysmessage @0481 A formatacao do ano esta errada. 2 caracteres apenas
+    dialog d_add_data_news
+return 1
+else
+    tag.snews.datad = <eval <argtxt[0]>>
+    tag.snews.datam = <eval <argtxt[1]>>
+    tag.snews.dataa = <eval <argtxt[2]>>
+    src.sysmessage @0481 Data alterada com sucesso!
+    dialog d_sn_add
+return 1
+endif
+on=2
+dialog d_sn_add
+return 1
+
+[Dialog d_add_msg_news]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite a nova noticia: (255 caracteres)
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 250 320 1209 1210 1 0 3
+dtext 267 318 0000 Limpar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+
+[Dialog d_add_msg_news TEXt]
+<tag.snews.msg>
+
+[Dialog d_add_msg_news BUTTON]
+on=0
+dialog d_sn_add
+return 1
+
+on=1
+if (strlen(<argtxt[0]>) > 255)
+    src.sysmessage @0481 A noticia ultrapassou 255 caracteres.
+    dialog d_add_msg_news
+return 1
+else
+    tag.snews.msg = <argtxt[0]>
+    src.sysmessage @0481 Noticia alterada com sucesso!
+    dialog d_sn_add
+return 1
+endif
+
+on=2
+dialog d_sn_add
+return 1
+
+on=3
+src.sysmessage @0481 Limpado!
+tag.snews.msg = Sua noticia aqui.
+dialog d_add_msg_news
+return 1
+
+////////////////Players
+
+[plevel 1]
+news
+
+[function news]
+If (<var.sn.smostra>==0)
+src.sysmessage @0790 O sistema de news esta temporariamente desativado.
+return 1
+endif
+If (<var0.sn.sem2>==1)
+   If (<var0.sn.sem1>==1)
+    src.sysmessage @0790 Sem news no momento.
+    return 1
+   endif
+dialog d_sis_news_1
+return 1
+endif
+dialog d_sis_news
+
+[DIALOG d_sis_news]
+15, 10
+resizepic 60 60 3600 460 470
+resizepic 80 80 10830 35 30
+resizepic 465 80 10830 35 30
+resizepic 115 80 5054 345 40
+
+
+/////news 1
+resizepic 78 140 5100 45 20
+resizepic 127 139 2440 165 120
+
+resizepic 338 140 5100 125 20
+
+
+////news 2
+resizepic 78 320 5100 45 20
+resizepic 127 319 2440 165 120
+
+resizepic 338 320 5100 125 20
+
+text 150 85 52 0
+text 320 95 27 1
+text 151 86 254 2
+text 322 97 42 3
+
+///news 1
+text 87 140 595 4
+text 135 140 00 5
+text 347 140 595 6
+
+dhtmlgump 100 168 380 120 1 1 <var0.sn1.msg>
+
+////news 2
+text 87 320 595 7
+text 135 320 00 8
+text 347 320 595 9
+
+dhtmlgump 100 350 380 120 1 1 <var0.sn2.msg>
+
+
+[DIALOG d_sis_news TEXT]
+Sistema de Noticias
+TLP Shard
+Sistema de Noticias
+TLP Shard
+Por: 
+<var0.sn1.autor>
+Data: <eval <var0.sn1.datad>>/<eval <var0.sn1.datam>>/<eval <var0.sn1.dataa>>
+Por: 
+<var0.sn2.autor>
+Data: <eval <var0.sn2.datad>>/<eval <var0.sn2.datam>>/<eval <var0.sn2.dataa>>
+
+
+[DIALOG d_sis_news_1]
+15, 10
+resizepic 60 60 3600 460 470
+resizepic 80 80 10830 35 30
+resizepic 465 80 10830 35 30
+resizepic 115 80 5054 345 40
+
+
+/////news 1
+resizepic 78 140 5100 45 20
+resizepic 127 139 2440 165 120
+
+resizepic 338 140 5100 125 20
+
+
+text 150 85 52 0
+text 320 95 27 1
+text 151 86 254 2
+text 322 97 42 3
+text 87 140 595 4
+text 135 140 00 5
+text 347 140 595 6
+
+dhtmlgump 100 168 380 120 1 1 <var0.sn1.msg>
+
+
+[DIALOG d_sis_news_1 TEXT]
+Sistema de Noticias
+TLP Shard
+Sistema de Noticias
+TLP Shard
+Por: 
+<var0.sn1.autor>
+Data: <eval <var0.sn1.datad>>/<eval <var0.sn1.datam>>/<eval <var0.sn1.dataa>> 
+
+[function verif_novas_news]
+If (<tag0.sn.primeira>==1)
+else
+tag.sn.primeira=1
+tag.sn.nmsg=<var.sn.novo>
+news
+return 1
+endif
+if !(strmatch(<tag0.lastlogged>,<account.lastip>))
+news
+return 1
+endif
+If (<tag.sn.nmsg>==<var.sn.novo>)
+return 1
+else
+tag.sn.nmsg=<var.sn.novo>
+news
+return 1
+endif
+
+[events e_sn_pega_ip]
+
+on=@logout
+tag.lastlogged=<account.lastip>
+

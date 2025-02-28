@@ -1,0 +1,82 @@
+//////////Decoracao///////////////////
+
+
+[ITEMDEF i_m_corpo]
+DEFNAME=i_m_corpo
+ID=i_corpse
+NAME=Corpo
+
+ON=@CREATE
+ATTR=attr_move_never
+amount=400
+color=083ea
+
+on=@click
+message @07a1 Body of <src.name>
+src.EFFECT=3,036b0,6,15,1
+src.message @07a1 Cuidado, esse eh seu futuro...
+return 1
+
+ON=@DCLICK
+return 1
+
+[ITEMDEF i_lixeira] 
+DEFNAME=i_lixeira
+ID=i_barrel_open 
+NAME=Lixeira (2x Click para esvaziar)
+TYPE=T_container 
+
+ON=@CREATE
+TIMER=1
+COLOR=076c
+ATTR=08010
+
+ON=@DCLICK 
+EMPTY
+OPEN
+SAYU A Lixeira foi esvaziada!
+RETURN 1
+
+ON=@TIMER
+EMPTY
+TIMER=1
+RETURN 1
+
+
+
+
+//////////////Utilidades//////////////
+
+[ITEMDEF i_piso_ress]
+DEFNAME=i_piso_ress
+ID=i_paver_stone
+NAME=Piso Ress
+
+ON=@CREATE
+ATTR=attr_move_never|attr_invis
+
+ON=@step
+If (<src.hits> == 0)
+src.resurrect
+src.stam=<src.dex>
+endif
+
+[ITEMDEF i_gate_disturb]
+ID=i_moongate_blue
+NAME=gate
+
+ON=@CREATE
+ATTR=010
+color=00
+
+On=@click
+message @07a1 <name>
+return 1
+
+On=@step
+src.action = -1
+src.go <morep>
+return 1
+
+
+[EOF]

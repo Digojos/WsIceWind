@@ -1,0 +1,11 @@
+[itemdef i_arena_warrior]
+id=i_grave_stone
+TYPE=T_normal
+WEIGHT=1
+name=Arena de Armas 1x1
+
+on=@create
+ATTR=010
+color=0794
+tag.lotacao=0
+

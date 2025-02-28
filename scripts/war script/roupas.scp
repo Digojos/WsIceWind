@@ -1,0 +1,195 @@
+[ITEMDEF i_robe_cure]
+DEFNAME=i_cure
+ID=i_robe
+NAME=Robe
+TYPE=T_CLOTHING
+DYE=1
+ARMOR=7
+WEIGHT=1
+
+ON=@CREATE
+ATTR=04
+color=044
+HITPOINTS=80
+
+//ON=@EQUIP
+//If (<src.findid(i_to_poison).uid>)
+//src.findid(i_to_poison).remove
+//src.dialogclose ppp
+//src.sysmessage Voce pos Cure Robe.
+//endif
+
+
+
+[ITEMDEF i_mantle]
+DEFNAME=i_mantle
+ID=i_deathshroud
+NAME=Mantle
+TYPE=T_armor
+DYE=1
+ARMOR=50
+WEIGHT=1
+
+ON=@CREATE
+ATTR=04
+HITPOINTS=999
+COLOR=00
+
+ON=@click
+message @<color> <name>'s Death Shround
+return 1
+
+ON=@EQUIP
+IF (0<TAG.UID> == 0)
+TAG.UID = <SRC.UID>
+ENDIF
+
+IF (0<TAG.UID> == 0<SRC.UID>)
+NAME=<SRC.NAME>
+SRC.INT=(<SRC.INT>+15)
+SRC.STR=(<SRC.STR>+15)
+SRC.DEX=(<SRC.DEX>+15)
+ELSE
+SRC.MESSAGE @07a1 Esse mantle nao tem efeito em voce.
+return 1
+ENDIF
+
+ON=@UNEQUIP
+IF (0<TAG.UID> == 0<SRC.UID>)
+SRC.INT=(<SRC.INT>-15)
+SRC.STR=(<SRC.STR>-15)
+SRC.DEX=(<SRC.DEX>-15)
+endif
+
+[ITEMDEF i_h_apron]
+id=i_apron_half
+name=Half Apron
+
+ON=@Create
+ATTR=04
+HITPOINTS={50 100}
+
+[ITEMDEF i_sash_str]
+DEFNAME=i_sash_str
+ID=I_SASH
+NAME=Sash of Str
+WEIGHT=1
+TYPE=T_CLOTHING
+DYE=1
+ARMOR=1
+
+ON=@Create
+ATTR=04
+HITPOINTS={50 80}
+
+ON=@EQUIP
+SRC.STR=(<SRC.STR>+5)
+
+ON=@UNEQUIP
+SRC.STR=(<SRC.STR>-5)
+
+[ITEMDEF i_ring_str]
+DEFNAME=i_ring_str
+ID=I_ring_gold
+NAME=Ring of Force
+weight=1
+
+ON=@Create
+ATTR=04
+Color=0806
+
+ON=@EQUIP
+SRC.STR=(<SRC.STR>+5)
+
+ON=@UNEQUIP
+SRC.STR=(<SRC.STR>-5)
+
+[ITEMDEF i_robe_of_bless]
+DEFNAME=i_robe_of_bless
+ID=i_robe
+NAME=Robe of Bless
+TYPE=T_CLOTHING
+DYE=1
+ARMOR=7
+WEIGHT=1
+
+ON=@CREATE
+ATTR=04
+HITPOINTS=80
+
+ON=@EQUIP
+SRC.INT=(<SRC.INT>+5)
+SRC.STR=(<SRC.STR>+5)
+SRC.DEX=(<SRC.DEX>+5)
+SRC.SOUND=snd_SPELL_BLESS
+
+
+ON=@UNEQUIP
+SRC.INT=(<SRC.INT>-5)
+SRC.STR=(<SRC.STR>-5)
+SRC.DEX=(<SRC.DEX>-5)
+
+[ITEMDEF i_mana_bear]
+DEFNAME=i_mana_bear
+ID=i_mask_bear
+NAME=Bear Mask of Mana
+TYPE=T_CLOTHING
+DYE=1
+WEIGHT=1
+
+ON=@CREATE
+ATTR=04
+HITPOINTS={50 80}
+
+ON=@EQUIP
+src.sobe
+
+ON=@UNEQUIP
+if (<src.RESTEST mana_mask>)
+src.FINDID.mana_mask.remove
+endif
+
+[ITEMDEF mana_mask]
+NAME=Mana Mask Delay
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=Create
+ATTR=attr_decay
+
+ON=@Timer
+if (<link.mana> < <link.int>)
+link.mana=<link.mana>+1
+timer 2
+return 1
+endif
+timer 2
+return 1
+
+[function sobe]
+SERV.NEWITEM mana_mask
+NEW.timer=1
+NEW.link=<UID>
+NEW.EQUIP
+return 1
+
+[ITEMDEF i_cape_int]
+DEFNAME=i_cape_int
+ID=I_cape
+NAME=Cape of Meditation
+WEIGHT=1
+
+ON=@Create
+ATTR=04
+HITPOINTS={50 80}
+
+ON=@EQUIP
+SRC.int=(<SRC.int>+5)
+src.meditation=<src.meditation>+10.0
+
+ON=@UNEQUIP
+SRC.int=(<SRC.int>-5)
+src.meditation=<src.meditation>-10.0
+
+[EOF]

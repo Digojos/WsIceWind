@@ -1,0 +1,229 @@
+[PLEVEL 2]
+prender
+
+[FUNCTION prender]
+DIALOG d_jailer
+
+[DIALOG d_jailer] 
+0,0 
+nomove 
+resizepic 0 0 2620 370 300 
+//resizepic 150 30 7014 70 70 
+gumppic 130 165 2440 200 20 //1
+gumppic 130 138 2440 200 20 //2
+resizepic 15 220 5054 340 65
+text 50 5 50 0 
+text 45 45 1152 1 
+text 185 45 1152 2 
+text 45 65 1152 3 
+text 185 65 1152 4 
+text 45 85 1152 5 
+text 165 85 32 6 
+text 67 110 31 7 //texto
+text 20 140 995 8  
+text 20 168 995 9  
+textentry 138 141 200 25 0480 0 10    
+textentry 138 167 250 25 0480 1 11 
+button 30 226 4005 4006 1 0 1 
+button 30 257 4005 4006 1 0 2
+text 70 226 1152 12 
+text 70 257 1152 13 
+ 
+[DIALOG d_jailer TEXT] 
+Menu de Prisao - Edited by Scripter SwkLr
+600=10 Min(Rec)
+3600=1 Hora 
+7200=2 Horas 
+18000= 5 Horas
+36000= 10 horas 
+86400= 1 Dia 
+* 172800= 2 Dias (maxima)
+Tempo da pena:                        segundos
+Razao da pena: 
+<EVAL <SRC.TAG.JTIME>> 
+<SRC.TAG.JREASON> 
+Prender
+Soltar
+
+[DIALOG d_jailer BUTTON]
+ON=0
+SRC.SYSMESSAGE @0790,9 Menu de prisao cancelado!
+RETURN 1
+ 
+ON=1 
+IF (<EVAL <ARGTXT[0]>>>172800) 
+SRC.SYSMESSAGE @0790,9 Voce nao pode jailar ele.
+RETURN 1
+ELIF (<src.tag.prender>)
+src.obj=<src.tag.prender>
+SRC.obj.TAG.OJP=<SRC.obj.P> 
+SRC.obj.JAIL
+SRC.obj.TAG.JTIME=<ARGTXT[0]> 
+SRC.obj.EVENTS e_shakuzjail 
+SRC.obj.TAG.JREASON=<ARGTXT[1]> 
+SRC.obj.JAILMENOWBOY
+tag.prender 
+return 1
+ELSE 
+SRC.TAG.JTIME=<ARGTXT[0]> 
+SRC.TAG.JREASON=<ARGTXT[1]> 
+SRC.NEWITEM i_target_pad_jailer 
+SRC.ACT.TARGET
+RETURN 1 
+ENDIF 
+
+ON=2
+SRC.TAG.JTIME=0
+SRC.NEWITEM i_target_soltar
+SRC.ACT.TARGET
+RETURN 1 
+ENDIF
+
+[ITEMDEF i_target_pad_jailer] 
+TYPE=T_EQ_SCRIPT 
+ON=@TARGON_CHAR 
+SRC.TARG.TAG.OJP=<SRC.TARG.P> 
+SRC.TARG.JAIL
+VAR.SUA_COR=020
+SRC.TARG.TAG.JTIME=<SRC.TAG.JTIME> 
+SRC.TARG.EVENTS e_shakuzjail 
+SRC.TARG.TAG.JREASON=<SRC.TAG.JREASON> 
+SRC.TARG.JAILMENOWBOY 
+remove 
+RETURN 1 
+
+ON=@LOGOUT 
+TAG.LJOUT=1 
+
+ON=@LOGIN 
+TAG.LJOUT=0 
+
+[ITEMDEF i_target_soltar] 
+TYPE=T_EQ_SCRIPT 
+ON=@TARGON_CHAR 
+SRC.TARG.TAG.JTIME=<SRC.TAG.JTIME>
+SRC.TARG.JAILMENOWBOYSOLTAR
+remove
+RETURN 1
+
+[FUNCTION jailmenowboy] 
+NEWITEM m_jail_clocker
+ACT.TIMER=<SRC.TAG.JTIME> 
+ACT.CONT=<UID> 
+
+[FUNCTION jailmenowboysoltar] 
+NEWITEM m_jail_clockersoltar
+SRC.CONSUME m_jail_clocker
+ACT.TIMER=<SRC.TAG.JTIME> 
+ACT.CONT=<UID> 
+
+[ITEMDEF m_jail_clocker] 
+NAME=Jail Clocker 
+ID=i_memory 
+TYPE=t_eq_script 
+ON=@Create 
+ATTR=attr_decay 
+ON=@Timer 
+IF (<CONT.TAG.LJOUT>=1)
+TIMER=1 
+RETURN 1 
+ELSE 
+CONT.FORGIVE 
+CONT.EVENTS -e_shakuzjail 
+CONT.MESSAGE @0790,9 Voce cumpriu sua pena agora esta livre!
+CONT.P=<CONT.TAG.OJP> 
+src.tag.jailado=0
+CONT.UPDATE 
+CONT.FIX
+ENDIF 
+
+[ITEMDEF m_jail_clockersoltar] 
+NAME=Jail Clocker 
+ID=i_memory 
+TYPE=t_eq_script 
+ON=@Create 
+ATTR=attr_decay 
+ON=@Timer 
+IF (<CONT.TAG.LJOUT>=1)
+TIMER=1 
+RETURN 1 
+ELSE 
+CONT.FORGIVE 
+CONT.EVENTS -e_shakuzjail 
+CONT.MESSAGE @0790,9 Voce cumpriu sua pena agora esta livre!
+CONT.P=<CONT.TAG.OJP> 
+src.tag.jailado=0
+CONT.UPDATE 
+CONT.FIX
+ENDIF 
+
+[EVENTS e_shakuzjail] 
+ON=@CLICK 
+MESSAGE @0790,9 [Tempo: <FINDID.m_jail_clocker.timer>] 
+SRC.SYSMESSAGE=@0790,9 Razao da Pena: <TAG.JREASON> 
+
+[ITEMDEF i_pedra_preso] 
+DEFNAME=i_pedra_preso
+name=Jail Stone
+ID=i_gravestone_18 
+TYPE=t_door
+
+CATEGORY=Pedras
+SUBSECTION=Stones 
+DESCRIPTION=Jail Stone
+
+ON=@CREATE
+COLOR=09D0
+ATTR=08010
+
+ON=@DCLICK
+SRC.DIALOG D_PRESO
+
+[DIALOG d_preso] 
+100, 100 
+page 0 
+resizepic 100 100 2620 400 115
+nomove
+
+//BUTTONS 
+button 125 140 2362 2361 1 0 1 
+button 125 159 2362 2361 1 0 2 
+button 125 176 2362 2361 1 0 3
+
+//TEXT 
+text 140 110 137 0 
+text 140 135 268 1 
+text 140 154 268 2 
+text 140 171 268 3
+
+[DIALOG d_preso TEXT] 
+<SRC.NAME> escolha uma das opcoes
+Sair da Jail (50 k) 
+Veja o tempo que falta para sair da prisao.
+Abra seu banco
+
+[DIALOG d_preso BUTTON] 
+
+ONBUTTON=1 
+VAR.TOTALGOLD=<SRC.findlayer(layer_bankbox).rescount i_gold>+<SRC.findlayer(layer_pack).rescount i_gold> 
+if (<var.totalgold><10000) 
+SRC.MESSAGE @0790,9 Voce nao tem dinheiro suficiente para se libertar! 
+return 1 
+else 
+SRC.consumebank 50000 i_gold 
+NEWITEM m_jail_clockersoltar
+SRC.CONSUME m_jail_clocker
+ACT.TIMER=0
+ACT.CONT=<UID> 
+SRC.SYSMESSAGEUA @0790,9 Obrigado por contribuir com a prisao! 
+RETURN 1
+ENDIF 
+
+ONBUTTON=2 
+MESSAGE @0790,9 [Tempo: <FINDID.m_jail_clocker.timer>] 
+
+ONBUTTON=3
+SRC.BANK
+return 1 
+
+[EOF]

@@ -1,0 +1,178 @@
+//////////////////// Order Platemail ////////////////////
+
+[ITEMDEF i_Order_PLATEMAIL_ARMS]
+DEFNAME=i_Order_PLATEMAIL_ARMS
+NAME=Order Platemail Arms
+ID=i_platemail_arms
+ARMOR=60 //100
+REQSTR=100 //40
+WEIGHT=5
+
+ON=@Create
+COLOR=062
+HITPOINTS={51 65}
+
+[ITEMDEF i_Order_PLATEMAIL_leggings]
+DEFNAME=i_Order_PLATEMAIL_leggings
+NAME=Order Platemail Legs
+ID=i_platemail_leggings
+WEIGHT=15
+ARMOR=64 //100
+REQSTR=100 //60
+
+ON=@Create
+COLOR=062
+HITPOINTS={51 65}
+
+[ITEMDEF i_Order_PLATE_HELM]
+DEFNAME=i_Order_PLATE_HELM
+NAME=Order Plate Helm
+ID=i_platemail_helm
+ARMOR=60 //100
+REQSTR=50 //40
+WEIGHT=5
+
+ON=@Create
+COLOR=062
+HITPOINTS={46 58}
+
+[ITEMDEF i_Order_PLATEMAIL_GORGET]
+DEFNAME=i_Order_PLATEMAIL_GORGET
+NAME=Order Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=39 //100
+REQSTR=100 //30
+WEIGHT=2
+
+ON=@Create
+COLOR=062
+HITPOINTS={51 65}
+
+[ITEMDEF i_Order_PLATEMAIL_GAUNTLETS]
+DEFNAME=i_Order_PLATEMAIL_GAUNTLETS
+NAME=Order Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=60 //100
+REQSTR=100 //30
+WEIGHT=2
+
+ON=@Create
+COLOR=062
+HITPOINTS={51 65}
+
+[ITEMDEF i_Order_PLATEMAIL]
+DEFNAME=i_Order_PLATEMAIL
+NAME=Order Platemail
+ID=i_platemail_chest
+ARMOR=90 //100
+REQSTR=100 //60
+WEIGHT=10
+
+
+ON=@Create
+COLOR=062
+HITPOINTS={51 65}
+
+
+[ITEMDEF i_Order_HEATER_SHIELD]
+DEFNAME=i_Order_HEATER_SHIELD
+NAME=Order Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=8
+REQSTR=100 //30
+WEIGHT=8
+
+
+ON=@Create
+HITPOINTS=31
+COLOR=062
+
+
+//////////// Chaos Platemail ///////////////////
+
+[ITEMDEF i_Chaos_PLATEMAIL_ARMS]
+DEFNAME=i_Chaos_PLATEMAIL_ARMS
+NAME=Chaos Platemail Arms
+ID=i_platemail_arms
+ARMOR=60 //100
+REQSTR=100 //40
+WEIGHT=5
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={51 65}
+
+[ITEMDEF i_Chaos_PLATEMAIL_leggings]
+DEFNAME=i_Chaos_PLATEMAIL_leggings
+NAME=Chaos Platemail Legs
+ID=i_platemail_leggings
+WEIGHT=15
+ARMOR=64 //100
+REQSTR=100 //60
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={51 65}
+
+[ITEMDEF i_Chaos_PLATE_HELM]
+DEFNAME=i_Chaos_PLATE_HELM
+NAME=Chaos Plate Helm
+ID=i_platemail_helm
+ARMOR=60 //100
+REQSTR=100 //40
+WEIGHT=5
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={46 58}
+
+[ITEMDEF i_Chaos_PLATEMAIL_GORGET]
+DEFNAME=i_Chaos_PLATEMAIL_GORGET
+NAME=Chaos Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=39 //100
+REQSTR=100 //30
+WEIGHT=2
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={51 65}
+
+[ITEMDEF i_Chaos_PLATEMAIL_GAUNTLETS]
+DEFNAME=i_Chaos_PLATEMAIL_GAUNTLETS
+NAME=Chaos Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=60 //100
+REQSTR=100 //30
+WEIGHT=2
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={51 65}
+
+[ITEMDEF i_Chaos_PLATEMAIL]
+DEFNAME=i_Chaos_PLATEMAIL
+NAME=Chaos Platemail
+ID=i_platemail_chest
+ARMOR=90 //100
+REQSTR=90 //60
+WEIGHT=10
+
+
+ON=@Create
+COLOR=04D8
+HITPOINTS={51 65}
+
+
+[ITEMDEF i_Chaos_HEATER_SHIELD]
+DEFNAME=i_Chaos_HEATER_SHIELD
+NAME=Chaos Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=8
+REQSTR=100 //30
+WEIGHT=8
+
+
+ON=@Create
+HITPOINTS=31
+COLOR=04D8

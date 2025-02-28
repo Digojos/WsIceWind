@@ -1,0 +1,583 @@
+
+12:57:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+12:57:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+12:57:Expansion maps supported: T2A, LBR, AOS, SE
+12:57:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+12:57:Indexing 259 scripts...
+12:57:Loading scripts/sphere_defs.scp
+12:57:Loading scripts/sphere_types.scp
+12:57:Loading scripts/sphere_book.scp
+12:57:Loading scripts/sphere_backward_compatibility.scp
+12:57:Loading scripts/sphere_events_human.scp
+12:57:Loading scripts/sphere_events_npcs.scp
+12:57:Loading scripts/npcs/spherechar_se.scp
+12:57:Loading scripts/npcs/spherechar_new_mounts.scp
+12:57:Loading scripts/npcs/spherechar_mondains_legacy.scp
+12:57:Loading scripts/npcs/spherechar_misc.scp
+12:57:Loading scripts/npcs/spherechar_lbr.scp
+12:57:Loading scripts/npcs/spherechar_human.scp
+12:57:Loading scripts/npcs/spherechar_evil.scp
+12:57:Loading scripts/npcs/spherechar_aos.scp
+12:57:Loading scripts/npcs/spherechar_anim.scp
+12:57:Loading scripts/npcs/spherechar.scp
+12:57:Loading scripts/sphere_admin.scp
+12:57:Loading scripts/sphere_dialog.scp
+12:57:Loading scripts/items/sphere_item_resources.scp
+12:57:Loading scripts/items/sphere_minor_artifacts.scp
+12:57:Loading scripts/items/sphere_item_vegetation.scp
+12:57:Loading scripts/items/sphere_item_unsorted.scp
+12:57:Loading scripts/items/sphere_item_treasure_maps.scp
+12:57:Loading scripts/items/sphere_item_ship_parts.scp
+12:57:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+12:57:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+12:57:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+12:57:Loading scripts/items/sphere_item_provisions_weapons.scp
+12:57:Loading scripts/items/sphere_item_provisions_potions.scp
+12:57:Loading scripts/items/sphere_item_provisions_ore.scp
+12:57:Loading scripts/items/sphere_item_provisions_misc.scp
+12:57:Loading scripts/items/sphere_item_provisions_jewelry.scp
+12:57:Loading scripts/items/sphere_item_provisions_deeds.scp
+12:57:Loading scripts/items/sphere_item_provisions_deed.scp
+12:57:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+12:57:Loading scripts/items/sphere_item_provisions_clothing.scp
+12:57:Loading scripts/items/sphere_item_provisions_beers.scp
+12:57:Loading scripts/items/sphere_item_provisions_armor_se.scp
+12:57:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+12:57:Loading scripts/items/sphere_item_provisions_armor_color.scp
+12:57:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+12:57:Loading scripts/items/sphere_item_provisions_armor.scp
+12:57:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+12:57:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+12:57:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+12:57:Loading scripts/items/sphere_item_profession_cartographer.scp
+12:57:Loading scripts/items/sphere_item_profession_barber.scp
+12:57:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+12:57:Loading scripts/items/sphere_item_profession.scp
+12:57:Loading scripts/items/sphere_item_multis_stairs.scp
+12:57:Loading scripts/items/sphere_item_multis_houses_ships.scp
+12:57:Loading scripts/items/sphere_item_multis_foundations.scp
+12:57:Loading scripts/items/sphere_item_ml_misc.scp
+12:57:Loading scripts/items/sphere_item_ml_floor_wall.scp
+12:57:Loading scripts/items/sphere_item_ml.scp
+12:57:Loading scripts/items/sphere_item_misc_se.scp
+12:57:Loading scripts/items/sphere_item_misc.scp
+12:57:Loading scripts/items/sphere_item_magic_weapon.scp
+12:57:Loading scripts/items/sphere_item_magic_wands.scp
+12:57:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+12:57:Loading scripts/items/sphere_item_magic_leather.scp
+12:57:Loading scripts/items/sphere_item_magic_armor.scp
+12:57:Loading scripts/items/sphere_item_icons_new.scp
+12:57:Loading scripts/items/sphere_item_ground_tiles.scp
+12:57:Loading scripts/items/sphere_item_eight_age.scp
+12:57:Loading scripts/items/sphere_item_deco_signs.scp
+12:57:Loading scripts/items/sphere_item_deco_misc.scp
+12:57:Loading scripts/items/sphere_item_deco_mini_houses.scp
+12:57:Loading scripts/items/sphere_item_deco_lightsources.scp
+12:57:Loading scripts/items/sphere_item_deco_furniture.scp
+12:57:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+12:57:Loading scripts/items/sphere_item_deco_evilitem.scp
+12:57:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+12:57:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+12:57:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+12:57:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+12:57:Loading scripts/items/sphere_item_christimas.scp
+12:57:Loading scripts/items/sphere_item_char_icons.scp
+12:57:Loading scripts/items/sphere_item_building_walls_se.scp
+12:57:Loading scripts/items/sphere_item_building_walls.scp
+12:57:Loading scripts/items/sphere_item_building_stairs_ml.scp
+12:57:Loading scripts/items/sphere_item_building_stairs.scp
+12:57:Loading scripts/items/sphere_item_building_roofs_se.scp
+12:57:Loading scripts/items/sphere_item_building_roofs_ml.scp
+12:57:Loading scripts/items/sphere_item_building_roofs_aos.scp
+12:57:Loading scripts/items/sphere_item_building_roofs.scp
+12:57:Loading scripts/items/sphere_item_building_other.scp
+12:57:Loading scripts/items/sphere_item_building_floors_se.scp
+12:57:Loading scripts/items/sphere_item_building_floors.scp
+12:57:Loading scripts/items/sphere_item_building_fence.scp
+12:57:Loading scripts/items/sphere_item_building_doors.scp
+12:57:Loading scripts/items/sphere_item_boulders_rocks.scp
+12:57:Loading scripts/items/sphere_item_aos_se.scp
+12:57:Loading scripts/items/sphere_item_animations.scp
+12:57:Loading scripts/sphere_region.scp
+12:57:Loading scripts/maps/sphere_map0.scp
+12:57:Loading scripts/maps/sphere_map1.scp
+12:57:Loading scripts/maps/sphere_map_points0.scp
+12:57:Loading scripts/maps/sphere_map_points1.scp
+12:57:Loading scripts/sphere_menu.scp
+12:57:Loading scripts/sphere_name.scp
+12:57:Loading scripts/sphere_skillmenu.scp
+12:57:Loading scripts/sphere_spawns.scp
+12:57:Loading scripts/sphere_speech.scp
+12:57:Loading scripts/sphere_skills.scp
+12:57:Loading scripts/sphere_spells.scp
+12:57:Loading scripts/sphere_newb.scp
+12:57:Loading scripts/sphere_template.scp
+12:57:Loading scripts/sphere_template_loot.scp
+12:57:Loading scripts/sphere_template_vend.scp
+12:57:Loading scripts/sphere_triggers.scp
+12:57:Loading scripts/sphere_serv_triggers.scp
+12:57:Loading scripts/speech/townyew.scp
+12:57:Loading scripts/speech/townwind.scp
+12:57:Loading scripts/speech/townvesper.scp
+12:57:Loading scripts/speech/towntrinsic.scp
+12:57:Loading scripts/speech/townskarabrae.scp
+12:57:Loading scripts/speech/townserphold.scp
+12:57:Loading scripts/speech/townnujelm.scp
+12:57:Loading scripts/speech/townmoonglow.scp
+12:57:Loading scripts/speech/townminoc.scp
+12:57:Loading scripts/speech/townmagincia.scp
+12:57:Loading scripts/speech/townjhelom.scp
+12:57:Loading scripts/speech/towncove.scp
+12:57:Loading scripts/speech/townbucsden.scp
+12:57:Loading scripts/speech/townbritain.scp
+12:57:Loading scripts/speech/spherespee.scp
+12:57:Loading scripts/speech/speakshopkeep.scp
+12:57:Loading scripts/speech/speakrehello.scp
+12:57:Loading scripts/speech/speakorc.scp
+12:57:Loading scripts/speech/speakneeds.scp
+12:57:Loading scripts/speech/speakmaster.scp
+12:57:Loading scripts/speech/speakhuman.scp
+12:57:Loading scripts/speech/speakhorse.scp
+12:57:Loading scripts/speech/jobweaver.scp
+12:57:Loading scripts/speech/jobweaponstrainer.scp
+12:57:Loading scripts/speech/jobweaponsmith.scp
+12:57:Loading scripts/speech/jobwaiter.scp
+12:57:Loading scripts/speech/jobvet.scp
+12:57:Loading scripts/speech/jobveggie.scp
+12:57:Loading scripts/speech/jobtinker.scp
+12:57:Loading scripts/speech/jobthief.scp
+12:57:Loading scripts/speech/jobtavernkeeper.scp
+12:57:Loading scripts/speech/jobtanner.scp
+12:57:Loading scripts/speech/jobshipwright.scp
+12:57:Loading scripts/speech/jobshepherd.scp
+12:57:Loading scripts/speech/jobservant.scp
+12:57:Loading scripts/speech/jobsculptor.scp
+12:57:Loading scripts/speech/jobscribe.scp
+12:57:Loading scripts/speech/jobscholar.scp
+12:57:Loading scripts/speech/jobsailor.scp
+12:57:Loading scripts/speech/jobrunner.scp
+12:57:Loading scripts/speech/jobrealtor.scp
+12:57:Loading scripts/speech/jobranger.scp
+12:57:Loading scripts/speech/jobrancher.scp
+12:57:Loading scripts/speech/jobprovisioner.scp
+12:57:Loading scripts/speech/jobprisoner.scp
+12:57:Loading scripts/speech/jobpriest.scp
+12:57:Loading scripts/speech/jobpirate.scp
+12:57:Loading scripts/speech/jobparliament.scp
+12:57:Loading scripts/speech/jobpaladin.scp
+12:57:Loading scripts/speech/joboverseer.scp
+12:57:Loading scripts/speech/jobnoble.scp
+12:57:Loading scripts/speech/jobmonk.scp
+12:57:Loading scripts/speech/jobminter.scp
+12:57:Loading scripts/speech/jobminer.scp
+12:57:Loading scripts/speech/jobmiller.scp
+12:57:Loading scripts/speech/jobmayor.scp
+12:57:Loading scripts/speech/jobmapmaker.scp
+12:57:Loading scripts/speech/jobMageShop.scp
+12:57:Loading scripts/speech/jobMageEvil.scp
+12:57:Loading scripts/speech/jobMage.scp
+12:57:Loading scripts/speech/joblaborer.scp
+12:57:Loading scripts/speech/jobjudge.scp
+12:57:Loading scripts/speech/jobjeweller.scp
+12:57:Loading scripts/speech/jobjailor.scp
+12:57:Loading scripts/speech/jobinnkeeper.scp
+12:57:Loading scripts/speech/jobherbalist.scp
+12:57:Loading scripts/speech/jobhealwand.scp
+12:57:Loading scripts/speech/jobhealer.scp
+12:57:Loading scripts/speech/jobGuard.scp
+12:57:Loading scripts/speech/jobglassblower.scp
+12:57:Loading scripts/speech/jobgambler.scp
+12:57:Loading scripts/speech/jobfurtrader.scp
+12:57:Loading scripts/speech/jobfarmer.scp
+12:57:Loading scripts/speech/jobcobbler.scp
+12:57:Loading scripts/speech/jobcashual.scp
+12:57:Loading scripts/speech/jobcarpenter.scp
+12:57:Loading scripts/speech/jobbutcher.scp
+12:57:Loading scripts/speech/jobBrigand.scp
+12:57:Loading scripts/speech/jobbowyer.scp
+12:57:Loading scripts/speech/jobblacksmith.scp
+12:57:Loading scripts/speech/jobbeggar.scp
+12:57:Loading scripts/speech/jobbeekeeper.scp
+12:57:Loading scripts/speech/jobbard.scp
+12:57:Loading scripts/speech/jobbanker.scp
+12:57:Loading scripts/speech/jobbaker.scp
+12:57:Loading scripts/speech/jobartist.scp
+12:57:Loading scripts/speech/jobarmourer.scp
+12:57:Loading scripts/speech/jobarchitect.scp
+12:57:Loading scripts/speech/jobanimal.scp
+12:57:Loading scripts/speech/jobalchemist.scp
+12:57:Loading scripts/speech/jobactor.scp
+12:57:Loading scripts/sphere_msgs.scp
+12:57:Loading scripts/stones/sphere_genericstone_types.scp
+12:57:Loading scripts/stones/sphere_genericstone_items.scp
+12:57:Loading scripts/stones/sphere_genericstone_functions.scp
+12:57:Loading scripts/stones/sphere_genericstone_config.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_types.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_speech.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_items.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_functions.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_events.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+12:57:Loading scripts/stones/guilds/sphere_guild_config.scp
+12:57:Loading scripts/stones/towns/sphere_town_types.scp
+12:57:Loading scripts/stones/towns/sphere_town_speech.scp
+12:57:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+12:57:Loading scripts/stones/towns/sphere_town_items.scp
+12:57:Loading scripts/stones/towns/sphere_town_functions_player.scp
+12:57:Loading scripts/stones/towns/sphere_town_functions.scp
+12:57:Loading scripts/stones/towns/sphere_town_events.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+12:57:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+12:57:Loading scripts/stones/towns/sphere_town_config.scp
+12:57:Loading scripts/war script/sistema_runebook.scp
+12:57:Loading scripts/war script/sistema_de_news.scp
+12:57:Loading scripts/war script/sistema_bandagem.scp
+12:57:Loading scripts/war script/sistema_arena_x1.scp
+12:57:Loading scripts/war script/roupas.scp
+12:57:Loading scripts/war script/plates.scp
+12:57:Loading scripts/war script/pisos e gates.scp
+12:57:Loading scripts/war script/pedra_votacao.scp
+12:57:Loading scripts/war script/pedras.scp
+12:57:Loading scripts/war script/Jail Staff.scp
+12:57:Loading scripts/war script/itens_uteis.scp
+12:57:Loading scripts/war script/itens_pvp.scp
+12:57:Loading scripts/war script/events.scp
+12:57:Loading scripts/war script/comandos.scp
+12:57:Loading scripts/war script/arena_warrior.scp
+12:57:Loading scripts/war script/areas.scp
+12:57:Loading scripts/war script/accountinfo.scp
+12:57:Loaded 54 client encryption keys.
+12:57:Server started on 'Rodrigo-PC' port 2593.
+12:57:Monitoring IP '5.208.195.198'.
+12:57:Monitoring IP '10.0.0.4'.
+12:57:Loading save/spheredata...
+12:57:WARNING:'save/spherestatics.scp' not found...
+12:57:WARNING:Can't Load save/spherestatics
+12:57:Loading save/spheremultis...
+12:57:Loading save/sphereworld...
+12:57:Loading save/spherechars...
+12:57:GC: 2820 Objects accounted for
+12:57:Auto-complete dictionary loaded (contains 142 words).
+12:57:Option flags: CommandSysmessages + NoHouseMuteSpeech
+12:57:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+12:57:Startup complete. items=2806, chars=14
+12:57:Press '?' for console commands
+12:59:FATAL:Server terminated by error 5!
+
+21:57:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+21:57:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+21:57:Expansion maps supported: T2A, LBR, AOS, SE
+21:57:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+21:57:Indexing 259 scripts...
+21:57:Loading scripts/sphere_defs.scp
+21:57:Loading scripts/sphere_types.scp
+21:57:Loading scripts/sphere_book.scp
+21:57:Loading scripts/sphere_backward_compatibility.scp
+21:57:Loading scripts/sphere_events_human.scp
+21:57:Loading scripts/sphere_events_npcs.scp
+21:57:Loading scripts/npcs/spherechar_se.scp
+21:57:Loading scripts/npcs/spherechar_new_mounts.scp
+21:57:Loading scripts/npcs/spherechar_mondains_legacy.scp
+21:57:Loading scripts/npcs/spherechar_misc.scp
+21:57:Loading scripts/npcs/spherechar_lbr.scp
+21:57:Loading scripts/npcs/spherechar_human.scp
+21:57:Loading scripts/npcs/spherechar_evil.scp
+21:57:Loading scripts/npcs/spherechar_aos.scp
+21:57:Loading scripts/npcs/spherechar_anim.scp
+21:57:Loading scripts/npcs/spherechar.scp
+21:57:Loading scripts/sphere_admin.scp
+21:57:Loading scripts/sphere_dialog.scp
+21:57:Loading scripts/items/sphere_item_resources.scp
+21:57:Loading scripts/items/sphere_minor_artifacts.scp
+21:57:Loading scripts/items/sphere_item_vegetation.scp
+21:57:Loading scripts/items/sphere_item_unsorted.scp
+21:57:Loading scripts/items/sphere_item_treasure_maps.scp
+21:57:Loading scripts/items/sphere_item_ship_parts.scp
+21:57:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+21:57:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+21:57:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+21:57:Loading scripts/items/sphere_item_provisions_weapons.scp
+21:57:Loading scripts/items/sphere_item_provisions_potions.scp
+21:57:Loading scripts/items/sphere_item_provisions_ore.scp
+21:57:Loading scripts/items/sphere_item_provisions_misc.scp
+21:57:Loading scripts/items/sphere_item_provisions_jewelry.scp
+21:57:Loading scripts/items/sphere_item_provisions_deeds.scp
+21:57:Loading scripts/items/sphere_item_provisions_deed.scp
+21:57:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+21:57:Loading scripts/items/sphere_item_provisions_clothing.scp
+21:57:Loading scripts/items/sphere_item_provisions_beers.scp
+21:57:Loading scripts/items/sphere_item_provisions_armor_se.scp
+21:57:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+21:57:Loading scripts/items/sphere_item_provisions_armor_color.scp
+21:57:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+21:57:Loading scripts/items/sphere_item_provisions_armor.scp
+21:57:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+21:57:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+21:57:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+21:57:Loading scripts/items/sphere_item_profession_cartographer.scp
+21:57:Loading scripts/items/sphere_item_profession_barber.scp
+21:57:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+21:57:Loading scripts/items/sphere_item_profession.scp
+21:57:Loading scripts/items/sphere_item_multis_stairs.scp
+21:57:Loading scripts/items/sphere_item_multis_houses_ships.scp
+21:57:Loading scripts/items/sphere_item_multis_foundations.scp
+21:57:Loading scripts/items/sphere_item_ml_misc.scp
+21:57:Loading scripts/items/sphere_item_ml_floor_wall.scp
+21:57:Loading scripts/items/sphere_item_ml.scp
+21:57:Loading scripts/items/sphere_item_misc_se.scp
+21:57:Loading scripts/items/sphere_item_misc.scp
+21:57:Loading scripts/items/sphere_item_magic_weapon.scp
+21:57:Loading scripts/items/sphere_item_magic_wands.scp
+21:57:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+21:57:Loading scripts/items/sphere_item_magic_leather.scp
+21:57:Loading scripts/items/sphere_item_magic_armor.scp
+21:57:Loading scripts/items/sphere_item_icons_new.scp
+21:57:Loading scripts/items/sphere_item_ground_tiles.scp
+21:57:Loading scripts/items/sphere_item_eight_age.scp
+21:57:Loading scripts/items/sphere_item_deco_signs.scp
+21:57:Loading scripts/items/sphere_item_deco_misc.scp
+21:57:Loading scripts/items/sphere_item_deco_mini_houses.scp
+21:57:Loading scripts/items/sphere_item_deco_lightsources.scp
+21:57:Loading scripts/items/sphere_item_deco_furniture.scp
+21:57:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+21:57:Loading scripts/items/sphere_item_deco_evilitem.scp
+21:57:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+21:57:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+21:57:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+21:57:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+21:57:Loading scripts/items/sphere_item_christimas.scp
+21:57:Loading scripts/items/sphere_item_char_icons.scp
+21:57:Loading scripts/items/sphere_item_building_walls_se.scp
+21:57:Loading scripts/items/sphere_item_building_walls.scp
+21:57:Loading scripts/items/sphere_item_building_stairs_ml.scp
+21:57:Loading scripts/items/sphere_item_building_stairs.scp
+21:57:Loading scripts/items/sphere_item_building_roofs_se.scp
+21:57:Loading scripts/items/sphere_item_building_roofs_ml.scp
+21:57:Loading scripts/items/sphere_item_building_roofs_aos.scp
+21:57:Loading scripts/items/sphere_item_building_roofs.scp
+21:57:Loading scripts/items/sphere_item_building_other.scp
+21:57:Loading scripts/items/sphere_item_building_floors_se.scp
+21:57:Loading scripts/items/sphere_item_building_floors.scp
+21:57:Loading scripts/items/sphere_item_building_fence.scp
+21:57:Loading scripts/items/sphere_item_building_doors.scp
+21:57:Loading scripts/items/sphere_item_boulders_rocks.scp
+21:57:Loading scripts/items/sphere_item_aos_se.scp
+21:57:Loading scripts/items/sphere_item_animations.scp
+21:57:Loading scripts/sphere_region.scp
+21:57:Loading scripts/maps/sphere_map0.scp
+21:57:Loading scripts/maps/sphere_map1.scp
+21:57:Loading scripts/maps/sphere_map_points0.scp
+21:57:Loading scripts/maps/sphere_map_points1.scp
+21:57:Loading scripts/sphere_menu.scp
+21:57:Loading scripts/sphere_name.scp
+21:57:Loading scripts/sphere_skillmenu.scp
+21:57:Loading scripts/sphere_spawns.scp
+21:57:Loading scripts/sphere_speech.scp
+21:57:Loading scripts/sphere_skills.scp
+21:57:Loading scripts/sphere_spells.scp
+21:57:Loading scripts/sphere_newb.scp
+21:57:Loading scripts/sphere_template.scp
+21:57:Loading scripts/sphere_template_loot.scp
+21:57:Loading scripts/sphere_template_vend.scp
+21:57:Loading scripts/sphere_triggers.scp
+21:57:Loading scripts/sphere_serv_triggers.scp
+21:57:Loading scripts/speech/townyew.scp
+21:57:Loading scripts/speech/townwind.scp
+21:57:Loading scripts/speech/townvesper.scp
+21:57:Loading scripts/speech/towntrinsic.scp
+21:57:Loading scripts/speech/townskarabrae.scp
+21:57:Loading scripts/speech/townserphold.scp
+21:57:Loading scripts/speech/townnujelm.scp
+21:57:Loading scripts/speech/townmoonglow.scp
+21:57:Loading scripts/speech/townminoc.scp
+21:57:Loading scripts/speech/townmagincia.scp
+21:57:Loading scripts/speech/townjhelom.scp
+21:57:Loading scripts/speech/towncove.scp
+21:57:Loading scripts/speech/townbucsden.scp
+21:57:Loading scripts/speech/townbritain.scp
+21:57:Loading scripts/speech/spherespee.scp
+21:57:Loading scripts/speech/speakshopkeep.scp
+21:57:Loading scripts/speech/speakrehello.scp
+21:57:Loading scripts/speech/speakorc.scp
+21:57:Loading scripts/speech/speakneeds.scp
+21:57:Loading scripts/speech/speakmaster.scp
+21:57:Loading scripts/speech/speakhuman.scp
+21:57:Loading scripts/speech/speakhorse.scp
+21:57:Loading scripts/speech/jobweaver.scp
+21:57:Loading scripts/speech/jobweaponstrainer.scp
+21:57:Loading scripts/speech/jobweaponsmith.scp
+21:57:Loading scripts/speech/jobwaiter.scp
+21:57:Loading scripts/speech/jobvet.scp
+21:57:Loading scripts/speech/jobveggie.scp
+21:57:Loading scripts/speech/jobtinker.scp
+21:57:Loading scripts/speech/jobthief.scp
+21:57:Loading scripts/speech/jobtavernkeeper.scp
+21:57:Loading scripts/speech/jobtanner.scp
+21:57:Loading scripts/speech/jobshipwright.scp
+21:57:Loading scripts/speech/jobshepherd.scp
+21:57:Loading scripts/speech/jobservant.scp
+21:57:Loading scripts/speech/jobsculptor.scp
+21:57:Loading scripts/speech/jobscribe.scp
+21:57:Loading scripts/speech/jobscholar.scp
+21:57:Loading scripts/speech/jobsailor.scp
+21:57:Loading scripts/speech/jobrunner.scp
+21:57:Loading scripts/speech/jobrealtor.scp
+21:57:Loading scripts/speech/jobranger.scp
+21:57:Loading scripts/speech/jobrancher.scp
+21:57:Loading scripts/speech/jobprovisioner.scp
+21:57:Loading scripts/speech/jobprisoner.scp
+21:57:Loading scripts/speech/jobpriest.scp
+21:57:Loading scripts/speech/jobpirate.scp
+21:57:Loading scripts/speech/jobparliament.scp
+21:57:Loading scripts/speech/jobpaladin.scp
+21:57:Loading scripts/speech/joboverseer.scp
+21:57:Loading scripts/speech/jobnoble.scp
+21:57:Loading scripts/speech/jobmonk.scp
+21:57:Loading scripts/speech/jobminter.scp
+21:57:Loading scripts/speech/jobminer.scp
+21:57:Loading scripts/speech/jobmiller.scp
+21:57:Loading scripts/speech/jobmayor.scp
+21:57:Loading scripts/speech/jobmapmaker.scp
+21:57:Loading scripts/speech/jobMageShop.scp
+21:57:Loading scripts/speech/jobMageEvil.scp
+21:57:Loading scripts/speech/jobMage.scp
+21:57:Loading scripts/speech/joblaborer.scp
+21:57:Loading scripts/speech/jobjudge.scp
+21:57:Loading scripts/speech/jobjeweller.scp
+21:57:Loading scripts/speech/jobjailor.scp
+21:57:Loading scripts/speech/jobinnkeeper.scp
+21:57:Loading scripts/speech/jobherbalist.scp
+21:57:Loading scripts/speech/jobhealwand.scp
+21:57:Loading scripts/speech/jobhealer.scp
+21:57:Loading scripts/speech/jobGuard.scp
+21:57:Loading scripts/speech/jobglassblower.scp
+21:57:Loading scripts/speech/jobgambler.scp
+21:57:Loading scripts/speech/jobfurtrader.scp
+21:57:Loading scripts/speech/jobfarmer.scp
+21:57:Loading scripts/speech/jobcobbler.scp
+21:57:Loading scripts/speech/jobcashual.scp
+21:57:Loading scripts/speech/jobcarpenter.scp
+21:57:Loading scripts/speech/jobbutcher.scp
+21:57:Loading scripts/speech/jobBrigand.scp
+21:57:Loading scripts/speech/jobbowyer.scp
+21:57:Loading scripts/speech/jobblacksmith.scp
+21:57:Loading scripts/speech/jobbeggar.scp
+21:57:Loading scripts/speech/jobbeekeeper.scp
+21:57:Loading scripts/speech/jobbard.scp
+21:57:Loading scripts/speech/jobbanker.scp
+21:57:Loading scripts/speech/jobbaker.scp
+21:57:Loading scripts/speech/jobartist.scp
+21:57:Loading scripts/speech/jobarmourer.scp
+21:57:Loading scripts/speech/jobarchitect.scp
+21:57:Loading scripts/speech/jobanimal.scp
+21:57:Loading scripts/speech/jobalchemist.scp
+21:57:Loading scripts/speech/jobactor.scp
+21:57:Loading scripts/sphere_msgs.scp
+21:57:Loading scripts/stones/sphere_genericstone_types.scp
+21:57:Loading scripts/stones/sphere_genericstone_items.scp
+21:57:Loading scripts/stones/sphere_genericstone_functions.scp
+21:57:Loading scripts/stones/sphere_genericstone_config.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_types.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_speech.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_items.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_functions.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_events.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+21:57:Loading scripts/stones/guilds/sphere_guild_config.scp
+21:57:Loading scripts/stones/towns/sphere_town_types.scp
+21:57:Loading scripts/stones/towns/sphere_town_speech.scp
+21:57:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+21:57:Loading scripts/stones/towns/sphere_town_items.scp
+21:57:Loading scripts/stones/towns/sphere_town_functions_player.scp
+21:57:Loading scripts/stones/towns/sphere_town_functions.scp
+21:57:Loading scripts/stones/towns/sphere_town_events.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+21:57:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+21:57:Loading scripts/stones/towns/sphere_town_config.scp
+21:57:Loading scripts/war script/sistema_runebook.scp
+21:57:Loading scripts/war script/sistema_de_news.scp
+21:57:Loading scripts/war script/sistema_bandagem.scp
+21:57:Loading scripts/war script/sistema_arena_x1.scp
+21:57:Loading scripts/war script/roupas.scp
+21:57:Loading scripts/war script/plates.scp
+21:57:Loading scripts/war script/pisos e gates.scp
+21:57:Loading scripts/war script/pedra_votacao.scp
+21:57:Loading scripts/war script/pedras.scp
+21:57:Loading scripts/war script/Jail Staff.scp
+21:57:Loading scripts/war script/itens_uteis.scp
+21:57:Loading scripts/war script/itens_pvp.scp
+21:57:Loading scripts/war script/events.scp
+21:57:Loading scripts/war script/comandos.scp
+21:57:Loading scripts/war script/arena_warrior.scp
+21:57:Loading scripts/war script/areas.scp
+21:57:Loading scripts/war script/accountinfo.scp
+21:57:Loaded 54 client encryption keys.
+21:57:Server started on 'Rodrigo-PC' port 2593.
+21:57:Monitoring IP '5.208.195.198'.
+21:57:Monitoring IP '10.0.0.4'.
+21:57:(sphereaccu.scp,6)MD5: Converted password for 'digolol'.
+21:57:Loading save/spheredata...
+21:57:WARNING:'save/spherestatics.scp' not found...
+21:57:WARNING:Can't Load save/spherestatics
+21:57:Loading save/spheremultis...
+21:57:Loading save/sphereworld...
+21:57:Loading save/spherechars...
+21:57:GC: 2820 Objects accounted for
+21:57:Auto-complete dictionary loaded (contains 142 words).
+21:57:Option flags: CommandSysmessages + NoHouseMuteSpeech
+21:57:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+21:57:Startup complete. items=2806, chars=14
+21:57:Press '?' for console commands
+21:59:FATAL:Server terminated by error 5!

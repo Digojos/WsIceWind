@@ -1,0 +1,562 @@
+[ITEMDEF i_spellbook_full]
+id=i_spellbook 
+TYPE=T_SPELLBOOK
+WEIGHT=1
+
+ON=@Create
+ATTR=00004
+More1 0ffffffff
+More2 0ffffffff
+
+//greater heal
+[ITEMDEF i_pot_heal]
+DEFNAME=i_pot_heal
+ID=i_bottle_empty
+NAME=Total Heal
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=00FF
+
+ON=@DCLICK
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @00FF Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.f_life
+SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+[function f_life]
+MESSAGE @00FF Total Heal!
+if (<hits> <= <str>-80)
+hits=<hits>+80
+return 1
+endif
+hits=<str>
+
+
+//Total Mana Refresh
+[ITEMDEF i_pot_mana]
+DEFNAME=i_pot_mana
+ID=i_bottle_empty
+NAME=Total Mana Refresh
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=0480
+
+ON=@DCLICK
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @076c Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.f_mana
+SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+[function f_mana]
+MESSAGE @076c Total Mana Refresh!
+if (<mana> <= <mana>-80)
+mana=<mana>+80
+return 1
+endif
+mana=<int>
+
+
+
+/////Invis Pot
+[ITEMDEF i_pot_invis]
+DEFNAME=i_pot_invis
+ID=i_bottle_empty
+NAME=Invisibility
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=038A
+MORE1=s_invisibility
+MORE2=100.0
+
+ON=@DCLICK
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @038A Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.MESSAGE @038A Invisibility!
+//SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+
+
+[function f_invis]
+src.FLAGS=<src.flags>&~statf_hidden
+serv.update
+src.MESSAGE @038A Invisibility!
+
+[ITEMDEF i_potionapok_Invisibility]
+ID=i_bottle_empty
+NAME=Invisibility
+TYPE=T_POTION
+TDATA1=i_bottle_empty
+RESOURCES=i_reag_worm_heart 4, i_bottle_EMPTY
+SKILLMAKE=ALCHEMY 65.1
+
+ON=@Create
+MORE1=s_invisibility
+MORE2=100.0
+COLOR=079e
+
+
+/////Cure Pot
+[ITEMDEF i_pot_cure]
+DEFNAME=i_pot_cure
+ID=i_bottle_empty
+NAME=Cure
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=01E0
+MORE1=s_archcure
+MORE2=101.0
+
+ON=@DCLICK
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @01E0 Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+If (<findid(i_to_poison).uid>)
+findid(i_to_poison).remove
+dialogclose ppp
+src.MESSAGE @01E0 Cure!
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 0
+endif
+//SRC.SOUND=87
+src.MESSAGE @01E0 Cure!
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+
+
+[function f_cure]
+src.MESSAGE @01E0 Cure!
+if (<src.flags> & statf_poisoned)
+src.FLAGS =<src.flags>-statf_poisoned
+src.update
+return 1
+endif
+
+
+/////Explosion Pot
+[ITEMDEF i_pot_exx]
+DEFNAME=i_pot_exx
+ID=i_bottle_empty
+NAME=Lesser Explosion
+TYPE=T_POTION
+WEIGHT=10
+
+ON=@Create
+color=0015
+MORE1=s_explosion
+MORE2={ 30.0 80.0 }
+
+/////Refresh Pot
+[ITEMDEF i_pot_refresh]
+DEFNAME=i_pot_refresh
+ID=i_bottle_empty
+NAME=Total Refresh
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=0021
+
+ON=@DCLICK
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @0021 Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.f_refresh
+SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+[function f_refresh]
+stam=<dex>
+MESSAGE @0021 Total Refresh!
+update
+return 1
+
+[ITEMDEF i_p_Shrink]
+ID=i_bottle_empty
+NAME=Shrink
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+MORE1=s_shrink
+MORE2=100.0
+COLOR=07FD
+
+ON=@DCLICK
+SRC.SYSMESSAGE Escolha o animal a ser shrink:
+TARGET
+RETURN 1
+
+ON=@TARGON_ITEM
+SRC.SYSMESSAGE Voce nao pode shrinkar esse item.
+RETURN 1
+
+ON=@TARGON_CHAR
+IF ((<SRC.TARG.BODY>==c_man) || (<SRC.TARG.BODY>==c_woman) || (<SRC.TARG.FLAGS>&statf_conjured)) 
+SRC.SYSMESSAGE Voce so pode shrinkar animais.
+RETURN 1
+ELSEIF <SRC.TARG.ISMYPET>
+SRC.NEWITEM=<SRC.TARG.ICON>
+SRC.ACT.NAME=<SRC.TARG.NAME>
+SRC.ACT.COLOR=<SRC.TARG.COLOR>
+SRC.ACT.MORE1=<SRC.TARG.ID>
+SRC.ACT.MORE2=<SRC.TARG.SERIAL>
+SRC.ACT.LINK=
+SRC.ACT.ATTR=020
+SRC.ACT.BOUNCE
+SRC.TARG.REMOVE
+CONSUME 1 i_p_Shrink
+RETURN 1
+ENDIF
+
+
+[ITEMDEF tempo_pot]
+NAME=Delay da potion
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=@Create
+ATTR=attr_decay
+
+ON=@Timer
+remove
+return 1
+
+[ITEMDEF i_fs_scroll]
+DEFNAME=i_fs_scroll
+id=i_scroll_flamestrike
+RESOURCES=i_scroll_blank, i_reag_spider_silk, i_reag_sulfur_ash
+SKILLMAKE=INSCRIPTION 70.0, MAGERY 60.0
+TYPE=T_SCROLL
+WEIGHT=0
+//CIRCLE=7
+
+ON=@Create
+ATTR=ATTR_MAGIC
+MOREX=s_flamestrike
+MOREY={70 90}
+
+
+/////////////////
+//////////
+/////////Sistema de Armas
+/////////////////////
+
+[ITEMDEF i_ka_vanq]
+DEFNAME=i_ka_vanq
+ID=i_katana
+NAME=Katana of Vanquishing
+RESOURCES=i_katana,5 i_enchant_weapon
+TWOHANDS=NO
+SPEED=46
+DAM=11,27
+
+ON=@Create
+MOREY=100.0
+ATTR=04
+HITPOINTS={31 90}
+
+ON=@EQUIP
+IF (0<tag.pos>==1)
+src.tag.ap=1
+endif
+
+ON=@UNEQUIP
+src.tag.ap=0
+
+[ITEMDEF i_k_vanq]
+DEFNAME=i_k_vanq
+ID=i_kryss
+NAME=Kryss of Vanquishing
+RESOURCES=i_kryss,5 i_enchant_weapon
+TYPE=T_WEAPON_FENCE
+SPEED=53
+DAM=10,27
+SKILL=FENCING
+
+ON=@Create
+MOREY=100.0
+ATTR=04
+HITPOINTS={31 90}
+
+ON=@EQUIP
+IF (0<tag.pos>==1)
+src.tag.ap=1
+endif
+
+ON=@UNEQUIP
+src.tag.ap=0
+
+
+[ITEMDEF i_ss_vanq]
+DEFNAME=i_ss_vanq
+ID=i_spear_short
+NAME=Short Spear of Vanquishing
+TWOHANDS=YES
+SPEED=55
+DAM=10,39
+
+ON=@Create
+MOREY=100.0
+ATTR=04
+HITPOINTS={31 90}
+
+
+ON=@EQUIP
+IF (0<tag.pos>==1)
+say ae
+endif
+
+ON=@UNEQUIP
+src.tag.ap=0
+
+[ITEMDEF i_bow_ws] 
+ID=i_bow
+TYPE=T_weapon_bow 
+NAME=Bow of Vanq
+DAM=0
+WEIGHT=28 
+REQSTR=30 
+TWOHANDS=Y 
+SPEED=35 
+RESOURCES=9 i_ingot_iron
+SKILLMAKE=BOWCRAFT 17.80 
+SKILL=ARCHERY 
+FLIP=1 
+TDATA3=i_arrow 
+ 
+ON=@CREATE 
+ATTR=04
+HITPOINTS={31 80} 
+
+On=@damage
+If (<src.hits> <= 30)
+src.hits=0
+return 1
+else
+src.hits=<src.hits>-30
+src.action=-1
+src.sound 340
+src.anim 20
+return 1
+endif
+
+
+////////////////Sistema Poisoning/////////
+
+[ITEMDEF i_d_poison]
+DEFNAME=i_d_poison
+ID=i_bottle_empty
+NAME=Deadly Poison
+TYPE=T_POTION
+WEIGHT=0
+
+ON=@Create
+color=044
+
+ON=@DCLICK
+TARGET Selecione a arma a ser envenenada:
+RETURN 1
+
+ON=@TARGON_ITEM
+IF ! (<SRC.TARG.CONT>==<SRC.FINDLAYER(21).UID>)
+SRC.SYSMESSAGE <SRC.TARG.NAME> tem que estar na bag.
+RETURN 1
+ENDIF
+
+If (<src.targ.baseid>==i_k_vanq) | (<src.targ.baseid>==i_ss_vanq) | (<src.targ.baseid>==i_ka_vanq)
+src.targ.tag.pos=1
+SRC.SYSMESSAGE Veneno Aplicado com sucesso.
+SRC.consume 1 i_d_poison
+src.sound 32
+return 1
+else
+SRC.SYSMESSAGE <SRC.TARG.NAME> nao pode ser evenenado.
+RETURN 1
+endif
+
+ON=@TARGON_CHAR
+RETURN 1
+
+ON=@TARGON_GROUND
+RETURN 1
+
+[Dialog ppp]
+500,20
+PAGE 0
+NOCLOSE
+resizepic 0 5 3600 100 40
+text 10 15 162 0
+
+[Dialog ppp text]
+Envenenado!
+
+[FUNCTION pega_poison]
+if (<FINDID(i_to_poison).uid>)
+return 1
+endif
+SOUND snd_SPELL_POISON
+say @026 <name> foi envenenado.
+funfa_poison1
+damage 6
+dialog ppp
+update
+serv.NEWITEM i_to_poison
+NEW.link=<uid>
+NEW.equip
+NEW.timer=40
+
+[FUNCTION funfa_poison1]
+serv.NEWITEM i_dmg_poison
+NEW.LINK=<uid>
+NEW.equip
+NEW.timer=5
+
+
+[FUNCTION funfa_poison]
+if (<FINDID(i_to_poison).uid>)
+If (<findid(i_dmg_poison).uid>)
+serv.NEWITEM i_dmg_poison2
+NEW.equip
+NEW.cont=<uid>
+NEW.timer=5
+return 1
+else
+serv.NEWITEM i_dmg_poison
+NEW.equip
+NEW.cont=<uid>
+NEW.timer=5
+return 1
+endif
+endif
+
+[ITEMDEF i_to_poison]
+NAME=Tempo Poison
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=@CREATE
+ATTR=attr_decay
+
+ON=@TIMER
+link.dialogclose ppp
+remove
+return 1
+
+[ITEMDEF i_dmg_poison]
+NAME=Dmg Poison
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=@CREATE
+ATTR=attr_decay
+
+ON=@TIMER
+If (<cont.hits>==0)
+cont.FINDID(i_to_poison).remove
+link.dialogclose ppp
+remove
+return 1
+endif
+
+If (<cont.findid(i_to_poison).uid>)
+if (<cont.hits> <= 6)
+cont.hits =0
+return 1
+endif
+cont.hits=<cont.hits>-6
+cont.action=-1
+cont.sound 340
+cont.anim 20
+cont.say @026 <cont.name> esta muito envenenado.
+cont.funfa_poison
+remove
+return 1
+endif
+
+remove
+return 1
+
+[ITEMDEF i_dmg_poison2]
+NAME=Dmg Poison2
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=@CREATE
+ATTR=attr_decay
+
+ON=@TIMER
+If (<cont.hits>==0)
+cont.FINDID(i_to_poison).remove
+link.dialogclose ppp
+remove
+return 1
+endif
+
+
+If (<cont.findid(i_to_poison).uid>)
+if (<cont.hits> <= 6)
+cont.hits =0
+return 1
+endif
+cont.hits=<cont.hits>-6
+cont.action=-1
+cont.anim 20
+cont.sound 340
+cont.say @026 <cont.name> esta muito envenenado.
+cont.funfa_poison
+remove
+return 1
+endif
+
+remove
+return 1
+
+[EOF]

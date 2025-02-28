@@ -1,0 +1,153 @@
+[EVENTS e_ganha_status]
+
+ON=@kill
+kills=<kills>+1
+fame=<fame>+50
+sysmessage @07bd Voce matou <act.name>
+
+ON=@DEATH
+dialogclose ppp
+If (<fame> <=50)
+sysmessage @07bd <act.name> te matou.
+return 0
+endif
+fame=<fame>-50
+sysmessage @07bd <act.name> te matou.
+
+
+
+[EVENTS e_logoutserver]
+
+ON=@LOGOUT
+
+IF (<tag0.evento>==1)
+return 0
+endif
+
+IF (<isgm>)
+return 0
+endif
+
+IF (<region.flags>&region_flag_safe)
+invis
+Serv.NEWITEM i_logout_item
+new.CONT=<SRC.UID>
+new.EQUIP
+GO 5470,1118
+endif
+
+ON=@login
+IF (<isgm>)
+return 0
+endif
+if (<restest i_logout_item> ) 
+consume i_logout_item 
+invis 0
+resend 
+endif
+
+[ITEMDEF i_logout_item] 
+name=Sistema de Logout
+id=i_memory 
+type=t_eq_script 
+
+on=@equip 
+attr=attr_decay|attr_invis|attr_newbie 
+
+
+[FUNCTION checkon]
+IF (<SERV.CLIENTS> > <var.recorde>)
+SERV.B @07a1 Novo record de players : <SERV.CLIENTS>
+var.recorde=<SERV.CLIENTS>
+ENDIF
+
+[EVENTS e_kills_mostra]
+
+ON=@CLICK
+IF (<tag0.evento>==1)
+return 0
+endif
+
+IF (<isgm>)
+message @01,1 [STAFF]
+message @07aa,4 <name>
+return 1
+endif
+
+IF (<isplayer>)
+message @07a1 K: <kills> D: <deaths>
+endif
+
+[EVENTS e_passa_cima_animal]
+
+ON=@PersonalSpace
+IF (<src.stam> < <src.dex>)
+return 1
+endif
+IF (<src.stam> >= <src.dex>)
+return 0
+endif
+
+ON=@Hit
+IF (<SRC.REGION.FLAGS>&02000) || (<REGION.FLAGS>&02000)
+ACTION=-1
+SRC.ACTION=-1
+SRC.SKILL fail
+RETURN 1
+ENDIF
+
+IF (<src.isgm>)
+ACTION=-1
+SRC.ACTION=-1
+SRC.SKILL fail
+RETURN 1
+ENDIF
+
+IF (<src.isplayer>)
+ACTION=-1
+SRC.ACTION=-1
+SRC.SKILL fail
+RETURN 1
+ENDIF
+
+IF (<src.flags>&01)
+ACTION=-1
+SRC.ACTION=-1
+SRC.SKILL fail
+RETURN 1
+ENDIF
+
+IF (<src.flags>&000040000)
+ACTION=-1
+SRC.ACTION=-1
+SRC.SKILL fail
+RETURN 1
+ENDIF
+
+
+
+[EVENTS e_anti_bugs]
+
+ON=@ITEMTARGON_ITEM
+IF (<targ.BASEID>=i_pot_exx)
+return 1
+endif
+
+ON=@ITEMDCLICK
+IF (<act.BASEID>==i_pot_exx)
+IF (<SRC.REGION.FLAGS>&02000) || (<REGION.FLAGS>&02000)
+src.sysmessage Proibido usar este item aqui.
+return 1
+endif
+endif
+
+ON=@SPELLCAST
+IF (<SRC.REGION.FLAGS>&02000) || (<REGION.FLAGS>&02000)
+IF (<argn>==24)
+src.sysmessage Proibido usar essa magia nessa area.
+action=-1
+return 1
+endif
+endif
+
+[EOF]

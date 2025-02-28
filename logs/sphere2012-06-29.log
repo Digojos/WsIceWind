@@ -1,0 +1,1109 @@
+
+00:32:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+00:32:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+00:32:Expansion maps supported: T2A, LBR, AOS, SE
+00:32:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+00:32:Indexing 259 scripts...
+00:32:Loading scripts/sphere_defs.scp
+00:32:Loading scripts/sphere_types.scp
+00:32:Loading scripts/sphere_book.scp
+00:32:Loading scripts/sphere_backward_compatibility.scp
+00:32:Loading scripts/sphere_events_human.scp
+00:32:Loading scripts/sphere_events_npcs.scp
+00:32:Loading scripts/npcs/spherechar_se.scp
+00:32:Loading scripts/npcs/spherechar_new_mounts.scp
+00:32:Loading scripts/npcs/spherechar_mondains_legacy.scp
+00:32:Loading scripts/npcs/spherechar_misc.scp
+00:32:Loading scripts/npcs/spherechar_lbr.scp
+00:32:Loading scripts/npcs/spherechar_human.scp
+00:32:Loading scripts/npcs/spherechar_evil.scp
+00:32:Loading scripts/npcs/spherechar_aos.scp
+00:32:Loading scripts/npcs/spherechar_anim.scp
+00:32:Loading scripts/npcs/spherechar.scp
+00:32:Loading scripts/sphere_admin.scp
+00:32:Loading scripts/sphere_dialog.scp
+00:32:Loading scripts/items/sphere_item_resources.scp
+00:32:Loading scripts/items/sphere_minor_artifacts.scp
+00:32:Loading scripts/items/sphere_item_vegetation.scp
+00:32:Loading scripts/items/sphere_item_unsorted.scp
+00:32:Loading scripts/items/sphere_item_treasure_maps.scp
+00:32:Loading scripts/items/sphere_item_ship_parts.scp
+00:32:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+00:32:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+00:32:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+00:32:Loading scripts/items/sphere_item_provisions_weapons.scp
+00:32:Loading scripts/items/sphere_item_provisions_potions.scp
+00:32:Loading scripts/items/sphere_item_provisions_ore.scp
+00:32:Loading scripts/items/sphere_item_provisions_misc.scp
+00:32:Loading scripts/items/sphere_item_provisions_jewelry.scp
+00:32:Loading scripts/items/sphere_item_provisions_deeds.scp
+00:32:Loading scripts/items/sphere_item_provisions_deed.scp
+00:32:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+00:32:Loading scripts/items/sphere_item_provisions_clothing.scp
+00:32:Loading scripts/items/sphere_item_provisions_beers.scp
+00:32:Loading scripts/items/sphere_item_provisions_armor_se.scp
+00:32:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+00:32:Loading scripts/items/sphere_item_provisions_armor_color.scp
+00:32:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+00:32:Loading scripts/items/sphere_item_provisions_armor.scp
+00:32:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+00:32:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+00:32:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+00:32:Loading scripts/items/sphere_item_profession_cartographer.scp
+00:32:Loading scripts/items/sphere_item_profession_barber.scp
+00:32:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+00:32:Loading scripts/items/sphere_item_profession.scp
+00:32:Loading scripts/items/sphere_item_multis_stairs.scp
+00:32:Loading scripts/items/sphere_item_multis_houses_ships.scp
+00:32:Loading scripts/items/sphere_item_multis_foundations.scp
+00:32:Loading scripts/items/sphere_item_ml_misc.scp
+00:32:Loading scripts/items/sphere_item_ml_floor_wall.scp
+00:32:Loading scripts/items/sphere_item_ml.scp
+00:32:Loading scripts/items/sphere_item_misc_se.scp
+00:32:Loading scripts/items/sphere_item_misc.scp
+00:32:Loading scripts/items/sphere_item_magic_weapon.scp
+00:32:Loading scripts/items/sphere_item_magic_wands.scp
+00:32:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+00:32:Loading scripts/items/sphere_item_magic_leather.scp
+00:32:Loading scripts/items/sphere_item_magic_armor.scp
+00:32:Loading scripts/items/sphere_item_icons_new.scp
+00:32:Loading scripts/items/sphere_item_ground_tiles.scp
+00:32:Loading scripts/items/sphere_item_eight_age.scp
+00:32:Loading scripts/items/sphere_item_deco_signs.scp
+00:32:Loading scripts/items/sphere_item_deco_misc.scp
+00:32:Loading scripts/items/sphere_item_deco_mini_houses.scp
+00:32:Loading scripts/items/sphere_item_deco_lightsources.scp
+00:32:Loading scripts/items/sphere_item_deco_furniture.scp
+00:32:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+00:32:Loading scripts/items/sphere_item_deco_evilitem.scp
+00:32:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+00:32:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+00:32:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+00:32:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+00:32:Loading scripts/items/sphere_item_christimas.scp
+00:32:Loading scripts/items/sphere_item_char_icons.scp
+00:32:Loading scripts/items/sphere_item_building_walls_se.scp
+00:32:Loading scripts/items/sphere_item_building_walls.scp
+00:32:Loading scripts/items/sphere_item_building_stairs_ml.scp
+00:32:Loading scripts/items/sphere_item_building_stairs.scp
+00:32:Loading scripts/items/sphere_item_building_roofs_se.scp
+00:32:Loading scripts/items/sphere_item_building_roofs_ml.scp
+00:32:Loading scripts/items/sphere_item_building_roofs_aos.scp
+00:32:Loading scripts/items/sphere_item_building_roofs.scp
+00:32:Loading scripts/items/sphere_item_building_other.scp
+00:32:Loading scripts/items/sphere_item_building_floors_se.scp
+00:32:Loading scripts/items/sphere_item_building_floors.scp
+00:32:Loading scripts/items/sphere_item_building_fence.scp
+00:32:Loading scripts/items/sphere_item_building_doors.scp
+00:32:Loading scripts/items/sphere_item_boulders_rocks.scp
+00:32:Loading scripts/items/sphere_item_aos_se.scp
+00:32:Loading scripts/items/sphere_item_animations.scp
+00:32:Loading scripts/sphere_region.scp
+00:32:Loading scripts/maps/sphere_map0.scp
+00:32:Loading scripts/maps/sphere_map1.scp
+00:32:Loading scripts/maps/sphere_map_points0.scp
+00:32:Loading scripts/maps/sphere_map_points1.scp
+00:32:Loading scripts/sphere_menu.scp
+00:32:Loading scripts/sphere_name.scp
+00:32:Loading scripts/sphere_skillmenu.scp
+00:32:Loading scripts/sphere_spawns.scp
+00:32:Loading scripts/sphere_speech.scp
+00:32:Loading scripts/sphere_skills.scp
+00:32:Loading scripts/sphere_spells.scp
+00:32:Loading scripts/sphere_newb.scp
+00:32:Loading scripts/sphere_template.scp
+00:32:Loading scripts/sphere_template_loot.scp
+00:32:Loading scripts/sphere_template_vend.scp
+00:32:Loading scripts/sphere_triggers.scp
+00:32:Loading scripts/sphere_serv_triggers.scp
+00:32:Loading scripts/speech/townyew.scp
+00:32:Loading scripts/speech/townwind.scp
+00:32:Loading scripts/speech/townvesper.scp
+00:32:Loading scripts/speech/towntrinsic.scp
+00:32:Loading scripts/speech/townskarabrae.scp
+00:32:Loading scripts/speech/townserphold.scp
+00:32:Loading scripts/speech/townnujelm.scp
+00:32:Loading scripts/speech/townmoonglow.scp
+00:32:Loading scripts/speech/townminoc.scp
+00:32:Loading scripts/speech/townmagincia.scp
+00:32:Loading scripts/speech/townjhelom.scp
+00:32:Loading scripts/speech/towncove.scp
+00:32:Loading scripts/speech/townbucsden.scp
+00:32:Loading scripts/speech/townbritain.scp
+00:32:Loading scripts/speech/spherespee.scp
+00:32:Loading scripts/speech/speakshopkeep.scp
+00:32:Loading scripts/speech/speakrehello.scp
+00:32:Loading scripts/speech/speakorc.scp
+00:32:Loading scripts/speech/speakneeds.scp
+00:32:Loading scripts/speech/speakmaster.scp
+00:32:Loading scripts/speech/speakhuman.scp
+00:32:Loading scripts/speech/speakhorse.scp
+00:32:Loading scripts/speech/jobweaver.scp
+00:32:Loading scripts/speech/jobweaponstrainer.scp
+00:32:Loading scripts/speech/jobweaponsmith.scp
+00:32:Loading scripts/speech/jobwaiter.scp
+00:32:Loading scripts/speech/jobvet.scp
+00:32:Loading scripts/speech/jobveggie.scp
+00:32:Loading scripts/speech/jobtinker.scp
+00:32:Loading scripts/speech/jobthief.scp
+00:32:Loading scripts/speech/jobtavernkeeper.scp
+00:32:Loading scripts/speech/jobtanner.scp
+00:32:Loading scripts/speech/jobshipwright.scp
+00:32:Loading scripts/speech/jobshepherd.scp
+00:32:Loading scripts/speech/jobservant.scp
+00:32:Loading scripts/speech/jobsculptor.scp
+00:32:Loading scripts/speech/jobscribe.scp
+00:32:Loading scripts/speech/jobscholar.scp
+00:32:Loading scripts/speech/jobsailor.scp
+00:32:Loading scripts/speech/jobrunner.scp
+00:32:Loading scripts/speech/jobrealtor.scp
+00:32:Loading scripts/speech/jobranger.scp
+00:32:Loading scripts/speech/jobrancher.scp
+00:32:Loading scripts/speech/jobprovisioner.scp
+00:32:Loading scripts/speech/jobprisoner.scp
+00:32:Loading scripts/speech/jobpriest.scp
+00:32:Loading scripts/speech/jobpirate.scp
+00:32:Loading scripts/speech/jobparliament.scp
+00:32:Loading scripts/speech/jobpaladin.scp
+00:32:Loading scripts/speech/joboverseer.scp
+00:32:Loading scripts/speech/jobnoble.scp
+00:32:Loading scripts/speech/jobmonk.scp
+00:32:Loading scripts/speech/jobminter.scp
+00:32:Loading scripts/speech/jobminer.scp
+00:32:Loading scripts/speech/jobmiller.scp
+00:32:Loading scripts/speech/jobmayor.scp
+00:32:Loading scripts/speech/jobmapmaker.scp
+00:32:Loading scripts/speech/jobMageShop.scp
+00:32:Loading scripts/speech/jobMageEvil.scp
+00:32:Loading scripts/speech/jobMage.scp
+00:32:Loading scripts/speech/joblaborer.scp
+00:32:Loading scripts/speech/jobjudge.scp
+00:32:Loading scripts/speech/jobjeweller.scp
+00:32:Loading scripts/speech/jobjailor.scp
+00:32:Loading scripts/speech/jobinnkeeper.scp
+00:32:Loading scripts/speech/jobherbalist.scp
+00:32:Loading scripts/speech/jobhealwand.scp
+00:32:Loading scripts/speech/jobhealer.scp
+00:32:Loading scripts/speech/jobGuard.scp
+00:32:Loading scripts/speech/jobglassblower.scp
+00:32:Loading scripts/speech/jobgambler.scp
+00:32:Loading scripts/speech/jobfurtrader.scp
+00:32:Loading scripts/speech/jobfarmer.scp
+00:32:Loading scripts/speech/jobcobbler.scp
+00:32:Loading scripts/speech/jobcashual.scp
+00:32:Loading scripts/speech/jobcarpenter.scp
+00:32:Loading scripts/speech/jobbutcher.scp
+00:32:Loading scripts/speech/jobBrigand.scp
+00:32:Loading scripts/speech/jobbowyer.scp
+00:32:Loading scripts/speech/jobblacksmith.scp
+00:32:Loading scripts/speech/jobbeggar.scp
+00:32:Loading scripts/speech/jobbeekeeper.scp
+00:32:Loading scripts/speech/jobbard.scp
+00:32:Loading scripts/speech/jobbanker.scp
+00:32:Loading scripts/speech/jobbaker.scp
+00:32:Loading scripts/speech/jobartist.scp
+00:32:Loading scripts/speech/jobarmourer.scp
+00:32:Loading scripts/speech/jobarchitect.scp
+00:32:Loading scripts/speech/jobanimal.scp
+00:32:Loading scripts/speech/jobalchemist.scp
+00:32:Loading scripts/speech/jobactor.scp
+00:32:Loading scripts/sphere_msgs.scp
+00:32:Loading scripts/stones/sphere_genericstone_types.scp
+00:32:Loading scripts/stones/sphere_genericstone_items.scp
+00:32:Loading scripts/stones/sphere_genericstone_functions.scp
+00:32:Loading scripts/stones/sphere_genericstone_config.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_types.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_speech.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_items.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_functions.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_events.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+00:32:Loading scripts/stones/guilds/sphere_guild_config.scp
+00:32:Loading scripts/stones/towns/sphere_town_types.scp
+00:32:Loading scripts/stones/towns/sphere_town_speech.scp
+00:32:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+00:32:Loading scripts/stones/towns/sphere_town_items.scp
+00:32:Loading scripts/stones/towns/sphere_town_functions_player.scp
+00:32:Loading scripts/stones/towns/sphere_town_functions.scp
+00:32:Loading scripts/stones/towns/sphere_town_events.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+00:32:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+00:32:Loading scripts/stones/towns/sphere_town_config.scp
+00:32:Loading scripts/war script/sistema_runebook.scp
+00:32:Loading scripts/war script/sistema_de_news.scp
+00:32:Loading scripts/war script/sistema_bandagem.scp
+00:32:Loading scripts/war script/sistema_arena_x1.scp
+00:32:Loading scripts/war script/roupas.scp
+00:32:Loading scripts/war script/plates.scp
+00:32:Loading scripts/war script/pisos e gates.scp
+00:32:Loading scripts/war script/pedra_votacao.scp
+00:32:Loading scripts/war script/pedras.scp
+00:32:Loading scripts/war script/Jail Staff.scp
+00:32:Loading scripts/war script/itens_uteis.scp
+00:32:Loading scripts/war script/itens_pvp.scp
+00:32:Loading scripts/war script/events.scp
+00:32:Loading scripts/war script/comandos.scp
+00:32:Loading scripts/war script/arena_warrior.scp
+00:32:Loading scripts/war script/areas.scp
+00:32:Loading scripts/war script/accountinfo.scp
+00:32:Loaded 54 client encryption keys.
+00:32:Server started on 'Rodrigo-PC' port 2593.
+00:32:Monitoring IP '5.208.195.198'.
+00:32:Monitoring IP '10.0.0.3'.
+00:32:Loading save/spheredata...
+00:32:WARNING:'save/spherestatics.scp' not found...
+00:32:WARNING:Can't Load save/spherestatics
+00:32:Loading save/spheremultis...
+00:32:Loading save/sphereworld...
+00:32:Loading save/spherechars...
+00:32:GC: 2884 Objects accounted for
+00:32:Auto-complete dictionary loaded (contains 142 words).
+00:32:Option flags: CommandSysmessages + NoHouseMuteSpeech
+00:32:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+00:32:Startup complete. items=2865, chars=19
+00:32:Press '?' for console commands
+00:34:244:Client connected [Total:1] ('5.208.195.198' 1/1)
+00:34:244:Login 'rodrigo10'
+00:34:23c:Client connected [Total:2] ('127.0.0.1' 1/1)
+00:34:244:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+00:34:23c:Login 'rodrigo10'
+00:34:23c:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+00:34:23c:'rodrigo10' commands 'page'=1
+00:35:23c:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+00:36:23c:Client connected [Total:1] ('5.197.130.229' 1/1)
+00:36:23c:Login 'igo117'
+00:37:244:Client connected [Total:2] ('5.197.130.229' 1/2)
+00:37:23c:Client disconnected [Total:1] ('5.197.130.229' 1/1)
+00:37:244:Login 'igo117'
+00:37:244:Setup_Start acct='igo117', char='BroKeer', IP='5.197.130.229'
+00:37:23c:Client connected [Total:2] ('5.208.195.198' 1/1)
+00:37:23c:Login 'rodrigo10'
+00:37:22c:Client connected [Total:3] ('127.0.0.1' 1/1)
+00:37:23c:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+00:37:22c:Login 'rodrigo10'
+00:37:22c:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+00:37:22c:'rodrigo10' commands 'setcolor 01'=1
+00:37:'rodrigo10' commands uid=0400014a1 (Half Apron) to 'color 01'=1
+00:37:22c:'rodrigo10' commands 'setcolor 01'=1
+00:37:'rodrigo10' commands uid=04000149f (BroKeer) to 'color 01'=1
+00:37:22c:'rodrigo10' commands 'setcolor 01'=1
+00:37:'rodrigo10' commands uid=0400014a4 (Cape of Meditation) to 'color 01'=1
+00:37:22c:'rodrigo10' commands 'setcolor 01'=1
+00:37:'rodrigo10' commands uid=012be (Ostard) to 'color 01'=1
+00:40:22c:'rodrigo10' commands 'tele'=1
+00:40:22c:'rodrigo10' commands 'tele'=1
+00:40:22c:'rodrigo10' commands 'tele'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000146b (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000146a (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001463 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001464 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001461 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001460 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000145f (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000145d (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000145e (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000145c (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001458 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001459 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=04000145b (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001457 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001454 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001453 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001452 (sandstone wall) to 'remove'=1
+00:41:22c:'rodrigo10' commands 'remove'=1
+00:41:'rodrigo10' commands uid=040001450 (sandstone wall) to 'remove'=1
+00:41:GC: 2866 Objects accounted for
+00:41:World data saved   (save/sphereworld.scp).
+00:41:Player data saved  (save/spherechars.scp).
+00:41:Multi data saved   (save/spheremultis.scp).
+00:41:Context data saved (save/spheredata.scp).
+00:41:World save completed, took 0.6803 seconds
+00:41:22c:'rodrigo10' commands 'save'=1
+00:51:22c:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+00:51:22c:Client connected [Total:2] ('5.208.195.198' 1/1)
+00:51:22c:Login 'teste'
+00:51:170:Client connected [Total:3] ('127.0.0.1' 1/1)
+00:51:22c:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+00:51:170:Login 'teste'
+00:51:170:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+00:52:170:Client connected [Total:2] ('5.208.195.198' 1/1)
+00:52:170:Login 'teste'
+00:52:22c:Client connected [Total:3] ('127.0.0.1' 1/1)
+00:52:170:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+00:52:22c:Login 'teste'
+00:52:22c:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+00:52:22c:Client connected [Total:2] ('5.208.195.198' 1/1)
+00:52:22c:Login 'teste'
+00:52:170:Client connected [Total:3] ('127.0.0.1' 1/1)
+00:52:22c:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+00:52:170:Login 'teste'
+00:52:170:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+00:52:170:Client connected [Total:2] ('5.208.195.198' 1/1)
+00:52:170:Login 'teste'
+00:52:22c:Client connected [Total:3] ('127.0.0.1' 1/1)
+00:52:170:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+00:52:22c:Login 'teste'
+00:53:22c:Setup_CreateDialog acct='teste', char='LeBron James'
+00:53:22c:Setup_Start acct='teste', char='LeBron James', IP='127.0.0.1'
+00:57:170:Client connected [Total:3] ('5.70.224.74' 1/1)
+00:57:170:Login 'icaro09'
+00:57:170:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+00:57:170:Client connected [Total:3] ('5.70.224.74' 1/1)
+00:57:170:Login 'icaro09'
+00:59:22c:Client disconnected [Total:2] ('127.0.0.1' 0/0)
+01:00:170:Setup_CreateDialog acct='icaro09', char='Icaro matado'
+01:00:170:Setup_Start acct='icaro09', char='Icaro matado', IP='5.70.224.74'
+01:00:170:Client disconnected [Total:1] ('5.70.224.74' 0/0)
+01:01:ERROR:UID=04000140a, id=02044 'mohawk', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+01:01:ERROR:UID=04000145f, id=0203b 'short hair', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+01:01:GC: 2900 Objects accounted for
+01:01:World data saved   (save/sphereworld.scp).
+01:01:Player data saved  (save/spherechars.scp).
+01:01:Multi data saved   (save/spheremultis.scp).
+01:01:Context data saved (save/spheredata.scp).
+01:01:World save completed, took 0.0080 seconds
+01:02:244:Client disconnected [Total:0] ('5.197.130.229' 0/0)
+01:06:244:Client connected [Total:1] ('5.70.224.74' 1/1)
+01:06:244:Login 'icaro09'
+01:06:244:Client disconnected [Total:0] ('5.70.224.74' 0/0)
+01:06:244:Client connected [Total:1] ('5.70.224.74' 1/1)
+01:06:244:Login 'icaro09'
+01:06:244:Setup_Start acct='icaro09', char='Icaro matado', IP='5.70.224.74'
+01:06:238:Client connected [Total:2] ('5.208.195.198' 1/1)
+01:06:238:Login 'teste'
+01:06:230:Client connected [Total:3] ('127.0.0.1' 1/1)
+01:06:238:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+01:06:230:Login 'teste'
+01:06:230:Setup_Start acct='teste', char='LeBron James', IP='127.0.0.1'
+01:06:238:Client connected [Total:3] ('5.197.130.229' 1/1)
+01:06:238:Login 'igo117'
+01:06:22c:Client connected [Total:4] ('5.197.130.229' 1/2)
+01:06:238:Client disconnected [Total:3] ('5.197.130.229' 1/1)
+01:06:22c:Login 'igo117'
+01:06:22c:Setup_Start acct='igo117', char='BroKeer', IP='5.197.130.229'
+01:07:230:'teste' commands 'drinkheal'=1
+01:07:230:'teste' commands 'drinkmana'=1
+01:09:22c:'igo117' commands 'drinkheal'=1
+01:10:230:'teste' commands 'drinkmana'=1
+01:10:22c:'igo117' commands 'drinkheal'=1
+01:10:22c:'igo117' commands 'drinkmana'=1
+01:10:22c:'igo117' commands 'drinkheal'=1
+01:11:22c:'igo117' commands 'drinkheal'=1
+01:12:230:'teste' commands 'drinkmana'=1
+01:12:230:'teste' commands 'drinkmana'=1
+01:12:22c:'igo117' commands 'drinkmana'=1
+01:13:22c:'igo117' commands 'drinkmana'=1
+01:13:230:'teste' commands 'drinkmana'=1
+01:13:22c:'igo117' commands 'drinkheal'=1
+01:14:22c:'igo117' commands 'drinkheal'=1
+01:14:230:'teste' commands 'drinkmana'=1
+01:14:230:'teste' commands 'drinkmana'=1
+01:14:22c:'igo117' commands 'drinkheal'=1
+01:15:230:'teste' commands 'drinkmana'=1
+01:15:22c:'igo117' commands 'drinkheal'=1
+01:15:230:'teste' commands 'drinkmana'=1
+01:16:22c:'igo117' commands 'drinkmana'=1
+01:16:230:'teste' commands 'drinkmana'=1
+01:16:22c:'igo117' commands 'drinkheal'=1
+01:16:22c:'igo117' commands 'drinkheal'=1
+01:16:230:'teste' commands 'drinkmana'=1
+01:16:22c:'igo117' commands 'drinkheal'=1
+01:16:230:'teste' commands 'drinkmana'=1
+01:16:230:'teste' commands 'drinkmana'=1
+01:17:P'BroKeer' was killed by P'LeBron James'.
+01:17:230:'teste' commands 'ress'=1
+01:17:22c:'igo117' commands 'raz'=0
+01:17:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+01:21:GC: 2948 Objects accounted for
+01:21:World data saved   (save/sphereworld.scp).
+01:21:Player data saved  (save/spherechars.scp).
+01:21:Multi data saved   (save/spheremultis.scp).
+01:21:Context data saved (save/spheredata.scp).
+01:21:World save completed, took 0.8452 seconds
+01:21:230:'teste' commands 'drinkmana'=1
+01:21:230:'teste' commands 'disarm'=1
+01:24:22c:'igo117' commands 'drinkheal'=1
+01:25:P'Icaro matado' was killed by P'LeBron James', P'BroKeer'.
+01:26:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+01:27:ERROR:Undefined keyword 'resnyc'
+01:27:Expansion maps supported: T2A, LBR, AOS, SE
+01:27:Indexing 259 scripts...
+01:27:WARNING:Resource 'scripts/sphere_spells.scp' changed, resync.
+01:27:GC: 2930 Objects accounted for
+01:27:World data saved   (save/sphereworld.scp).
+01:27:Player data saved  (save/spherechars.scp).
+01:27:Multi data saved   (save/spheremultis.scp).
+01:27:Context data saved (save/spheredata.scp).
+01:27:World save completed, took 0.6053 seconds
+01:28:22c:'igo117' commands 'drinkheal'=1
+01:28:22c:'igo117' commands 'drinkheal'=1
+01:28:230:'teste' commands 'drinkmana'=1
+01:29:22c:'igo117' commands 'drinkmana'=1
+01:29:230:'teste' commands 'drinkheal'=1
+01:29:22c:'igo117' commands 'drinkheal'=1
+01:29:230:'teste' commands 'drinkmana'=1
+01:30:22c:'igo117' commands 'drinkmana'=1
+01:30:22c:'igo117' commands 'drinkheal'=1
+01:30:230:'teste' commands 'drinkmana'=1
+01:31:22c:'igo117' commands 'drinkheal'=1
+01:31:230:'teste' commands 'drinkmana'=1
+01:31:P'BroKeer' was killed by P'Icaro matado', P'LeBron James'.
+01:32:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+01:34:244:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+01:37:244:Client connected [Total:3] ('5.70.224.74' 1/1)
+01:37:244:Login 'icaro09'
+01:37:244:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+01:37:244:Client connected [Total:3] ('5.70.224.74' 1/1)
+01:37:244:Login 'icaro09'
+01:37:244:Setup_Start acct='icaro09', char='Icaro matado', IP='5.70.224.74'
+01:38:244:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+01:41:244:Client connected [Total:3] ('5.70.224.74' 1/1)
+01:41:244:Login 'icaro09'
+01:42:244:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+01:42:244:Client connected [Total:3] ('5.70.224.74' 1/1)
+01:42:244:Login 'icaro09'
+01:42:244:Setup_Start acct='icaro09', char='Icaro matado', IP='5.70.224.74'
+01:43:230:'teste' commands 'drinkmana'=1
+01:43:22c:'igo117' commands 'drinkheal'=1
+01:44:P'Icaro matado' was killed by P'BroKeer'.
+01:44:22c:'igo117' commands 'drinkmana'=1
+01:44:22c:'igo117' commands 'drinkheal'=1
+01:44:22c:'igo117' commands 'drinkheal'=1
+01:44:230:'teste' commands 'drinkinvisibility'=1
+01:45:230:'teste' commands 'drinkmana'=1
+01:45:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+01:45:22c:'igo117' commands 'drinkheal'=1
+01:45:22c:'igo117' commands 'drinkheal'=1
+01:46:230:'teste' commands 'drinkmana'=1
+01:46:230:'teste' commands 'drinkmana'=1
+01:46:230:'teste' commands 'drinkmana'=1
+01:46:22c:'igo117' commands 'drinkheal'=1
+01:46:230:'teste' commands 'drinkmana'=1
+01:47:230:'teste' commands 'drinkmana'=1
+01:47:GC: 2936 Objects accounted for
+01:47:World data saved   (save/sphereworld.scp).
+01:47:Player data saved  (save/spherechars.scp).
+01:47:Multi data saved   (save/spheremultis.scp).
+01:47:Context data saved (save/spheredata.scp).
+01:47:World save completed, took 0.6038 seconds
+01:47:P'BroKeer' was killed by P'Icaro matado', P'LeBron James'.
+01:53:200:Client connected [Total:4] ('5.208.195.198' 1/1)
+01:53:200:Login 'rodrigo10'
+01:53:23c:Client connected [Total:5] ('127.0.0.1' 1/2)
+01:53:200:Client disconnected [Total:4] ('5.208.195.198' 0/0)
+01:53:23c:Login 'rodrigo10'
+01:53:23c:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+01:53:23c:'rodrigo10' commands 'dupe'=1
+01:53:'rodrigo10' commands uid=0400015bc (Special Black & Special Blue) to 'dupe'=1
+01:54:23c:'rodrigo10' commands 'dupe'=1
+01:54:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:54:23c:'rodrigo10' commands 'info'=1
+01:54:23c:'rodrigo10' commands 'setcolor 07a5'=1
+01:54:'rodrigo10' commands uid=04000112e (Special Black & Special Blue) to 'color 07a5'=1
+01:54:23c:'rodrigo10' commands 'dupe'=1
+01:54:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:54:P'Icaro matado' was killed by P'BroKeer'.
+01:54:23c:'rodrigo10' commands 'dupe'=1
+01:54:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:54:23c:'rodrigo10' commands 'dupe'=1
+01:54:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:54:23c:'rodrigo10' commands 'dupe'=1
+01:54:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:54:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+01:54:23c:'rodrigo10' commands 'setcolor 01'=1
+01:54:'rodrigo10' commands uid=04000112b (Special Black & Special Blue) to 'color 01'=1
+01:54:23c:'rodrigo10' commands 'info'=1
+01:55:23c:'rodrigo10' commands 'setcolor 079a'=1
+01:55:'rodrigo10' commands uid=040001126 (Special Black & Special Blue) to 'color 079a'=1
+01:55:23c:'rodrigo10' commands 'kill'=1
+01:55:23c:'rodrigo10' commands 'info'=1
+01:55:23c:'rodrigo10' commands 'info'=1
+01:55:23c:'rodrigo10' commands 'setcolor 079b'=1
+01:55:'rodrigo10' commands uid=040001125 (Special Black & Special Blue) to 'color 079b'=1
+01:55:23c:'rodrigo10' commands 'info'=1
+01:55:23c:'rodrigo10' commands 'setcolor 0481'=1
+01:55:'rodrigo10' commands uid=040001122 (Special Black & Special Blue) to 'color 0481'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:'rodrigo10' commands uid=040001133 (Special Black & Special Blue) to 'dupe'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:'rodrigo10' commands uid=0400010f5 (Special Black & Special Blue) to 'dupe'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:'rodrigo10' commands uid=0400010f4 (Special Black & Special Blue) to 'dupe'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:'rodrigo10' commands uid=0400010f3 (Special Black & Special Blue) to 'dupe'=1
+01:56:23c:'rodrigo10' commands 'dupe'=1
+01:56:'rodrigo10' commands uid=0400010f2 (Special Black & Special Blue) to 'dupe'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'setcolor 077a'=1
+01:56:'rodrigo10' commands uid=0400010f5 (Special Black & Special Blue) to 'color 077a'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'setcolor 078c'=1
+01:56:'rodrigo10' commands uid=0400010f4 (Special Black & Special Blue) to 'color 078c'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'setcolor 0796'=1
+01:56:'rodrigo10' commands uid=0400010f3 (Special Black & Special Blue) to 'color 0796'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:56:23c:'rodrigo10' commands 'setcolor 0806'=1
+01:56:'rodrigo10' commands uid=0400010f2 (Special Black & Special Blue) to 'color 0806'=1
+01:56:23c:'rodrigo10' commands 'info'=1
+01:57:23c:'rodrigo10' commands 'setcolor 0795'=1
+01:57:'rodrigo10' commands uid=0400010f1 (Special Black & Special Blue) to 'color 0795'=1
+01:57:23c:'rodrigo10' commands 'kill'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a80 (Brown) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a7c (@0a11 Green) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a7f (Swamp) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a7a (@0a11 Night) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a7b (@0a11 Fire) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a79 (@0a11 Poison) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a82 (@0a11 Black) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a81 (@0a11 Orange) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=04000152e (@0a11 Green Of Force) to 'remove'=1
+01:57:23c:'rodrigo10' commands 'remove'=1
+01:57:'rodrigo10' commands uid=040001a83 (White) to 'remove'=1
+01:57:23c:Client disconnected [Total:3] ('127.0.0.1' 0/1)
+01:57:P'Icaro matado' was killed by accident.
+01:57:GC: 2944 Objects accounted for
+01:57:World data saved   (save/sphereworld.scp).
+01:57:Player data saved  (save/spherechars.scp).
+01:57:Multi data saved   (save/spheremultis.scp).
+01:57:Context data saved (save/spheredata.scp).
+01:57:World save completed, took 0.4107 seconds
+01:59:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+02:01:22c:'igo117' commands 'drinkmana'=1
+02:01:230:'teste' commands 'drinkmana'=1
+02:01:P'BroKeer' was killed by P'Icaro matado', P'LeBron James'.
+02:04:22c:'igo117' commands 'drinkheal'=1
+02:05:22c:'igo117' commands 'drinkmana'=1
+02:06:230:'teste' commands 'drink clean bandages'=0
+02:06:230:'teste' commands 'drink clean bandage'=0
+02:06:230:'teste' commands 'fs'=0
+02:06:230:'teste' commands 'bands'=0
+02:06:22c:'igo117' commands 'drinkmana'=1
+02:07:22c:'igo117' commands 'drinkheal'=1
+02:08:22c:'igo117' commands 'drinkmana'=1
+02:08:244:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+02:08:230:'teste' commands 'drinkmana'=1
+02:09:22c:'igo117' commands 'drinkheal'=1
+02:10:22c:'igo117' commands 'drinkmana'=1
+02:10:22c:'igo117' commands 'drinkheal'=1
+02:11:230:'teste' commands 'drinkmana'=1
+02:11:P'BroKeer' was killed by P'Icaro matado', P'LeBron James'.
+02:11:230:'teste' commands 'drinkmana'=1
+02:11:ERROR:Timer expired without DECAY flag 'Ress with bandage' (UID=40000ffc)?
+02:13:230:'teste' commands 'drinkmana'=1
+02:13:230:'teste' commands 'drinkinvisibility'=1
+02:13:230:'teste' commands 'drinkinvisibility'=1
+02:14:22c:'igo117' commands 'drinkmana'=1
+02:14:22c:'igo117' commands 'drinkheal'=1
+02:14:22c:'igo117' commands 'drinkheal'=1
+02:14:22c:'igo117' commands 'drinkheal'=1
+02:14:230:'teste' commands 'drinkmana'=1
+02:15:230:'teste' commands 'drinkmana'=1
+02:15:22c:'igo117' commands 'drinkheal'=1
+02:16:22c:'igo117' commands 'drinkheal'=1
+02:17:22c:'igo117' commands 'drinkmana'=1
+02:17:230:'teste' commands 'drinkheal'=1
+02:17:22c:'igo117' commands 'drinkmana'=1
+02:17:GC: 2939 Objects accounted for
+02:17:World data saved   (save/sphereworld.scp).
+02:17:Player data saved  (save/spherechars.scp).
+02:17:Multi data saved   (save/spheremultis.scp).
+02:17:Context data saved (save/spheredata.scp).
+02:17:World save completed, took 0.7055 seconds
+02:20:230:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+02:20:230:Client connected [Total:2] ('5.70.224.74' 1/1)
+02:20:230:Login 'icaro09'
+02:20:22c:Client disconnected [Total:1] ('5.197.130.229' 0/0)
+02:20:230:Client disconnected [Total:0] ('5.70.224.74' 0/0)
+02:20:230:Client connected [Total:1] ('5.70.224.74' 1/1)
+02:20:230:Login 'icaro09'
+02:20:230:Setup_Start acct='icaro09', char='Icaro matado', IP='5.70.224.74'
+02:20:22c:Client connected [Total:2] ('5.208.195.198' 1/1)
+02:20:22c:Login 'digomaluko'
+02:20:200:Client connected [Total:3] ('127.0.0.1' 1/1)
+02:20:22c:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+02:20:200:Login 'digomaluko'
+02:20:200:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+02:20:200:Client connected [Total:2] ('5.208.195.198' 1/1)
+02:20:200:Login 'digomaluko'
+02:20:22c:Client connected [Total:3] ('127.0.0.1' 1/1)
+02:20:200:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+02:20:22c:Login 'digomaluko'
+02:20:22c:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+02:20:22c:Client connected [Total:2] ('5.208.195.198' 1/1)
+02:20:22c:Login 'digomaluko'
+02:20:200:Client connected [Total:3] ('127.0.0.1' 1/1)
+02:20:22c:Client disconnected [Total:2] ('5.208.195.198' 0/0)
+02:20:200:Login 'digomaluko'
+02:21:200:Client disconnected [Total:1] ('127.0.0.1' 0/0)
+02:21:200:Client connected [Total:2] ('5.208.195.198' 1/1)
+02:21:200:Login 'digomaluko'
+02:21:200:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+02:21:230:Client disconnected [Total:0] ('5.70.224.74' 0/0)
+02:21:FATAL:Server terminated by error 5!
+
+19:06:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+19:06:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+19:06:Expansion maps supported: T2A, LBR, AOS, SE
+19:06:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+19:06:Indexing 259 scripts...
+19:06:Loading scripts/sphere_defs.scp
+19:06:Loading scripts/sphere_types.scp
+19:06:Loading scripts/sphere_book.scp
+19:06:Loading scripts/sphere_backward_compatibility.scp
+19:06:Loading scripts/sphere_events_human.scp
+19:06:Loading scripts/sphere_events_npcs.scp
+19:06:Loading scripts/npcs/spherechar_se.scp
+19:06:Loading scripts/npcs/spherechar_new_mounts.scp
+19:06:Loading scripts/npcs/spherechar_mondains_legacy.scp
+19:06:Loading scripts/npcs/spherechar_misc.scp
+19:06:Loading scripts/npcs/spherechar_lbr.scp
+19:06:Loading scripts/npcs/spherechar_human.scp
+19:06:Loading scripts/npcs/spherechar_evil.scp
+19:06:Loading scripts/npcs/spherechar_aos.scp
+19:06:Loading scripts/npcs/spherechar_anim.scp
+19:06:Loading scripts/npcs/spherechar.scp
+19:06:Loading scripts/sphere_admin.scp
+19:06:Loading scripts/sphere_dialog.scp
+19:06:Loading scripts/items/sphere_item_resources.scp
+19:06:Loading scripts/items/sphere_minor_artifacts.scp
+19:06:Loading scripts/items/sphere_item_vegetation.scp
+19:06:Loading scripts/items/sphere_item_unsorted.scp
+19:06:Loading scripts/items/sphere_item_treasure_maps.scp
+19:06:Loading scripts/items/sphere_item_ship_parts.scp
+19:06:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+19:06:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+19:06:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+19:06:Loading scripts/items/sphere_item_provisions_weapons.scp
+19:06:Loading scripts/items/sphere_item_provisions_potions.scp
+19:06:Loading scripts/items/sphere_item_provisions_ore.scp
+19:06:Loading scripts/items/sphere_item_provisions_misc.scp
+19:06:Loading scripts/items/sphere_item_provisions_jewelry.scp
+19:06:Loading scripts/items/sphere_item_provisions_deeds.scp
+19:06:Loading scripts/items/sphere_item_provisions_deed.scp
+19:06:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+19:06:Loading scripts/items/sphere_item_provisions_clothing.scp
+19:06:Loading scripts/items/sphere_item_provisions_beers.scp
+19:06:Loading scripts/items/sphere_item_provisions_armor_se.scp
+19:06:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+19:06:Loading scripts/items/sphere_item_provisions_armor_color.scp
+19:06:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+19:06:Loading scripts/items/sphere_item_provisions_armor.scp
+19:06:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+19:06:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+19:06:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+19:06:Loading scripts/items/sphere_item_profession_cartographer.scp
+19:06:Loading scripts/items/sphere_item_profession_barber.scp
+19:06:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+19:06:Loading scripts/items/sphere_item_profession.scp
+19:06:Loading scripts/items/sphere_item_multis_stairs.scp
+19:06:Loading scripts/items/sphere_item_multis_houses_ships.scp
+19:06:Loading scripts/items/sphere_item_multis_foundations.scp
+19:06:Loading scripts/items/sphere_item_ml_misc.scp
+19:06:Loading scripts/items/sphere_item_ml_floor_wall.scp
+19:06:Loading scripts/items/sphere_item_ml.scp
+19:06:Loading scripts/items/sphere_item_misc_se.scp
+19:06:Loading scripts/items/sphere_item_misc.scp
+19:06:Loading scripts/items/sphere_item_magic_weapon.scp
+19:06:Loading scripts/items/sphere_item_magic_wands.scp
+19:06:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+19:06:Loading scripts/items/sphere_item_magic_leather.scp
+19:06:Loading scripts/items/sphere_item_magic_armor.scp
+19:06:Loading scripts/items/sphere_item_icons_new.scp
+19:06:Loading scripts/items/sphere_item_ground_tiles.scp
+19:06:Loading scripts/items/sphere_item_eight_age.scp
+19:06:Loading scripts/items/sphere_item_deco_signs.scp
+19:06:Loading scripts/items/sphere_item_deco_misc.scp
+19:06:Loading scripts/items/sphere_item_deco_mini_houses.scp
+19:06:Loading scripts/items/sphere_item_deco_lightsources.scp
+19:06:Loading scripts/items/sphere_item_deco_furniture.scp
+19:06:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+19:06:Loading scripts/items/sphere_item_deco_evilitem.scp
+19:06:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+19:06:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+19:06:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+19:06:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+19:06:Loading scripts/items/sphere_item_christimas.scp
+19:06:Loading scripts/items/sphere_item_char_icons.scp
+19:06:Loading scripts/items/sphere_item_building_walls_se.scp
+19:06:Loading scripts/items/sphere_item_building_walls.scp
+19:06:Loading scripts/items/sphere_item_building_stairs_ml.scp
+19:06:Loading scripts/items/sphere_item_building_stairs.scp
+19:06:Loading scripts/items/sphere_item_building_roofs_se.scp
+19:06:Loading scripts/items/sphere_item_building_roofs_ml.scp
+19:06:Loading scripts/items/sphere_item_building_roofs_aos.scp
+19:06:Loading scripts/items/sphere_item_building_roofs.scp
+19:06:Loading scripts/items/sphere_item_building_other.scp
+19:06:Loading scripts/items/sphere_item_building_floors_se.scp
+19:06:Loading scripts/items/sphere_item_building_floors.scp
+19:06:Loading scripts/items/sphere_item_building_fence.scp
+19:06:Loading scripts/items/sphere_item_building_doors.scp
+19:06:Loading scripts/items/sphere_item_boulders_rocks.scp
+19:06:Loading scripts/items/sphere_item_aos_se.scp
+19:06:Loading scripts/items/sphere_item_animations.scp
+19:06:Loading scripts/sphere_region.scp
+19:06:Loading scripts/maps/sphere_map0.scp
+19:06:Loading scripts/maps/sphere_map1.scp
+19:06:Loading scripts/maps/sphere_map_points0.scp
+19:06:Loading scripts/maps/sphere_map_points1.scp
+19:06:Loading scripts/sphere_menu.scp
+19:06:Loading scripts/sphere_name.scp
+19:06:Loading scripts/sphere_skillmenu.scp
+19:06:Loading scripts/sphere_spawns.scp
+19:06:Loading scripts/sphere_speech.scp
+19:06:Loading scripts/sphere_skills.scp
+19:06:Loading scripts/sphere_spells.scp
+19:06:Loading scripts/sphere_newb.scp
+19:06:Loading scripts/sphere_template.scp
+19:06:Loading scripts/sphere_template_loot.scp
+19:06:Loading scripts/sphere_template_vend.scp
+19:06:Loading scripts/sphere_triggers.scp
+19:06:Loading scripts/sphere_serv_triggers.scp
+19:06:Loading scripts/speech/townyew.scp
+19:06:Loading scripts/speech/townwind.scp
+19:06:Loading scripts/speech/townvesper.scp
+19:06:Loading scripts/speech/towntrinsic.scp
+19:06:Loading scripts/speech/townskarabrae.scp
+19:06:Loading scripts/speech/townserphold.scp
+19:06:Loading scripts/speech/townnujelm.scp
+19:06:Loading scripts/speech/townmoonglow.scp
+19:06:Loading scripts/speech/townminoc.scp
+19:06:Loading scripts/speech/townmagincia.scp
+19:06:Loading scripts/speech/townjhelom.scp
+19:06:Loading scripts/speech/towncove.scp
+19:06:Loading scripts/speech/townbucsden.scp
+19:06:Loading scripts/speech/townbritain.scp
+19:06:Loading scripts/speech/spherespee.scp
+19:06:Loading scripts/speech/speakshopkeep.scp
+19:06:Loading scripts/speech/speakrehello.scp
+19:06:Loading scripts/speech/speakorc.scp
+19:06:Loading scripts/speech/speakneeds.scp
+19:06:Loading scripts/speech/speakmaster.scp
+19:06:Loading scripts/speech/speakhuman.scp
+19:06:Loading scripts/speech/speakhorse.scp
+19:06:Loading scripts/speech/jobweaver.scp
+19:06:Loading scripts/speech/jobweaponstrainer.scp
+19:06:Loading scripts/speech/jobweaponsmith.scp
+19:06:Loading scripts/speech/jobwaiter.scp
+19:06:Loading scripts/speech/jobvet.scp
+19:06:Loading scripts/speech/jobveggie.scp
+19:06:Loading scripts/speech/jobtinker.scp
+19:06:Loading scripts/speech/jobthief.scp
+19:06:Loading scripts/speech/jobtavernkeeper.scp
+19:06:Loading scripts/speech/jobtanner.scp
+19:06:Loading scripts/speech/jobshipwright.scp
+19:06:Loading scripts/speech/jobshepherd.scp
+19:06:Loading scripts/speech/jobservant.scp
+19:06:Loading scripts/speech/jobsculptor.scp
+19:06:Loading scripts/speech/jobscribe.scp
+19:06:Loading scripts/speech/jobscholar.scp
+19:06:Loading scripts/speech/jobsailor.scp
+19:06:Loading scripts/speech/jobrunner.scp
+19:06:Loading scripts/speech/jobrealtor.scp
+19:06:Loading scripts/speech/jobranger.scp
+19:06:Loading scripts/speech/jobrancher.scp
+19:06:Loading scripts/speech/jobprovisioner.scp
+19:06:Loading scripts/speech/jobprisoner.scp
+19:06:Loading scripts/speech/jobpriest.scp
+19:06:Loading scripts/speech/jobpirate.scp
+19:06:Loading scripts/speech/jobparliament.scp
+19:06:Loading scripts/speech/jobpaladin.scp
+19:06:Loading scripts/speech/joboverseer.scp
+19:06:Loading scripts/speech/jobnoble.scp
+19:06:Loading scripts/speech/jobmonk.scp
+19:06:Loading scripts/speech/jobminter.scp
+19:06:Loading scripts/speech/jobminer.scp
+19:06:Loading scripts/speech/jobmiller.scp
+19:06:Loading scripts/speech/jobmayor.scp
+19:06:Loading scripts/speech/jobmapmaker.scp
+19:06:Loading scripts/speech/jobMageShop.scp
+19:06:Loading scripts/speech/jobMageEvil.scp
+19:06:Loading scripts/speech/jobMage.scp
+19:06:Loading scripts/speech/joblaborer.scp
+19:06:Loading scripts/speech/jobjudge.scp
+19:06:Loading scripts/speech/jobjeweller.scp
+19:06:Loading scripts/speech/jobjailor.scp
+19:06:Loading scripts/speech/jobinnkeeper.scp
+19:06:Loading scripts/speech/jobherbalist.scp
+19:06:Loading scripts/speech/jobhealwand.scp
+19:06:Loading scripts/speech/jobhealer.scp
+19:06:Loading scripts/speech/jobGuard.scp
+19:06:Loading scripts/speech/jobglassblower.scp
+19:06:Loading scripts/speech/jobgambler.scp
+19:06:Loading scripts/speech/jobfurtrader.scp
+19:06:Loading scripts/speech/jobfarmer.scp
+19:06:Loading scripts/speech/jobcobbler.scp
+19:06:Loading scripts/speech/jobcashual.scp
+19:06:Loading scripts/speech/jobcarpenter.scp
+19:06:Loading scripts/speech/jobbutcher.scp
+19:06:Loading scripts/speech/jobBrigand.scp
+19:06:Loading scripts/speech/jobbowyer.scp
+19:06:Loading scripts/speech/jobblacksmith.scp
+19:06:Loading scripts/speech/jobbeggar.scp
+19:06:Loading scripts/speech/jobbeekeeper.scp
+19:06:Loading scripts/speech/jobbard.scp
+19:06:Loading scripts/speech/jobbanker.scp
+19:06:Loading scripts/speech/jobbaker.scp
+19:06:Loading scripts/speech/jobartist.scp
+19:06:Loading scripts/speech/jobarmourer.scp
+19:06:Loading scripts/speech/jobarchitect.scp
+19:06:Loading scripts/speech/jobanimal.scp
+19:06:Loading scripts/speech/jobalchemist.scp
+19:06:Loading scripts/speech/jobactor.scp
+19:06:Loading scripts/sphere_msgs.scp
+19:06:Loading scripts/stones/sphere_genericstone_types.scp
+19:06:Loading scripts/stones/sphere_genericstone_items.scp
+19:06:Loading scripts/stones/sphere_genericstone_functions.scp
+19:06:Loading scripts/stones/sphere_genericstone_config.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_types.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_speech.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_items.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_functions.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_events.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+19:06:Loading scripts/stones/guilds/sphere_guild_config.scp
+19:06:Loading scripts/stones/towns/sphere_town_types.scp
+19:06:Loading scripts/stones/towns/sphere_town_speech.scp
+19:06:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+19:06:Loading scripts/stones/towns/sphere_town_items.scp
+19:06:Loading scripts/stones/towns/sphere_town_functions_player.scp
+19:06:Loading scripts/stones/towns/sphere_town_functions.scp
+19:06:Loading scripts/stones/towns/sphere_town_events.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+19:06:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+19:06:Loading scripts/stones/towns/sphere_town_config.scp
+19:06:Loading scripts/war script/sistema_runebook.scp
+19:06:Loading scripts/war script/sistema_de_news.scp
+19:06:Loading scripts/war script/sistema_bandagem.scp
+19:06:Loading scripts/war script/sistema_arena_x1.scp
+19:06:Loading scripts/war script/roupas.scp
+19:06:Loading scripts/war script/plates.scp
+19:06:Loading scripts/war script/pisos e gates.scp
+19:06:Loading scripts/war script/pedra_votacao.scp
+19:06:Loading scripts/war script/pedras.scp
+19:06:Loading scripts/war script/Jail Staff.scp
+19:06:Loading scripts/war script/itens_uteis.scp
+19:06:Loading scripts/war script/itens_pvp.scp
+19:06:Loading scripts/war script/events.scp
+19:06:Loading scripts/war script/comandos.scp
+19:06:Loading scripts/war script/arena_warrior.scp
+19:06:Loading scripts/war script/areas.scp
+19:06:Loading scripts/war script/accountinfo.scp
+19:06:Loaded 54 client encryption keys.
+19:06:Server started on 'Rodrigo-PC' port 2593.
+19:06:Monitoring IP '5.208.195.198'.
+19:06:Monitoring IP '10.0.0.3'.
+19:06:Loading save/spheredata...
+19:06:WARNING:'save/spherestatics.scp' not found...
+19:06:WARNING:Can't Load save/spherestatics
+19:06:Loading save/spheremultis...
+19:06:Loading save/sphereworld...
+19:07:Loading save/spherechars...
+19:07:GC: 2939 Objects accounted for
+19:07:Auto-complete dictionary loaded (contains 142 words).
+19:07:Option flags: CommandSysmessages + NoHouseMuteSpeech
+19:07:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+19:07:Startup complete. items=2916, chars=23
+19:07:Press '?' for console commands
+19:27:GC: 2939 Objects accounted for
+19:27:World data saved   (save/sphereworld.scp).
+19:27:Player data saved  (save/spherechars.scp).
+19:27:Multi data saved   (save/spheremultis.scp).
+19:27:Context data saved (save/spheredata.scp).
+19:27:World save completed, took 0.5051 seconds
+19:28:234:Client connected [Total:1] ('5.208.195.198' 1/1)
+19:28:234:Login 'rodrigo10'
+19:28:170:Client connected [Total:2] ('127.0.0.1' 1/1)
+19:28:234:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+19:28:170:Login 'rodrigo10'
+19:28:170:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+19:29:170:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+19:29:170:Client connected [Total:1] ('5.208.195.198' 1/1)
+19:29:170:Login 'teste'
+19:29:234:Client connected [Total:2] ('127.0.0.1' 1/1)
+19:29:170:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+19:29:234:Login 'teste'
+19:29:234:Setup_Start acct='teste', char='LeBron James', IP='127.0.0.1'
+19:29:234:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+19:31:234:Client connected [Total:1] ('5.70.224.74' 1/1)
+19:31:234:Login 'icaro09'
+19:31:234:Client disconnected [Total:0] ('5.70.224.74' 0/0)
+19:32:234:Client connected [Total:1] ('5.70.224.74' 1/1)
+19:32:234:Login 'icaro09'
+19:32:234:Client disconnected [Total:0] ('5.70.224.74' 0/0)
+19:32:234:Client connected [Total:1] ('5.208.195.198' 1/1)
+19:32:234:Login 'teste'
+19:32:170:Client connected [Total:2] ('127.0.0.1' 1/1)
+19:32:234:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+19:32:170:Login 'teste'
+19:32:170:Setup_Start acct='teste', char='LeBron James', IP='127.0.0.1'
+19:32:170:'teste' commands 'drinkheal'=1
+19:32:170:'teste' commands 'drinkmana'=1
+19:32:234:Client connected [Total:2] ('5.197.130.229' 1/1)
+19:32:234:Login 'igo117'
+19:32:240:Client connected [Total:3] ('5.197.130.229' 1/2)
+19:32:234:Client disconnected [Total:2] ('5.197.130.229' 1/1)
+19:32:240:Login 'igo117'
+19:32:240:Setup_Start acct='igo117', char='BroKeer', IP='5.197.130.229'
+19:33:234:Client connected [Total:3] ('5.70.224.74' 1/1)
+19:33:234:Login 'icaro09'
+19:33:234:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+19:35:240:'igo117' commands 'drinkheal'=1
+19:36:240:'igo117' commands 'drinkheal'=1
+19:36:240:'igo117' commands 'drinkheal'=1
+19:36:170:'teste' commands 'drinkmana'=1
+19:36:240:'igo117' commands 'drinkheal'=1
+19:37:170:'teste' commands 'drinkmana'=1
+19:37:240:'igo117' commands 'drinkheal'=1
+19:37:240:'igo117' commands 'drinkmana'=1
+19:37:240:'igo117' commands 'drinkmana'=1
+19:37:240:'igo117' commands 'drinkmana'=1
+19:38:P'BroKeer' was killed by P'LeBron James'.
+19:38:ERROR:Timer expired without DECAY flag 'Ress with bandage' (UID=40001574)?
+19:39:170:'teste' commands 'drinkmana'=1
+19:40:240:'igo117' commands 'drinkheal'=1
+19:40:170:'teste' commands 'drinkmana'=1
+19:40:240:'igo117' commands 'drinkheal'=1
+19:40:170:'teste' commands 'drinkmana'=1
+19:40:170:'teste' commands 'drinkmana'=1
+19:41:170:'teste' commands 'drinkmana'=1
+19:41:170:'teste' commands 'drinkmana'=1
+19:41:P'BroKeer' was killed by P'LeBron James'.
+19:41:ERROR:Timer expired without DECAY flag 'Ress with bandage' (UID=4000146b)?
+19:41:234:Client connected [Total:3] ('5.44.171.22' 1/1)
+19:41:234:Login 'lukinhaspro'
+19:41:234:Client disconnected [Total:2] ('5.44.171.22' 0/0)
+19:41:234:Client connected [Total:3] ('5.44.171.22' 1/1)
+19:41:234:Login 'lukinhaspro'
+19:43:234:Setup_CreateDialog acct='lukinhaspro', char='lukinhaspro'
+19:43:234:Setup_Start acct='lukinhaspro', char='lukinhaspro', IP='5.44.171.22'
+19:43:240:'igo117' commands 'drinkmana'=1
+19:43:170:'teste' commands 'drinkheal'=1
+19:43:23c:Client connected [Total:4] ('5.70.224.74' 1/1)
+19:43:23c:Login 'icaro09'
+19:43:23c:Client disconnected [Total:3] ('5.70.224.74' 0/0)
+19:44:240:'igo117' commands 'drinkheal'=1
+19:44:170:'teste' commands 'drinkmana'=1
+19:44:P'BroKeer' was killed by P'LeBron James'.
+19:45:ERROR:Timer expired without DECAY flag 'Ress with bandage' (UID=4000141f)?
+19:45:170:'teste' commands 'online'=1
+19:45:170:'teste' commands 'pm'=0
+19:47:ERROR:UID=040001442, id=0203b 'short hair', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+19:47:GC: 2987 Objects accounted for
+19:47:World data saved   (save/sphereworld.scp).
+19:47:Player data saved  (save/spherechars.scp).
+19:47:Multi data saved   (save/spheremultis.scp).
+19:47:Context data saved (save/spheredata.scp).
+19:47:World save completed, took 0.5826 seconds
+19:48:214:Client connected [Total:4] ('5.70.224.74' 1/1)
+19:48:214:Login 'icaro1'
+19:48:214:Client disconnected [Total:3] ('5.70.224.74' 0/0)
+19:50:214:Client connected [Total:4] ('5.70.224.74' 1/1)
+19:50:214:Login 'icaro1'
+19:50:214:Client disconnected [Total:3] ('5.70.224.74' 0/0)
+19:53:170:'teste' commands 'drinkmana'=1
+19:53:240:'igo117' commands 'drinkheal'=1
+19:53:240:'igo117' commands 'drinkheal'=1
+19:53:P'BroKeer' was killed by P'LeBron James'.
+19:53:170:'teste' commands 'drinkmana'=1
+19:54:234:Client disconnected [Total:2] ('5.44.171.22' 0/0)
+19:55:170:'teste' commands 'online'=1
+19:59:234:Client connected [Total:3] ('5.70.224.74' 1/1)
+19:59:234:Login 'icaro09'
+19:59:234:Client disconnected [Total:2] ('5.70.224.74' 0/0)
+20:03:240:Client disconnected [Total:1] ('5.197.130.229' 0/0)
+20:07:240:Client connected [Total:2] ('5.70.224.74' 1/1)
+20:07:240:Login 'icaro09'
+20:07:GC: 2984 Objects accounted for
+20:07:World data saved   (save/sphereworld.scp).
+20:07:Player data saved  (save/spherechars.scp).
+20:07:Multi data saved   (save/spheremultis.scp).
+20:07:Context data saved (save/spheredata.scp).
+20:07:World save completed, took 0.7633 seconds
+20:07:240:Client disconnected [Total:1] ('5.70.224.74' 0/0)
+20:15:240:Client connected [Total:2] ('5.70.224.74' 1/1)
+20:15:240:Login 'icaro09'
+20:15:240:Client disconnected [Total:1] ('5.70.224.74' 0/0)
+20:15:170:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+20:15:FATAL:Server terminated by error 5!

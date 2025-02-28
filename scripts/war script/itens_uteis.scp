@@ -1,0 +1,146 @@
+[ITEMDEF i_teleport]
+NAME=Cajado do Teleport
+ID=i_CROOK_THIN
+WEIGHT=5
+ON=@CREATE
+COLOR=0455
+HITPOINTS={5 10}
+ATTR=attr_newbie|attr_move_never|attr_magic
+
+ON=@DCLICK
+TARGET Selecione o player que voce quer mover.
+RETURN 1
+
+ON=@TARGON_ITEM
+SRC.SYSMESSAGE Vove nao pode mover <SRC.TARG.NAME> ou algum item.
+RETURN 1
+
+ON=@TARGON_CHAR
+LINK=<SRC.TARG.UID>
+TARGETG Pra onde mover <SRC.TARG.NAME>?
+RETURN 1
+
+ON=@TARGON_GROUND
+LINK.GO <SRC.TARGP>
+RETURN 1
+
+[ITEMDEF i_dye_tudo]
+ID=I_DYE_TUB
+TYPE=T_DYE_VAT
+NAME=Dying Tub
+WEIGHT=5
+
+ON=@CREATE
+attr=010
+COLOR=0
+
+ON=@DCLICK 
+TARGET Escolha o seu animal a ser pintado:
+RETURN 1
+
+ON=@TARGON_CHAR 
+IF (<SRC.TARG.BODY>==c_man) || (<SRC.TARG.BODY>==c_woman)  
+IF (<src.targ.uid>==<src.uid>)
+SRC.FINDLAYER(layer_hair).COLOR=<COLOR>
+SRC.FINDLAYER(layer_beard).COLOR=<COLOR>
+SRC.FINDLAYER(layer_wrist).COLOR=<COLOR>
+RETURN 1 
+endif
+ELSEIF !<src.targ.brain>
+SRC.SYSMESSAGE Voce nao pode pintar outra pessoa! 
+RETURN 1 
+ELSEIF <SRC.TARG.ISMYPET> 
+SRC.TARG.COLOR=<color> 
+SRC.TARG.UPDATE 
+RETURN 1
+ELSE 
+SRC.SYSMESSAGE Voce nao eh dono deste animal. 
+RETURN 1 
+ENDIF 
+SRC.SYSMESSAGE Voce nao pode pintar outra pessoa!
+return 1 
+
+ON=@TARGON_ITEM 
+IF ! (<SRC.TARG.CONT>==<SRC.FINDLAYER(21).UID>)
+SRC.SYSMESSAGE <SRC.TARG.NAME> tem que estar na bag.
+RETURN 1
+ENDIF
+
+IF (<SRC.TARG.DYE>=01)
+SRC.TARG.COLOR=<color> 
+SRC.TARG.UPDATE 
+RETURN 1
+endif
+SRC.SYSMESSAGE=Esse item nao pode ser pintado.
+return 1
+
+ON=@TARGON_GROUND 
+SRC.SYSMESSAGE Voce nao pode pintar isto.
+Return 1 
+
+[ITEMDEF i_remove_animais] 
+ID=0ed4
+NAME=Removedor de Animais
+TYPE=T_NORMAL
+
+ON=@CREATE 
+COLOR=0482
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+TARGET @07a1 Escolha o seu animal a ser removido:
+RETURN 1
+
+ON=@TARGON_CHAR 
+IF (<SRC.TARG.BODY>==c_man) || (<SRC.TARG.BODY>==c_woman) 
+SRC.SYSMESSAGE @07a1 Isso nao eh seu animal.
+RETURN 1 
+ELSEIF !<src.targ.brain>
+SRC.SYSMESSAGE @07a1 Isso nao eh seu animal.
+RETURN 1 
+ELSEIF <SRC.TARG.ISMYPET> 
+SRC.TARG.remove
+src.sysmessage @07a1 Animal removido.
+RETURN 1
+ELSE 
+SRC.SYSMESSAGE @07a1 Isso nao eh seu animal.
+RETURN 1 
+ENDIF 
+
+ON=@TARGON_ITEM 
+SRC.SYSMESSAGE @07a1 Isso nao eh seu animal.
+RETURN 1 
+
+ON=@TARGON_GROUND 
+SRC.SYSMESSAGE @07a1 Isso nao eh seu animal. 
+Return 1 
+
+[ITEMDEF i_pao_fome] 
+ID=i_bread_french
+NAME=Pao Frances
+TYPE=T_FOOD
+
+ON=@CREATE 
+ATTR=010
+AMOUNT=4
+
+ON=@DCLICK
+if (<src.food>==15)
+src.sysmessage Voce ja esta satisfeito.
+return 1
+else
+src.food = 15
+src.anim 34
+src.say @027 Hm... Que delicia!!
+src.sound 59
+src.hungry
+return 1
+endif
+
+
+[EOF]
+

@@ -1,0 +1,389 @@
+[ITEMDEF i_pedra_votacao]
+ID=01184
+Name=Pedra de Votacao
+
+
+on=@Click
+message @07a1 Pedra de Votacao
+return 1
+
+
+on=@DClick
+src.dspeech +pedra_votacao
+IF (<src.ISGM>)
+DIALOG d_votacaogm
+return 1
+endif
+If (<tag0.votstatus> == 0)
+src.MESSAGE @077a Votacao desativada. 
+return 1
+endif
+DIALOG d_votacao
+return 1
+
+
+on=@create
+attr=010
+src.ACCOUNT.TOTALCONNECTTIME = <src.ACCOUNT.TOTALCONNECTTIME>+1
+tag.perguntaaa Nao ha pergunta
+tag.votstatus = 1
+tag.mostrastats = Ativado
+tag.votacao.total = 0
+tag.votacao.sim = 0
+tag.votacao.nao = 0
+tag.votacao.nec = 0
+tag.tipo.pedra = <src.ACCOUNT.TOTALCONNECTTIME>
+tag.votacao.numero=0
+
+
+
+////////////////////////////
+/////Menu dos Players///////
+////////////////////////////
+
+[DIALOG d_votacao]
+15, 10
+resizepic 60 60 3600 460 470
+resizepic 80 100 5054 420 410
+resizepic 80 78 5054 420 20
+text 190 78 50 0
+text 390 78 1152 1
+dtext 400 195 40 Total: <eval <tag.votacao.total>>
+dtext 400 140 200 Sim: <eval <tag.votacao.sim>>
+dtext 400 162 200 Nao: <eval <tag.votacao.nao>>
+dtext 100 104 1152 Enquete:
+dhtmlgump 110 135 280 120 1 1 <tag.perguntaaa>
+dtext 155 275 0000 Sim
+button 120 275 4005 4007 1 0 1       
+dtext 245 275 0000 Nao
+button 210 275 4005 4007 1 0 2   
+
+
+[DIALOG d_votacao TEXT]
+Sistema de Votacao
+TLP Shard
+
+[DIALOG d_votacao BUTTON]
+ON=0
+return 0
+
+ON=1
+If (<src.tag0.player.pedra> == <tag.tipo.pedra>))
+if (<src.tag0.player.numero> == <tag.votacao.numero>)
+src.MESSAGE @077a Voce ja votou.
+return 1
+endif
+endif
+
+If (<src.ACCOUNT.TOTALCONNECTTIME> >= <tag.votacao.nec>)
+tag.votacao.total = <eval <tag.votacao.total>+1>
+tag.votacao.sim = <eval <tag.votacao.sim>+1>
+src.tag.player.pedra = <tag.tipo.pedra>
+src.tag.player.numero = <tag.votacao.numero>
+src.MESSAGE @077a Seu voto foi computado, obrigado. 
+return 1
+endif
+
+src.MESSAGE @077a Voce deve estar conectado <eval <tag.votacao.nec>> mins para poder votar.
+return 1
+
+
+ON=2
+If (<src.tag0.player.pedra> == <tag.tipo.pedra>))
+if (<src.tag0.player.numero> == <tag.votacao.numero>)
+src.MESSAGE @077a Voce ja votou.
+return 1
+endif
+endif
+
+If (<src.ACCOUNT.TOTALCONNECTTIME> >= <tag.votacao.nec>)
+tag.votacao.total = <eval <tag.votacao.total>+1>
+tag.votacao.nao = <eval <tag.votacao.nao>+1>
+src.tag.player.pedra = <tag.tipo.pedra>
+src.tag.player.numero = <tag.votacao.numero>
+src.MESSAGE @077a Seu voto foi computado, obrigado. 
+return 1
+endif
+src.MESSAGE @077a Voce deve estar conectado <eval <tag.votacao.nec>> mins para poder votar.
+return 1
+
+
+
+
+
+///////////////////////////////
+////Menu dos Staffs///////////
+/////////////////////////////
+
+[DIALOG d_votacaogm]
+15, 10
+resizepic 60 60 3600 460 470
+resizepic 80 100 5054 420 410
+resizepic 80 78 5054 420 20
+text 190 78 50 0
+text 390 78 1152 1
+
+dtext 400 195 40 Total: <eval <tag.votacao.total>>
+dtext 400 140 200 Sim: <eval <tag.votacao.sim>>
+dtext 400 162 200 Nao: <eval <tag.votacao.nao>>
+dtext 100 104 1152 Enquete:
+dhtmlgump 110 135 280 120 1 1 <tag.perguntaaa>
+dtext 155 275 0000 Sim
+button 120 275 4005 4007 1 0 5       
+dtext 245 275 0000 Nao
+button 210 275 4005 4007 1 0 6
+ 
+//Parte que apenas staff ve
+text 120 320 190 2 
+text 373 320 191 3
+
+button 100 323 1209 1210 1 0 1
+dtext 120 340 190 Resetar votacao [todos voltam ao zero].
+button 100 343 1209 1210 1 0 2
+dtext 120 360 190 Fazer nova votacao [reseta automaticamente os votos].
+button 100 363 1209 1210 1 0 3
+dtext 120 380 190 Colocar limite de tempo conectado para poder votar. 
+dtext 340 398 191 Atual (<eval <tag.votacao.nec>>) mins.*
+dtext 130 440 1152 *Obs.: 0 [zero], qualquer um ira poder votar.
+button 100 383 1209 1210 1 0 4
+
+
+[DIALOG d_votacaogm TEXT]
+Sistema de Votacao
+TLP Shard
+Ativar/Desativar pedra de votacao.
+(<tag.mostrastats>)
+
+[DIALOG d_votacaogm BUTTON]
+ON=0
+return 0
+
+ON=1
+If (<tag.votstatus> == 0)
+src.SYSMESSAGE @0480 Voce ativou a Pedra de Votacao. 
+tag.votstatus = 1
+tag.mostrastats = Ativado
+dialog d_votacaogm
+return 1
+endif
+If (<tag.votstatus> == 1)
+src.SYSMESSAGE @0480 Voce desativou a Pedra de Votacao. 
+tag.votstatus = 0
+tag.mostrastats = Desativado
+dialog d_votacaogm
+return 1
+endif
+
+
+ON=2
+src.SYSMESSAGE @0480 Os votos foram resetados.
+tag.votacao.total = 0
+tag.votacao.sim = 0
+tag.votacao.nao = 0
+tag.votacao.numero = <eval <tag.votacao.numero>+1>
+dialog d_votacaogm
+return 1
+
+ON=3
+tag.votacao.total = 0
+tag.votacao.sim = 0
+tag.votacao.nao = 0
+tag.votacao.numero = <eval tag.votacao.numero>+1>
+tryp 4 inpdlg tag.perguntaaa 255
+return 1
+
+ON=4
+dialog d_tempo_votacao
+return 1
+
+ON=5
+If (<src.tag0.player.pedra> == <tag.tipo.pedra>))
+if (<src.tag0.player.numero> == <tag.votacao.numero>)
+src.MESSAGE @077a Voce ja votou.
+return 1
+endif
+endif
+
+If (<src.ACCOUNT.TOTALCONNECTTIME> >= <tag.votacao.nec>)
+tag.votacao.total = <eval <tag.votacao.total>+1>
+tag.votacao.sim = <eval <tag.votacao.sim>+1>
+src.tag.player.pedra = <tag.tipo.pedra>
+src.tag.player.numero = <tag.votacao.numero>
+src.MESSAGE @077a Seu voto foi computado, obrigado. 
+return 1
+endif
+src.MESSAGE @077a Voce deve estar conectado <eval <tag.votacao.nec>> mins para poder votar.
+return 1
+
+ON=6
+If (<src.tag0.player.pedra> == <tag.tipo.pedra>))
+if (<src.tag0.player.numero> == <tag.votacao.numero>)
+src.MESSAGE @077a Voce ja votou.
+return 1
+endif
+endif
+
+If (<src.ACCOUNT.TOTALCONNECTTIME> >= <tag.votacao.nec>)
+tag.votacao.total = <eval <tag.votacao.total>+1>
+tag.votacao.nao = <eval <tag.votacao.nao>+1>
+src.tag.player.pedra = <tag.tipo.pedra>
+src.tag.player.numero = <tag.votacao.numero>
+src.MESSAGE @077a Seu voto foi computado, obrigado. 
+return 1
+endif
+src.MESSAGE @077a Voce deve estar conectado <eval <tag.votacao.nec>> mins para poder votar.
+return 1
+
+[FUNCTION desbugar_votacao]
+src.dialog d_desbug_vot
+return 1
+
+[FUNCTION desbugar_votostotal]
+src.dialog d_desbug_vot2
+return 1
+
+[SPEECH pedra_votacao]
+on=desbugar_votacao
+desbugar_votacao
+return 1
+
+on=desbugar_tempo
+desbugar_tempo
+return 1
+
+on=desbugar_votostotal
+desbugar_votostotal
+return 1
+
+[Dialog d_desbug_vot]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite o novo tempo(min):
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+[Dialog d_desbug_vot TEXt]
+Novo Tempo
+
+[Dialog d_desbug_vot BUTTON]
+on=0
+return 0
+
+on=1
+serv.NEWITEM <argtxt[0]>
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+on=2
+return 0
+
+[Dialog d_desbug_vot2]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite o novo tempo:
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+[Dialog d_desbug_vot2 TEXt]
+Novo Tempo
+
+[Dialog d_desbug_vot2 BUTTON]
+on=0
+return 0
+
+on=1
+tag.temppo = <argtxt[0]>
+TARGETF desbugar_2
+return 1
+
+on=2
+return 0
+
+////////////////////////////////
+//Menu De Tempo de Votacao//////
+///////////////////////////////
+
+
+
+[Dialog d_tempo_votacao]
+15, 10
+resizepic 200 185 3600 350 180
+resizepic 212 199 3000 325 155
+resizepic 230 250 3000 270 22
+dtext 225 210 995 Digite o novo tempo(min), escreve apenas numeros:
+dtext 247 227 025 Atencao! Deixe o zero na frente do tempo.
+textentry 235 252 253 25 0 0 0
+button 250 301 1209 1210 1 0 1
+dtext 267 299 0000 Confirmar
+button 390 301 1209 1210 1 0 2
+dtext 407 299 0000 Cancelar
+
+
+[Dialog d_tempo_votacao TEXt]
+<tag.votacao.nec>
+
+[Dialog d_tempo_votacao BUTTON]
+on=0
+dialog d_votacaogm
+return 1
+
+on=1
+if <apenasnum <argtxt[0]>>
+src.sysmessage @0480 Escreva apenas numeros.
+dialog d_tempo_votacao
+return 1
+endif
+tag.votacao.nec=<argtxt[0]>
+dialog d_votacaogm
+return 1
+
+on=2
+dialog d_votacaogm
+return 1
+
+[FUNCTION apenasnum]
+IF !(STRMATCH("*[9876543210]*","<ARGS>")) || (STRMATCH("*[@qwertyuiopasdfghjklzxcvbnm]*","<ARGS>"))
+return 1
+ELSE
+RETURN 0
+ENDIF
+
+[FUNCTION desbugar_tempo]
+TARGETF desbugar_1
+
+[FUNCTION desbugar_1]
+IF !(<argo.uid>)
+targetf desbugar_1
+sysmessage @0480 Invalido.
+ELSE
+IF (<argo.isitem>)
+SRC.SYSMESSAGE @0480 <ARGO.NAME> = <ARGO.BASEID>
+endif
+ELSE
+targetf desbugar_1
+ENDIF
+ENDIF
+
+[FUNCTION desbugar_2]
+IF !(<argo.uid>)
+targetf desbugar_2
+sysmessage @0480 Invalido.
+ELSE
+IF (<argo.isitem>)
+ARGO.amount = <eval <src.tag.temppo>>
+endif
+ELSE
+targetf desbugar_1
+ENDIF
+ENDIF

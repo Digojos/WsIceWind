@@ -1,0 +1,190 @@
+[PLEVEL 1]
+ress
+
+[function ress]
+IF STRMATCH("Arena 1x1","<region.name>")
+sysmessage @07a1 Voce esta na arena 1x1 !
+return 1
+endif
+
+IF (<tag0.evento>==1)
+sysmessage @07a1 Voce esta nao pode usar esse comando agora!
+return 1
+endif
+
+if (<hits> == 0)
+src.go cidade
+src.resurrect
+endif
+
+[PLEVEL 1]
+online
+
+[FUNCTION ONLINE]
+VAR.ON=<SERV.CLIENTS>
+SERV.ALLCLIENTS F_verg
+sysmessage @07a1 <EVAL <VAR.ON>> players online.
+sysmessage @0482 Recorde : <eval <var.recorde>>
+
+
+[FUNCTION f_verg]
+IF (<ACCOUNT.PLEVEL> > 1 )
+VAR.ON=<EVAL <VAR.ON>>
+ENDIF
+
+[PLEVEL 1]
+SPELLS
+
+[FUNCTION SPELLS]
+DIALOG D_SPELLS
+
+[DIALOG D_SPELLS]
+150,130
+resizepic 0 10 5054 250 255
+tilepic 105 195 <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.RUNE_ITEM>
+dtext 70 20 1152 <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.NAME>
+dtext 70 40 1152 <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.RUNES>
+dtext 70 60 1152 <FVAL <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.SKILLREQ>> magery
+dtext 70 80 1152 <FVAL <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.CAST_TIME>> segs
+dtext 70 100 1152 <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.MANAUSE>
+dtext 70 120 1152 <QVAL <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.EFFECT>?<SERV.SPELL.<EVAL <TAG0.SPELL>+1>.EFFECT>:n/a>
+IF (<SERV.SPELL.<EVAL <TAG0.SPELL>+1>.DURATION> > 0>
+dtext 70 140 1152 <FVAL <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.DURATION>/60> mins (<FVAL <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.DURATION>> segs)
+ELSE
+dtext 70 140 1152 n/a
+ENDIF
+tilepic 60 160 <SERV.SPELL.<EVAL <TAG0.SPELL>+1>.SCROLL_ITEM>
+dtext 10 20 059 Nome:
+dtext 10 40 059 Runas:
+dtext 10 60 059 Skill:
+dtext 10 80 059 Delay:
+dtext 10 100 059 Mana:
+dtext 10 120 059 Efeito:
+dtext 10 140 059 Duracao:
+dtext 10 160 059 Scroll:
+dtext 117 240 059 <EVAL <TAG0.SPELL>+1>
+IF (<EVAL <TAG0.SPELL>+1> > 1)
+button 10 235 4014 4015 1 0 1
+ENDIF
+IF <EVAL <TAG0.SPELL>+1> < 64)
+button 210 235 4005 4006 1 0 2
+ENDIF
+
+[DIALOG D_SPELLS BUTTON]
+ON=1
+IF (<EVAL <TAG0.SPELL>+1> > 1)
+TAG0.SPELL -= 1
+DIALOG D_SPELLS
+ENDIF
+ON=2
+IF (<EVAL <TAG0.SPELL>+1> < 64)
+TAG0.SPELL += 1
+DIALOG D_SPELLS
+ENDIF
+
+[PLEVEL 1]
+senha
+
+[FUNCTION senha]
+DIALOG d_senha
+
+[DIALOG d_senha]
+100, 50
+resizepic 100 85 2520 300 230
+resizepic 125 150 3000 240 22
+resizepic 125 180 3000 240 22
+resizepic 125 210 3000 240 22
+text 140 120 199 0
+text 170 245 199 1
+text 280 245 199 2
+button 135 240 2151 2154 2154 0 1
+button 245 240 2151 2154 2154 0 2
+textentry 130 152 253 15 197 0 3
+textentry 130 182 253 15 197 1 4
+text 130 95 197 5
+textentry 130 212 253 15 197 2 6
+
+[DIALOG d_senha TEXT]
+Escreva a nova senha abaixo:
+Confirmar
+Cancelar
+Escreva a senha
+Reescreva a senha
+Sistema de Password
+Escreva sua Senha In Game
+
+[DIALOG d_senha BUTTON]
+ONBUTTON=1
+IF (<ARGTXT[2]>==<SRC.TAG.SenhaIG2>)
+	IF (<ARGTXT[0]>==<ARGTXT[1]>)
+		SRC.PASSWORD=<ARGTXT[1]>
+		SRC.SYSMESSAGE @65 Sua nova senha eh: <ARGTXT[1]>
+		RETURN 1
+	ELSE
+		SRC.SYSMESSAGE As senhas estao diferentes.
+		RETURN 1
+	ENDIF
+ENDIF
+SRC.SYSMESSAGE Seu SIG esta incorreto. Mudanca de senha cancelada.
+rETURN 1
+
+ONBUTTON=2
+
+
+[PLEVEL 1]
+drinkmana
+drinkheal
+drinkrefresh
+drinkinvisibility
+disarm
+
+
+[FUNCTION drinkheal]
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @00FF Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.f_life
+SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+[FUNCTION drinkmana]
+if (<SRC.FINDID(tempo_pot).uid>)
+src.MESSAGE @076c Pocao: <SRC.FINDID(tempo_pot).timer> seg
+return 1
+endif
+src.f_mana
+SRC.SOUND=87
+SRC.SOUND=49
+Serv.NEWITEM tempo_pot
+new.timer=15
+new.CONT=<SRC.UID>
+new.EQUIP
+return 1
+
+[FUNCTION drinkinvisibility]
+if (<SRC.FINDID(i_pot_invis).uid>)
+SRC.FINDID(i_pot_invis).USEITEM
+return 1
+endif
+
+[FUNCTION drinkrefresh]
+if (<SRC.FINDID(i_pot_refresh).uid>)
+SRC.FINDID(i_pot_refresh).USEITEM
+return 1
+endif
+
+[FUNCTION disarm]
+	if (<src.findlayer(1)>)
+		src.findlayer(1).unequip
+	endif
+	if (<src.findlayer(2)>)
+		src.findlayer(2).unequip
+	endif
+
+[EOF]

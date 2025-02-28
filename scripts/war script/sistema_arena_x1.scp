@@ -1,0 +1,430 @@
+[itemdef i_entrada_global]
+id=i_pet_wisp
+TYPE=T_normal
+WEIGHT=1
+name=Arena x1
+
+on=@create
+ATTR=010
+color=0794
+tag.lotacao=0
+
+ON=@CLICK
+CALL F_TEMPO <TIMER>
+IF (<tag.lotacao>==0)
+message @076a (Vazio)
+message @076a Arena Global
+return 1
+endif
+IF (<tag.lotacao>==1)
+message @076a (<tag.lotacao>)
+message @076a Arena Global
+src.sysmessage @07a1 <LOCAL.TIMER>
+src.sysmessage @07a1 <TAG.ADVERSARIOS> x ?
+return 1
+endif
+IF (<tag.lotacao>==2)
+message @076a (<tag.lotacao>)
+message @076a Arena Global
+src.sysmessage @07a1 <LOCAL.TIMER>
+src.sysmessage @07a1 <TAG.ADVERSARIOS>
+return 1
+endif
+message @076a (<tag.lotacao>)
+message @076a Arena Global
+return 1
+
+ON=@DCLICK
+IF (<src.tag0.evento>==1)
+src.sysmessage @07a1 <LOCAL.TIMER>
+return 1
+endif
+
+IF (<tag.lotacao>==2)
+src.sysmessage @07bd A arena esta lotada.
+return 1
+endif
+
+IF (<tag.lotacao>==1)
+tag.lotacao=2
+var.espera=2
+tag.p2=<src.name>
+tag.pp2=<src.uid>
+timer=360
+src.verifica_helproom
+src.events=+e_arenax1
+src.tag.evento=1
+src.hits=<src.str>
+src.mana=<src.int>
+src.stam=<src.dex>
+src.tag.global=<uid>
+TAG.ADVERSARIOS=<TAG.ADVERSARIOS> x <SRC.NAME>
+src.go 5914,609
+say @0794 <src.name> Entrou!
+OBJ.go 5925,609
+
+
+/////Player 2
+NEWITEM pedra_global
+new.p=<src.p>
+new.move w 1
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move e 1
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move n 1
+
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move s 1
+
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move 1 1 0
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move -1 -1 0
+
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move -1 1 0
+
+NEWITEM pedra_global
+new.p=<src.p>
+new.move 1 -1 0
+
+
+///Player 1
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move w 1
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move e 1
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move n 1
+
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move s 1
+
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move 1 1 0
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move -1 -1 0
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move -1 1 0
+
+NEWITEM pedra_global
+new.p=<OBJ.p>
+new.move 1 -1 0
+
+say @07a1 O PvP sera iniciado em 30 segundos.
+
+return 1
+endif
+
+IF (<tag.lotacao>==0)
+tag.lotacao=1
+tag.p1=<src.name>
+tag.pp1=<src.uid>
+OBJ=<src.uid>
+timer=30
+var.espera=1
+src.verifica_helproom
+src.go 5927,609
+src.hits=<src.str>
+src.mana=<src.int>
+src.stam=<src.dex>
+src.events=+e_arenax1
+src.tag.evento=1
+src.tag.global=<uid>
+TAG.ADVERSARIOS=<SRC.NAME>
+newitem espera_1_player
+new.timer=30
+new.cont=<src.uid>
+new.equip
+say @0794 <src.name> Entrou!
+return 1
+endif
+
+ON=@timer
+If (<tag.lotacao>==1)
+tag.lotacao=0
+say @07a1 Ninguem desejou desafiar <tag.p1>
+return 1
+endif
+
+If (<tag0.vencedor>==1)
+tag.lotacao=0
+
+OBJ=<tag.pp1>
+OBJ.go 5920,620
+OBJ.events=-e_arenax1
+OBJ.events=-e_logout_arenax1
+OBJ.tag.evento=0
+OBJ.verifica_arena
+
+OBJ=<tag.pp2>
+OBJ.go 5920,620
+OBJ.events=-e_arenax1
+OBJ.events=-e_logout_arenax1
+OBJ.tag.evento=0
+OBJ.verifica_arena
+tag.vencedor=0
+return 1
+endif
+
+If (<tag.lotacao>==2)
+tag.lotacao=0
+OBJ=<tag.pp1>
+OBJ.go 5920,620
+OBJ.events=-e_arenax1
+OBJ.events=-e_logout_arenax1
+OBJ.tag.evento=0
+OBJ.verifica_arena
+
+OBJ=<tag.pp2>
+OBJ.go 5920,620
+OBJ.events=-e_arenax1
+OBJ.events=-e_logout_arenax1
+OBJ.tag.evento=0
+OBJ.verifica_arena
+var.espera=
+return 1
+endif
+
+return 1
+
+
+
+[EVENTS e_arenax1]
+
+ON=@click
+IF (<tag0.glog>==1)
+return 0
+endif
+
+IF (<isplayer>)
+message @026 [Arena x1]
+message @07c7 <name>
+return 1
+endif
+
+ON=@Logout
+tag.glog=1
+OBJ=<tag.global>
+ARGN1 <OBJ.TIMER>*10
+If (<hits>==0)
+return 1
+endif
+CALL F_TEMPO <OBJ.TIMER>
+say @07a1 Logout! (<LOCAL.TIMER>)
+events=+e_logout_arenax1
+return 1
+
+ON=@Login
+tag.glog=0
+If (<src.hits>==0)
+return 0
+endif
+say @07a1 Login!
+events=-e_logout_arenax1
+
+ON=@Death
+OBJ=<tag.global>
+OBJ.say @07a1 <act.name> ganhou a luta e possui 40 seg para lotear.
+OBJ.timer=40
+OBJ.tag.vencedor=1
+If (<act.tag0.global.vitorias>==0)
+act.tag.global.vitorias=1
+return 0
+else
+act.tag.global.vitorias=<act.tag.global.vitorias>+1
+return 0
+endif
+
+On=@DEATHCORPSE
+argo.timer 40
+
+ON=@timer
+ARGO.remove
+
+[EVENTS e_logout_arenax1]
+
+ON=@click
+IF (<isplayer>)
+message @026 [Desconectado]
+message @07c7 <name>
+return 1
+endif
+
+
+[FUNCTION verifica_arena]
+If (<eval <tag0.global.vitorias>> >= <var.p1>)
+var.p1=<eval <tag.global.vitorias>>
+var.n1=<name>
+ELSEIF (<eval <tag0.global.vitorias>> >= <var.p2>)
+var.p2=<eval <tag.global.vitorias>>
+var.n2=<name>
+ELSEIF (<eval <tag0.global.vitorias>> >= <var.p3>)
+var.p3=<eval <tag.global.vitorias>>
+var.n3=<name>
+ELSEIF (<eval <tag0.global.vitorias>> >= <var.p4>)
+var.p4=<eval <tag.global.vitorias>>
+var.n4=<name>
+ELSEIF (<eval <tag0.global.vitorias>> >= <var.p5>)
+var.p5=<eval <tag.global.vitorias>>
+var.n5=<name>
+endif
+
+
+If (<hits>==0)
+resurrect
+endif
+If (<tag0.glog>==1)
+tag.glog=0
+disconnect
+endif
+
+[FUNCTION verifica_helproom]
+If (<FINDID(i_teleport_delay).uid>)
+FINDID(i_teleport_delay).remove
+sysmessage @07a1 Sua Helproom foi cancelada.
+return 1
+endif
+
+[ITEMDEF espera_1_player]
+NAME=Tempo de Espera
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+
+ON=@Create
+ATTR=attr_decay
+
+ON=@Timer
+IF (<var0.espera>==1)
+cont.go 5920,620
+cont.events=-e_arenax1
+cont.events=-e_logout_arenax1
+cont.tag.evento=0
+cont.verifica_arena
+var.espera=
+remove
+return 1
+endif
+remove
+endif
+
+[ITEMDEF pedra_global]
+NAME=sandstone wall
+ID=0167
+TYPE=t_wall
+
+ON=@Create
+ATTR=attr_decay
+Timer=20
+
+ON=@Timer
+remove
+return 1
+
+
+
+
+
+//////////////////////
+///////////////////
+/////Rank Arena X1
+///////////////////////
+
+[ITEMDEF i_rank_global] 
+ID=i_gravestone_17
+TYPE=T_normal
+NAME=Rank da Arena
+WEIGHT=1
+
+on=@click
+message @07a1 <name>
+return 1
+
+ON=@CREATE
+COLOR=0754
+ATTR=010
+
+ON=@DCLICK 
+IF <DISTANCE>>2
+message @07a1 Encoste na Pedra!
+RETURN 1
+endif
+dialog d_rank_global
+return 1
+
+[DIALOG d_rank_global]
+0, 0
+PAGE 0
+resizepic 10 10 3600 460 265
+resizepic 18 22 3500 441 244
+text 140 30 026 0
+text 35 54 590 1
+text 55 80 778 2
+text 55 102 778 3
+text 55 124 778 4
+text 55 146 778 5
+text 55 168 778 6
+////players
+text 75 80 779 7
+text 75 102 779 8
+text 75 124 779 9
+text 75 146 779 10
+text 75 168 779 11
+text 75 188 789 12
+
+[DIALOG d_rank_global TEXT]
+Rank da Arena Global
+Top Kills:
+1:
+2:
+3:
+4:
+5:
+<eval <var.p1>> <var.n1>
+<eval <var.p2>> <var.n2>
+<eval <var.p3>> <var.n3>
+<eval <var.p4>> <var.n4>
+<eval <var.p5>> <var.n5>
+Suas vitorias: <eval <src.tag0.global.vitorias>>
+
+[DIALOG d_rank_global BUTTON]
+On=0
+
+
+[FUNCTION f_tempo]
+LOCAL.TIMER=<ARGS>
+IF <LOCAL.TIMER> > 120
+LOCAL.TIMER=<eval <ARGS> / 60> minutos e <eval <ARGS> - <eval <eval <ARGS> / 60>*60>> segundos restantes.
+ELSEIF <LOCAL.TIMER> > 60
+LOCAL.TIMER=<eval <ARGS> / 60> minuto e <eval <ARGS> - <eval <eval <ARGS> / 60>*60>> segundos restantes.
+ELSE
+LOCAL.TIMER=<eval <ARGS> - <eval <eval <ARGS> / 60>*60>> segundos restantes.
+ENDIF
+

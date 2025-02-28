@@ -1,0 +1,2080 @@
+
+13:01:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+13:01:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+13:01:Expansion maps supported: T2A, LBR, AOS, SE
+13:01:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+13:01:Indexing 259 scripts...
+13:01:Loading scripts/sphere_defs.scp
+13:01:Loading scripts/sphere_types.scp
+13:01:Loading scripts/sphere_book.scp
+13:01:Loading scripts/sphere_backward_compatibility.scp
+13:01:Loading scripts/sphere_events_human.scp
+13:01:Loading scripts/sphere_events_npcs.scp
+13:01:Loading scripts/npcs/spherechar_se.scp
+13:01:Loading scripts/npcs/spherechar_new_mounts.scp
+13:01:Loading scripts/npcs/spherechar_mondains_legacy.scp
+13:01:Loading scripts/npcs/spherechar_misc.scp
+13:01:Loading scripts/npcs/spherechar_lbr.scp
+13:01:Loading scripts/npcs/spherechar_human.scp
+13:01:Loading scripts/npcs/spherechar_evil.scp
+13:01:Loading scripts/npcs/spherechar_aos.scp
+13:01:Loading scripts/npcs/spherechar_anim.scp
+13:01:Loading scripts/npcs/spherechar.scp
+13:01:Loading scripts/sphere_admin.scp
+13:01:Loading scripts/sphere_dialog.scp
+13:01:Loading scripts/items/sphere_item_resources.scp
+13:01:Loading scripts/items/sphere_minor_artifacts.scp
+13:01:Loading scripts/items/sphere_item_vegetation.scp
+13:01:Loading scripts/items/sphere_item_unsorted.scp
+13:01:Loading scripts/items/sphere_item_treasure_maps.scp
+13:01:Loading scripts/items/sphere_item_ship_parts.scp
+13:01:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+13:01:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+13:01:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+13:01:Loading scripts/items/sphere_item_provisions_weapons.scp
+13:01:Loading scripts/items/sphere_item_provisions_potions.scp
+13:01:Loading scripts/items/sphere_item_provisions_ore.scp
+13:01:Loading scripts/items/sphere_item_provisions_misc.scp
+13:01:Loading scripts/items/sphere_item_provisions_jewelry.scp
+13:01:Loading scripts/items/sphere_item_provisions_deeds.scp
+13:01:Loading scripts/items/sphere_item_provisions_deed.scp
+13:01:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+13:01:Loading scripts/items/sphere_item_provisions_clothing.scp
+13:01:Loading scripts/items/sphere_item_provisions_beers.scp
+13:01:Loading scripts/items/sphere_item_provisions_armor_se.scp
+13:01:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+13:01:Loading scripts/items/sphere_item_provisions_armor_color.scp
+13:01:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+13:01:Loading scripts/items/sphere_item_provisions_armor.scp
+13:01:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+13:01:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+13:01:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+13:01:Loading scripts/items/sphere_item_profession_cartographer.scp
+13:01:Loading scripts/items/sphere_item_profession_barber.scp
+13:01:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+13:01:Loading scripts/items/sphere_item_profession.scp
+13:01:Loading scripts/items/sphere_item_multis_stairs.scp
+13:01:Loading scripts/items/sphere_item_multis_houses_ships.scp
+13:01:Loading scripts/items/sphere_item_multis_foundations.scp
+13:01:Loading scripts/items/sphere_item_ml_misc.scp
+13:01:Loading scripts/items/sphere_item_ml_floor_wall.scp
+13:01:Loading scripts/items/sphere_item_ml.scp
+13:01:Loading scripts/items/sphere_item_misc_se.scp
+13:01:Loading scripts/items/sphere_item_misc.scp
+13:01:Loading scripts/items/sphere_item_magic_weapon.scp
+13:01:Loading scripts/items/sphere_item_magic_wands.scp
+13:01:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+13:01:Loading scripts/items/sphere_item_magic_leather.scp
+13:01:Loading scripts/items/sphere_item_magic_armor.scp
+13:01:Loading scripts/items/sphere_item_icons_new.scp
+13:01:Loading scripts/items/sphere_item_ground_tiles.scp
+13:01:Loading scripts/items/sphere_item_eight_age.scp
+13:01:Loading scripts/items/sphere_item_deco_signs.scp
+13:01:Loading scripts/items/sphere_item_deco_misc.scp
+13:01:Loading scripts/items/sphere_item_deco_mini_houses.scp
+13:01:Loading scripts/items/sphere_item_deco_lightsources.scp
+13:01:Loading scripts/items/sphere_item_deco_furniture.scp
+13:01:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+13:01:Loading scripts/items/sphere_item_deco_evilitem.scp
+13:01:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+13:01:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+13:01:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+13:02:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+13:02:Loading scripts/items/sphere_item_christimas.scp
+13:02:Loading scripts/items/sphere_item_char_icons.scp
+13:02:Loading scripts/items/sphere_item_building_walls_se.scp
+13:02:Loading scripts/items/sphere_item_building_walls.scp
+13:02:Loading scripts/items/sphere_item_building_stairs_ml.scp
+13:02:Loading scripts/items/sphere_item_building_stairs.scp
+13:02:Loading scripts/items/sphere_item_building_roofs_se.scp
+13:02:Loading scripts/items/sphere_item_building_roofs_ml.scp
+13:02:Loading scripts/items/sphere_item_building_roofs_aos.scp
+13:02:Loading scripts/items/sphere_item_building_roofs.scp
+13:02:Loading scripts/items/sphere_item_building_other.scp
+13:02:Loading scripts/items/sphere_item_building_floors_se.scp
+13:02:Loading scripts/items/sphere_item_building_floors.scp
+13:02:Loading scripts/items/sphere_item_building_fence.scp
+13:02:Loading scripts/items/sphere_item_building_doors.scp
+13:02:Loading scripts/items/sphere_item_boulders_rocks.scp
+13:02:Loading scripts/items/sphere_item_aos_se.scp
+13:02:Loading scripts/items/sphere_item_animations.scp
+13:02:Loading scripts/sphere_region.scp
+13:02:Loading scripts/maps/sphere_map0.scp
+13:02:Loading scripts/maps/sphere_map1.scp
+13:02:Loading scripts/maps/sphere_map_points0.scp
+13:02:Loading scripts/maps/sphere_map_points1.scp
+13:02:Loading scripts/sphere_menu.scp
+13:02:Loading scripts/sphere_name.scp
+13:02:Loading scripts/sphere_skillmenu.scp
+13:02:Loading scripts/sphere_spawns.scp
+13:02:Loading scripts/sphere_speech.scp
+13:02:Loading scripts/sphere_skills.scp
+13:02:Loading scripts/sphere_spells.scp
+13:02:Loading scripts/sphere_newb.scp
+13:02:Loading scripts/sphere_template.scp
+13:02:Loading scripts/sphere_template_loot.scp
+13:02:Loading scripts/sphere_template_vend.scp
+13:02:Loading scripts/sphere_triggers.scp
+13:02:Loading scripts/sphere_serv_triggers.scp
+13:02:Loading scripts/speech/townyew.scp
+13:02:Loading scripts/speech/townwind.scp
+13:02:Loading scripts/speech/townvesper.scp
+13:02:Loading scripts/speech/towntrinsic.scp
+13:02:Loading scripts/speech/townskarabrae.scp
+13:02:Loading scripts/speech/townserphold.scp
+13:02:Loading scripts/speech/townnujelm.scp
+13:02:Loading scripts/speech/townmoonglow.scp
+13:02:Loading scripts/speech/townminoc.scp
+13:02:Loading scripts/speech/townmagincia.scp
+13:02:Loading scripts/speech/townjhelom.scp
+13:02:Loading scripts/speech/towncove.scp
+13:02:Loading scripts/speech/townbucsden.scp
+13:02:Loading scripts/speech/townbritain.scp
+13:02:Loading scripts/speech/spherespee.scp
+13:02:Loading scripts/speech/speakshopkeep.scp
+13:02:Loading scripts/speech/speakrehello.scp
+13:02:Loading scripts/speech/speakorc.scp
+13:02:Loading scripts/speech/speakneeds.scp
+13:02:Loading scripts/speech/speakmaster.scp
+13:02:Loading scripts/speech/speakhuman.scp
+13:02:Loading scripts/speech/speakhorse.scp
+13:02:Loading scripts/speech/jobweaver.scp
+13:02:Loading scripts/speech/jobweaponstrainer.scp
+13:02:Loading scripts/speech/jobweaponsmith.scp
+13:02:Loading scripts/speech/jobwaiter.scp
+13:02:Loading scripts/speech/jobvet.scp
+13:02:Loading scripts/speech/jobveggie.scp
+13:02:Loading scripts/speech/jobtinker.scp
+13:02:Loading scripts/speech/jobthief.scp
+13:02:Loading scripts/speech/jobtavernkeeper.scp
+13:02:Loading scripts/speech/jobtanner.scp
+13:02:Loading scripts/speech/jobshipwright.scp
+13:02:Loading scripts/speech/jobshepherd.scp
+13:02:Loading scripts/speech/jobservant.scp
+13:02:Loading scripts/speech/jobsculptor.scp
+13:02:Loading scripts/speech/jobscribe.scp
+13:02:Loading scripts/speech/jobscholar.scp
+13:02:Loading scripts/speech/jobsailor.scp
+13:02:Loading scripts/speech/jobrunner.scp
+13:02:Loading scripts/speech/jobrealtor.scp
+13:02:Loading scripts/speech/jobranger.scp
+13:02:Loading scripts/speech/jobrancher.scp
+13:02:Loading scripts/speech/jobprovisioner.scp
+13:02:Loading scripts/speech/jobprisoner.scp
+13:02:Loading scripts/speech/jobpriest.scp
+13:02:Loading scripts/speech/jobpirate.scp
+13:02:Loading scripts/speech/jobparliament.scp
+13:02:Loading scripts/speech/jobpaladin.scp
+13:02:Loading scripts/speech/joboverseer.scp
+13:02:Loading scripts/speech/jobnoble.scp
+13:02:Loading scripts/speech/jobmonk.scp
+13:02:Loading scripts/speech/jobminter.scp
+13:02:Loading scripts/speech/jobminer.scp
+13:02:Loading scripts/speech/jobmiller.scp
+13:02:Loading scripts/speech/jobmayor.scp
+13:02:Loading scripts/speech/jobmapmaker.scp
+13:02:Loading scripts/speech/jobMageShop.scp
+13:02:Loading scripts/speech/jobMageEvil.scp
+13:02:Loading scripts/speech/jobMage.scp
+13:02:Loading scripts/speech/joblaborer.scp
+13:02:Loading scripts/speech/jobjudge.scp
+13:02:Loading scripts/speech/jobjeweller.scp
+13:02:Loading scripts/speech/jobjailor.scp
+13:02:Loading scripts/speech/jobinnkeeper.scp
+13:02:Loading scripts/speech/jobherbalist.scp
+13:02:Loading scripts/speech/jobhealwand.scp
+13:02:Loading scripts/speech/jobhealer.scp
+13:02:Loading scripts/speech/jobGuard.scp
+13:02:Loading scripts/speech/jobglassblower.scp
+13:02:Loading scripts/speech/jobgambler.scp
+13:02:Loading scripts/speech/jobfurtrader.scp
+13:02:Loading scripts/speech/jobfarmer.scp
+13:02:Loading scripts/speech/jobcobbler.scp
+13:02:Loading scripts/speech/jobcashual.scp
+13:02:Loading scripts/speech/jobcarpenter.scp
+13:02:Loading scripts/speech/jobbutcher.scp
+13:02:Loading scripts/speech/jobBrigand.scp
+13:02:Loading scripts/speech/jobbowyer.scp
+13:02:Loading scripts/speech/jobblacksmith.scp
+13:02:Loading scripts/speech/jobbeggar.scp
+13:02:Loading scripts/speech/jobbeekeeper.scp
+13:02:Loading scripts/speech/jobbard.scp
+13:02:Loading scripts/speech/jobbanker.scp
+13:02:Loading scripts/speech/jobbaker.scp
+13:02:Loading scripts/speech/jobartist.scp
+13:02:Loading scripts/speech/jobarmourer.scp
+13:02:Loading scripts/speech/jobarchitect.scp
+13:02:Loading scripts/speech/jobanimal.scp
+13:02:Loading scripts/speech/jobalchemist.scp
+13:02:Loading scripts/speech/jobactor.scp
+13:02:Loading scripts/sphere_msgs.scp
+13:02:Loading scripts/stones/sphere_genericstone_types.scp
+13:02:Loading scripts/stones/sphere_genericstone_items.scp
+13:02:Loading scripts/stones/sphere_genericstone_functions.scp
+13:02:Loading scripts/stones/sphere_genericstone_config.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_types.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_speech.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_items.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_functions.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_events.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+13:02:Loading scripts/stones/guilds/sphere_guild_config.scp
+13:02:Loading scripts/stones/towns/sphere_town_types.scp
+13:02:Loading scripts/stones/towns/sphere_town_speech.scp
+13:02:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+13:02:Loading scripts/stones/towns/sphere_town_items.scp
+13:02:Loading scripts/stones/towns/sphere_town_functions_player.scp
+13:02:Loading scripts/stones/towns/sphere_town_functions.scp
+13:02:Loading scripts/stones/towns/sphere_town_events.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+13:02:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+13:02:Loading scripts/stones/towns/sphere_town_config.scp
+13:02:Loading scripts/war script/sistema_runebook.scp
+13:02:Loading scripts/war script/sistema_de_news.scp
+13:02:Loading scripts/war script/sistema_bandagem.scp
+13:02:Loading scripts/war script/sistema_arena_x1.scp
+13:02:Loading scripts/war script/roupas.scp
+13:02:Loading scripts/war script/plates.scp
+13:02:Loading scripts/war script/pisos e gates.scp
+13:02:Loading scripts/war script/pedra_votacao.scp
+13:02:Loading scripts/war script/pedras.scp
+13:02:Loading scripts/war script/Jail Staff.scp
+13:02:Loading scripts/war script/itens_uteis.scp
+13:02:Loading scripts/war script/itens_pvp.scp
+13:02:Loading scripts/war script/events.scp
+13:02:Loading scripts/war script/comandos.scp
+13:02:Loading scripts/war script/arena_warrior.scp
+13:02:Loading scripts/war script/areas.scp
+13:02:Loading scripts/war script/accountinfo.scp
+13:02:Loaded 54 client encryption keys.
+13:02:Server started on 'Rodrigo-PC' port 2593.
+13:02:Monitoring IP '5.208.195.198'.
+13:02:Monitoring IP '10.0.0.4'.
+13:02:Loading save/spheredata...
+13:02:WARNING:'save/spherestatics.scp' not found...
+13:02:WARNING:Can't Load save/spherestatics
+13:02:Loading save/spheremultis...
+13:02:Loading save/sphereworld...
+13:02:Loading save/spherechars...
+13:02:GC: 2820 Objects accounted for
+13:02:Auto-complete dictionary loaded (contains 142 words).
+13:02:Option flags: CommandSysmessages + NoHouseMuteSpeech
+13:02:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+13:02:Startup complete. items=2806, chars=14
+13:02:Press '?' for console commands
+13:05:FATAL:Server terminated by error 5!
+
+13:09:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+13:09:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+13:09:Expansion maps supported: T2A, LBR, AOS, SE
+13:09:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+13:09:Indexing 259 scripts...
+13:09:Loading scripts/sphere_defs.scp
+13:09:Loading scripts/sphere_types.scp
+13:09:Loading scripts/sphere_book.scp
+13:09:Loading scripts/sphere_backward_compatibility.scp
+13:09:Loading scripts/sphere_events_human.scp
+13:09:Loading scripts/sphere_events_npcs.scp
+13:09:Loading scripts/npcs/spherechar_se.scp
+13:09:Loading scripts/npcs/spherechar_new_mounts.scp
+13:09:Loading scripts/npcs/spherechar_mondains_legacy.scp
+13:09:Loading scripts/npcs/spherechar_misc.scp
+13:09:Loading scripts/npcs/spherechar_lbr.scp
+13:09:Loading scripts/npcs/spherechar_human.scp
+13:09:Loading scripts/npcs/spherechar_evil.scp
+13:09:Loading scripts/npcs/spherechar_aos.scp
+13:09:Loading scripts/npcs/spherechar_anim.scp
+13:09:Loading scripts/npcs/spherechar.scp
+13:09:Loading scripts/sphere_admin.scp
+13:09:Loading scripts/sphere_dialog.scp
+13:09:Loading scripts/items/sphere_item_resources.scp
+13:09:Loading scripts/items/sphere_minor_artifacts.scp
+13:09:Loading scripts/items/sphere_item_vegetation.scp
+13:09:Loading scripts/items/sphere_item_unsorted.scp
+13:09:Loading scripts/items/sphere_item_treasure_maps.scp
+13:09:Loading scripts/items/sphere_item_ship_parts.scp
+13:09:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+13:09:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+13:09:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+13:09:Loading scripts/items/sphere_item_provisions_weapons.scp
+13:09:Loading scripts/items/sphere_item_provisions_potions.scp
+13:09:Loading scripts/items/sphere_item_provisions_ore.scp
+13:09:Loading scripts/items/sphere_item_provisions_misc.scp
+13:09:Loading scripts/items/sphere_item_provisions_jewelry.scp
+13:09:Loading scripts/items/sphere_item_provisions_deeds.scp
+13:09:Loading scripts/items/sphere_item_provisions_deed.scp
+13:09:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+13:09:Loading scripts/items/sphere_item_provisions_clothing.scp
+13:09:Loading scripts/items/sphere_item_provisions_beers.scp
+13:09:Loading scripts/items/sphere_item_provisions_armor_se.scp
+13:09:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+13:09:Loading scripts/items/sphere_item_provisions_armor_color.scp
+13:09:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+13:09:Loading scripts/items/sphere_item_provisions_armor.scp
+13:09:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+13:09:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+13:09:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+13:09:Loading scripts/items/sphere_item_profession_cartographer.scp
+13:09:Loading scripts/items/sphere_item_profession_barber.scp
+13:09:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+13:09:Loading scripts/items/sphere_item_profession.scp
+13:09:Loading scripts/items/sphere_item_multis_stairs.scp
+13:09:Loading scripts/items/sphere_item_multis_houses_ships.scp
+13:09:Loading scripts/items/sphere_item_multis_foundations.scp
+13:09:Loading scripts/items/sphere_item_ml_misc.scp
+13:09:Loading scripts/items/sphere_item_ml_floor_wall.scp
+13:09:Loading scripts/items/sphere_item_ml.scp
+13:09:Loading scripts/items/sphere_item_misc_se.scp
+13:09:Loading scripts/items/sphere_item_misc.scp
+13:09:Loading scripts/items/sphere_item_magic_weapon.scp
+13:09:Loading scripts/items/sphere_item_magic_wands.scp
+13:09:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+13:09:Loading scripts/items/sphere_item_magic_leather.scp
+13:09:Loading scripts/items/sphere_item_magic_armor.scp
+13:09:Loading scripts/items/sphere_item_icons_new.scp
+13:09:Loading scripts/items/sphere_item_ground_tiles.scp
+13:09:Loading scripts/items/sphere_item_eight_age.scp
+13:09:Loading scripts/items/sphere_item_deco_signs.scp
+13:09:Loading scripts/items/sphere_item_deco_misc.scp
+13:09:Loading scripts/items/sphere_item_deco_mini_houses.scp
+13:09:Loading scripts/items/sphere_item_deco_lightsources.scp
+13:09:Loading scripts/items/sphere_item_deco_furniture.scp
+13:09:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+13:09:Loading scripts/items/sphere_item_deco_evilitem.scp
+13:09:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+13:09:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+13:09:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+13:09:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+13:09:Loading scripts/items/sphere_item_christimas.scp
+13:09:Loading scripts/items/sphere_item_char_icons.scp
+13:09:Loading scripts/items/sphere_item_building_walls_se.scp
+13:09:Loading scripts/items/sphere_item_building_walls.scp
+13:09:Loading scripts/items/sphere_item_building_stairs_ml.scp
+13:09:Loading scripts/items/sphere_item_building_stairs.scp
+13:09:Loading scripts/items/sphere_item_building_roofs_se.scp
+13:09:Loading scripts/items/sphere_item_building_roofs_ml.scp
+13:09:Loading scripts/items/sphere_item_building_roofs_aos.scp
+13:09:Loading scripts/items/sphere_item_building_roofs.scp
+13:09:Loading scripts/items/sphere_item_building_other.scp
+13:09:Loading scripts/items/sphere_item_building_floors_se.scp
+13:09:Loading scripts/items/sphere_item_building_floors.scp
+13:09:Loading scripts/items/sphere_item_building_fence.scp
+13:09:Loading scripts/items/sphere_item_building_doors.scp
+13:09:Loading scripts/items/sphere_item_boulders_rocks.scp
+13:09:Loading scripts/items/sphere_item_aos_se.scp
+13:09:Loading scripts/items/sphere_item_animations.scp
+13:09:Loading scripts/sphere_region.scp
+13:09:Loading scripts/maps/sphere_map0.scp
+13:09:Loading scripts/maps/sphere_map1.scp
+13:09:Loading scripts/maps/sphere_map_points0.scp
+13:09:Loading scripts/maps/sphere_map_points1.scp
+13:09:Loading scripts/sphere_menu.scp
+13:09:Loading scripts/sphere_name.scp
+13:09:Loading scripts/sphere_skillmenu.scp
+13:09:Loading scripts/sphere_spawns.scp
+13:09:Loading scripts/sphere_speech.scp
+13:09:Loading scripts/sphere_skills.scp
+13:09:Loading scripts/sphere_spells.scp
+13:09:Loading scripts/sphere_newb.scp
+13:09:Loading scripts/sphere_template.scp
+13:09:Loading scripts/sphere_template_loot.scp
+13:09:Loading scripts/sphere_template_vend.scp
+13:09:Loading scripts/sphere_triggers.scp
+13:09:Loading scripts/sphere_serv_triggers.scp
+13:09:Loading scripts/speech/townyew.scp
+13:09:Loading scripts/speech/townwind.scp
+13:09:Loading scripts/speech/townvesper.scp
+13:09:Loading scripts/speech/towntrinsic.scp
+13:09:Loading scripts/speech/townskarabrae.scp
+13:09:Loading scripts/speech/townserphold.scp
+13:09:Loading scripts/speech/townnujelm.scp
+13:09:Loading scripts/speech/townmoonglow.scp
+13:09:Loading scripts/speech/townminoc.scp
+13:09:Loading scripts/speech/townmagincia.scp
+13:09:Loading scripts/speech/townjhelom.scp
+13:09:Loading scripts/speech/towncove.scp
+13:09:Loading scripts/speech/townbucsden.scp
+13:09:Loading scripts/speech/townbritain.scp
+13:09:Loading scripts/speech/spherespee.scp
+13:09:Loading scripts/speech/speakshopkeep.scp
+13:09:Loading scripts/speech/speakrehello.scp
+13:09:Loading scripts/speech/speakorc.scp
+13:09:Loading scripts/speech/speakneeds.scp
+13:09:Loading scripts/speech/speakmaster.scp
+13:09:Loading scripts/speech/speakhuman.scp
+13:09:Loading scripts/speech/speakhorse.scp
+13:09:Loading scripts/speech/jobweaver.scp
+13:09:Loading scripts/speech/jobweaponstrainer.scp
+13:09:Loading scripts/speech/jobweaponsmith.scp
+13:09:Loading scripts/speech/jobwaiter.scp
+13:09:Loading scripts/speech/jobvet.scp
+13:09:Loading scripts/speech/jobveggie.scp
+13:09:Loading scripts/speech/jobtinker.scp
+13:09:Loading scripts/speech/jobthief.scp
+13:09:Loading scripts/speech/jobtavernkeeper.scp
+13:09:Loading scripts/speech/jobtanner.scp
+13:09:Loading scripts/speech/jobshipwright.scp
+13:09:Loading scripts/speech/jobshepherd.scp
+13:09:Loading scripts/speech/jobservant.scp
+13:09:Loading scripts/speech/jobsculptor.scp
+13:09:Loading scripts/speech/jobscribe.scp
+13:09:Loading scripts/speech/jobscholar.scp
+13:09:Loading scripts/speech/jobsailor.scp
+13:09:Loading scripts/speech/jobrunner.scp
+13:09:Loading scripts/speech/jobrealtor.scp
+13:09:Loading scripts/speech/jobranger.scp
+13:09:Loading scripts/speech/jobrancher.scp
+13:09:Loading scripts/speech/jobprovisioner.scp
+13:09:Loading scripts/speech/jobprisoner.scp
+13:09:Loading scripts/speech/jobpriest.scp
+13:09:Loading scripts/speech/jobpirate.scp
+13:09:Loading scripts/speech/jobparliament.scp
+13:09:Loading scripts/speech/jobpaladin.scp
+13:09:Loading scripts/speech/joboverseer.scp
+13:09:Loading scripts/speech/jobnoble.scp
+13:09:Loading scripts/speech/jobmonk.scp
+13:09:Loading scripts/speech/jobminter.scp
+13:09:Loading scripts/speech/jobminer.scp
+13:09:Loading scripts/speech/jobmiller.scp
+13:09:Loading scripts/speech/jobmayor.scp
+13:09:Loading scripts/speech/jobmapmaker.scp
+13:09:Loading scripts/speech/jobMageShop.scp
+13:09:Loading scripts/speech/jobMageEvil.scp
+13:09:Loading scripts/speech/jobMage.scp
+13:09:Loading scripts/speech/joblaborer.scp
+13:09:Loading scripts/speech/jobjudge.scp
+13:09:Loading scripts/speech/jobjeweller.scp
+13:09:Loading scripts/speech/jobjailor.scp
+13:09:Loading scripts/speech/jobinnkeeper.scp
+13:09:Loading scripts/speech/jobherbalist.scp
+13:09:Loading scripts/speech/jobhealwand.scp
+13:09:Loading scripts/speech/jobhealer.scp
+13:09:Loading scripts/speech/jobGuard.scp
+13:09:Loading scripts/speech/jobglassblower.scp
+13:09:Loading scripts/speech/jobgambler.scp
+13:09:Loading scripts/speech/jobfurtrader.scp
+13:09:Loading scripts/speech/jobfarmer.scp
+13:09:Loading scripts/speech/jobcobbler.scp
+13:09:Loading scripts/speech/jobcashual.scp
+13:09:Loading scripts/speech/jobcarpenter.scp
+13:09:Loading scripts/speech/jobbutcher.scp
+13:09:Loading scripts/speech/jobBrigand.scp
+13:09:Loading scripts/speech/jobbowyer.scp
+13:09:Loading scripts/speech/jobblacksmith.scp
+13:09:Loading scripts/speech/jobbeggar.scp
+13:09:Loading scripts/speech/jobbeekeeper.scp
+13:09:Loading scripts/speech/jobbard.scp
+13:09:Loading scripts/speech/jobbanker.scp
+13:09:Loading scripts/speech/jobbaker.scp
+13:09:Loading scripts/speech/jobartist.scp
+13:09:Loading scripts/speech/jobarmourer.scp
+13:09:Loading scripts/speech/jobarchitect.scp
+13:09:Loading scripts/speech/jobanimal.scp
+13:09:Loading scripts/speech/jobalchemist.scp
+13:09:Loading scripts/speech/jobactor.scp
+13:09:Loading scripts/sphere_msgs.scp
+13:09:Loading scripts/stones/sphere_genericstone_types.scp
+13:09:Loading scripts/stones/sphere_genericstone_items.scp
+13:09:Loading scripts/stones/sphere_genericstone_functions.scp
+13:09:Loading scripts/stones/sphere_genericstone_config.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_types.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_speech.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_items.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_functions.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_events.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+13:09:Loading scripts/stones/guilds/sphere_guild_config.scp
+13:09:Loading scripts/stones/towns/sphere_town_types.scp
+13:09:Loading scripts/stones/towns/sphere_town_speech.scp
+13:09:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+13:09:Loading scripts/stones/towns/sphere_town_items.scp
+13:09:Loading scripts/stones/towns/sphere_town_functions_player.scp
+13:09:Loading scripts/stones/towns/sphere_town_functions.scp
+13:09:Loading scripts/stones/towns/sphere_town_events.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+13:09:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+13:09:Loading scripts/stones/towns/sphere_town_config.scp
+13:09:Loading scripts/war script/sistema_runebook.scp
+13:09:Loading scripts/war script/sistema_de_news.scp
+13:09:Loading scripts/war script/sistema_bandagem.scp
+13:09:Loading scripts/war script/sistema_arena_x1.scp
+13:09:Loading scripts/war script/roupas.scp
+13:09:Loading scripts/war script/plates.scp
+13:09:Loading scripts/war script/pisos e gates.scp
+13:09:Loading scripts/war script/pedra_votacao.scp
+13:09:Loading scripts/war script/pedras.scp
+13:09:Loading scripts/war script/Jail Staff.scp
+13:09:Loading scripts/war script/itens_uteis.scp
+13:09:Loading scripts/war script/itens_pvp.scp
+13:09:Loading scripts/war script/events.scp
+13:09:Loading scripts/war script/comandos.scp
+13:09:Loading scripts/war script/arena_warrior.scp
+13:09:Loading scripts/war script/areas.scp
+13:09:Loading scripts/war script/accountinfo.scp
+13:09:Loaded 54 client encryption keys.
+13:09:Server started on 'Rodrigo-PC' port 2593.
+13:09:Monitoring IP '5.208.195.198'.
+13:09:Monitoring IP '10.0.0.4'.
+13:09:Loading save/spheredata...
+13:09:WARNING:'save/spherestatics.scp' not found...
+13:09:WARNING:Can't Load save/spherestatics
+13:09:Loading save/spheremultis...
+13:09:Loading save/sphereworld...
+13:09:Loading save/spherechars...
+13:09:GC: 2820 Objects accounted for
+13:09:Auto-complete dictionary loaded (contains 142 words).
+13:09:Option flags: CommandSysmessages + NoHouseMuteSpeech
+13:09:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+13:09:Startup complete. items=2806, chars=14
+13:09:Press '?' for console commands
+13:09:230:Client connected [Total:1] ('5.208.195.198' 1/1)
+13:09:230:Login 'Digo'
+13:09:234:Client connected [Total:2] ('127.0.0.1' 1/1)
+13:09:230:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+13:09:234:Login 'Digo'
+13:09:234:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+13:09:234:Client connected [Total:1] ('5.208.195.198' 1/1)
+13:09:234:Login 'Digo'
+13:09:230:Client connected [Total:2] ('127.0.0.1' 1/1)
+13:09:234:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+13:09:230:Login 'Digo'
+13:10:230:Setup_CreateDialog acct='Digo', char='Digo'
+13:10:230:Setup_Start acct='Digo', char='Digo', IP='127.0.0.1'
+13:11:230:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+13:11:23c:Client connected [Total:1] ('5.208.195.198' 1/1)
+13:11:23c:Login 'rodrigo10'
+13:11:240:Client connected [Total:2] ('127.0.0.1' 1/1)
+13:11:23c:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+13:11:240:Login 'rodrigo10'
+13:11:240:Setup_CreateDialog acct='rodrigo10', char='eL DiGuInhO'
+13:11:240:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+13:12:240:'rodrigo10' commands 'add'=1
+13:12:240:'rodrigo10' commands 'info'=1
+13:12:240:'rodrigo10' commands 'info'=1
+13:12:240:'rodrigo10' commands 'info'=1
+13:13:240:'rodrigo10' commands 'add'=1
+13:13:240:'rodrigo10' commands 'gm'=1
+13:14:240:'rodrigo10' commands 'add'=1
+13:14:240:'rodrigo10' commands 'info'=1
+13:14:240:'rodrigo10' commands 'gm'=1
+13:14:240:'rodrigo10' commands 'gm'=1
+13:14:240:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+13:17:240:Client connected [Total:1] ('5.208.195.198' 1/1)
+13:17:240:Login 'rodrigo10'
+13:17:248:Client connected [Total:2] ('127.0.0.1' 1/1)
+13:17:240:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+13:17:248:Login 'rodrigo10'
+13:17:248:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+13:17:248:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+13:18:248:Client connected [Total:1] ('5.208.195.198' 1/1)
+13:18:248:Login 'rodrigo10'
+13:18:240:Client connected [Total:2] ('127.0.0.1' 1/1)
+13:18:248:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+13:18:240:Login 'rodrigo10'
+13:18:240:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+13:18:240:'rodrigo10' commands 'add'=1
+13:18:240:'rodrigo10' commands 'remove'=1
+13:18:'rodrigo10' commands uid=0400015e0 (Deed to a Small Stone House) to 'remove'=1
+13:19:240:'rodrigo10' commands 'tele'=1
+13:19:ERROR:Undefined symbol 'i_horse'
+13:19:ERROR:Undefined keyword 'add'
+13:19:240:'rodrigo10' commands 'add i_horse'=1
+13:19:ERROR:Undefined symbol 'i_horse'
+13:19:ERROR:Undefined keyword 'add'
+13:19:240:'rodrigo10' commands 'add i_horse'=1
+13:19:240:'rodrigo10' commands 'info'=1
+13:21:248:Client connected [Total:2] ('5.197.130.229' 1/1)
+13:21:248:Login 'igo117'
+13:21:24c:Client connected [Total:3] ('5.197.130.229' 1/2)
+13:21:248:Client disconnected [Total:2] ('5.197.130.229' 1/1)
+13:21:24c:Login 'igo117'
+13:21:24c:Setup_CreateDialog acct='igo117', char='BroKeer'
+13:21:24c:Setup_Start acct='igo117', char='BroKeer', IP='5.197.130.229'
+13:21:24c:Client disconnected [Total:1] ('5.197.130.229' 0/0)
+13:22:24c:Client connected [Total:2] ('5.197.130.229' 1/1)
+13:22:24c:Login 'igo117'
+13:22:248:Client connected [Total:3] ('5.197.130.229' 1/2)
+13:22:24c:Client disconnected [Total:2] ('5.197.130.229' 1/1)
+13:22:248:Login 'igo117'
+13:22:248:Setup_Start acct='igo117', char='BroKeer', IP='5.197.130.229'
+13:23:240:'rodrigo10' commands 'tele'=1
+13:23:240:'rodrigo10' commands 'tele'=1
+13:23:240:'rodrigo10' commands 'tele'=1
+13:23:240:'rodrigo10' commands 'tele'=1
+13:24:240:'rodrigo10' commands 'tele'=1
+13:24:240:'rodrigo10' commands 'tele'=1
+13:24:240:'rodrigo10' commands 'tele'=1
+13:24:240:'rodrigo10' commands 'add i_mantle'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:26:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:27:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:28:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:ERROR:UID=0400015d9, id=0203b 'short hair', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+13:29:ERROR:UID=0400015f0, id=0203b 'short hair', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+13:29:ERROR:UID=04000161c, id=0203c 'long hair', Invalid code=2227 (Hair/Beard item not equipped / not in a corpse / not in a vendor box)
+13:29:GC: 2864 Objects accounted for
+13:29:World data saved   (save/sphereworld.scp).
+13:29:Player data saved  (save/spherechars.scp).
+13:29:Multi data saved   (save/spheremultis.scp).
+13:29:Context data saved (save/spheredata.scp).
+13:29:World save completed, took 0.7600 seconds
+13:29:240:'rodrigo10' commands 'go moonglow'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:29:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'tele'=1
+13:30:240:'rodrigo10' commands 'add'=1
+13:30:ERROR:Undefined symbol 'i_man_banker'
+13:30:ERROR:Undefined keyword 'add'
+13:30:240:'rodrigo10' commands 'add i_man_banker'=1
+13:30:240:'rodrigo10' commands 'where'=1
+13:30:240:'rodrigo10' commands 'go lycaeum'=1
+13:30:240:'rodrigo10' commands 'go lycaeum'=1
+13:30:240:'rodrigo10' commands 'go commerce'=1
+13:31:240:'rodrigo10' commands 'go commerce room'=1
+13:31:240:'rodrigo10' commands 'go arena global'=1
+13:31:240:'rodrigo10' commands 'tele'=1
+13:31:240:'rodrigo10' commands 'tele'=1
+13:31:240:'rodrigo10' commands 'info'=1
+13:32:240:'rodrigo10' commands 'tele'=1
+13:32:240:'rodrigo10' commands 'tele'=1
+13:32:240:'rodrigo10' commands 'tele'=1
+13:32:240:'rodrigo10' commands 'tele'=1
+13:32:240:'rodrigo10' commands 'tele'=1
+13:32:240:'rodrigo10' commands 'dupe'=1
+13:32:'rodrigo10' commands uid=040001eba (Cidade) to 'dupe'=1
+13:32:240:'rodrigo10' commands 'dupe'=1
+13:32:'rodrigo10' commands uid=04000088a (@07a1 Sala de Gates) to 'dupe'=1
+13:32:240:'rodrigo10' commands 'info'=1
+13:32:240:'rodrigo10' commands 'go lycaeum'=1
+13:33:240:'rodrigo10' commands 'dupe'=1
+13:34:240:'rodrigo10' commands 'dupe'=1
+13:34:'rodrigo10' commands uid=0400012b4 (Cidade) to 'dupe'=1
+13:34:240:'rodrigo10' commands 'where'=1
+13:34:240:'rodrigo10' commands 'tele'=1
+13:34:240:'rodrigo10' commands 'tele'=1
+13:34:240:'rodrigo10' commands 'tele'=1
+13:34:240:'rodrigo10' commands 'info'=1
+13:35:240:'rodrigo10' commands 'dupe'=1
+13:35:'rodrigo10' commands uid=04000192a (@07a1 Entrar no ws) to 'dupe'=1
+13:35:240:'rodrigo10' commands 'dupe'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'info'=1
+13:35:240:'rodrigo10' tweak uid=0400012ae (@07a1 Entrar no ws) to 'MOREP 4311,986'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'tele'=1
+13:35:240:'rodrigo10' commands 'info'=1
+13:35:240:'rodrigo10' commands 'info'=1
+13:36:240:'rodrigo10' commands 'go'=1
+13:36:240:'rodrigo10' commands 'go 90 65'=1
+13:36:240:'rodrigo10' commands 'info'=1
+13:36:240:'rodrigo10' commands 'info'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:36:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'info'=1
+13:37:240:'rodrigo10' commands 'info'=1
+13:37:240:'rodrigo10' tweak uid=0400012ae (@07a1 Entrar no ws) to 'P 4311,986'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:37:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'where'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'tele'=1
+13:38:240:'rodrigo10' commands 'info'=1
+13:39:240:'rodrigo10' commands 'add c_kirin'=1
+13:39:240:'rodrigo10' commands 'dupe'=1
+13:39:240:'rodrigo10' commands 'kill'=1
+13:39:'Horse' was KILLed by 'rodrigo10'
+13:39:'rodrigo10' commands uid=015de (Horse) to 'kill'=1
+13:40:240:'rodrigo10' commands 'tele'=1
+13:40:240:'rodrigo10' commands 'go lycaem'=1
+13:41:240:'rodrigo10' commands 'go lycaeum'=1
+13:41:240:'rodrigo10' commands 'where'=1
+13:41:GM Page from BroKeer [015da] @ 5422,1106,0,0 : poha gm vem logo aqui seu merda
+13:41:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:Expansion maps supported: T2A, LBR, AOS, SE
+13:42:Indexing 259 scripts...
+13:42:WARNING:Resource 'scripts/war script/pedras.scp' changed, resync.
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'remove'=1
+13:42:'rodrigo10' commands uid=0400012ae (@07a1 Entrar no ws) to 'remove'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:42:240:'rodrigo10' commands 'tele'=1
+13:49:GC: 2866 Objects accounted for
+13:49:World data saved   (save/sphereworld.scp).
+13:49:Player data saved  (save/spherechars.scp).
+13:49:Multi data saved   (save/spheremultis.scp).
+13:49:Context data saved (save/spheredata.scp).
+13:49:World save completed, took 0.1298 seconds
+13:49:240:'rodrigo10' commands 'go inicio'=1
+13:49:240:'rodrigo10' commands 'go cidade'=1
+13:49:240:'rodrigo10' commands 'add'=1
+13:49:ERROR:Undefined symbol 'i_cidade'
+13:49:ERROR:Undefined keyword 'add'
+13:49:240:'rodrigo10' commands 'add i_cidade'=1
+13:50:248:'igo117' commands 'drinkheal'=1
+13:50:248:'igo117' commands 'drinkmana'=1
+13:50:248:'igo117' commands 'drinkinvisibility'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'tele'=1
+13:51:240:'rodrigo10' commands 'info'=1
+13:52:Expansion maps supported: T2A, LBR, AOS, SE
+13:52:Indexing 259 scripts...
+13:52:WARNING:Resource 'scripts/war script/pedras.scp' changed, resync.
+13:52:240:'rodrigo10' commands 'tele'=1
+13:52:ERROR:Undefined symbol 'i_voltar_city'
+13:52:ERROR:Undefined keyword 'add'
+13:52:240:'rodrigo10' commands 'add i_voltar_city'=1
+13:53:Expansion maps supported: T2A, LBR, AOS, SE
+13:53:Indexing 259 scripts...
+13:53:WARNING:Resource 'scripts/war script/pedras.scp' changed, resync.
+13:53:240:'rodrigo10' commands 'go cidade'=1
+13:53:240:'rodrigo10' commands 'go cidade'=1
+13:54:240:'rodrigo10' commands 'remove'=1
+13:54:240:'rodrigo10' commands 'go cidade'=1
+13:54:240:'rodrigo10' commands 'remove'=1
+13:54:'rodrigo10' commands uid=04000088a (@07a1 Sala de Gates) to 'remove'=1
+13:54:240:'rodrigo10' commands 'remove'=1
+13:54:'rodrigo10' commands uid=0400012b1 (Cidade) to 'remove'=1
+13:54:240:'rodrigo10' commands 'kill'=1
+13:54:240:'rodrigo10' commands 'info'=1
+13:54:240:'rodrigo10' commands 'tele'=1
+13:54:240:'rodrigo10' commands 'info'=1
+13:54:240:'rodrigo10' tweak uid=0400012b4 (Commerce) to 'NAME Commerce'=1
+13:56:240:'rodrigo10' commands 'dupe'=1
+13:56:240:'rodrigo10' commands 'go cidade'=1
+13:57:240:'rodrigo10' commands 'go cidade'=1
+13:59:240:'rodrigo10' commands 'go cidade'=1
+13:59:240:'rodrigo10' commands 'dupe'=1
+13:59:'rodrigo10' commands uid=019fd (@07a1 Banker) to 'dupe'=1
+13:59:240:'rodrigo10' commands 'remove'=1
+13:59:240:'rodrigo10' commands 'info'=1
+13:59:240:'rodrigo10' commands 'remove'=1
+13:59:'rodrigo10' commands uid=019fd (@07a1 Banker) to 'remove'=1
+13:59:240:'rodrigo10' commands 'add c_h_banker'=1
+13:59:240:'rodrigo10' commands 'add c_h_banker'=1
+14:00:240:'rodrigo10' commands 'x sotne'=1
+14:00:240:'rodrigo10' commands 'x sotne'=1
+14:00:240:'rodrigo10' commands 'x stone'=1
+14:00:'rodrigo10' commands uid=01265 (Gaspar) to 'stone'=1
+14:00:240:'rodrigo10' commands 'x go 4311,896'=1
+14:00:'rodrigo10' commands uid=01265 (Gaspar) to 'go 4311,896'=1
+14:00:240:'rodrigo10' commands 'x go 4311,896'=1
+14:00:'rodrigo10' commands uid=015f2 (eL DiGuInhO) to 'go 4311,896'=1
+14:00:240:'rodrigo10' commands 'x go 4311,986'=1
+14:00:'rodrigo10' commands uid=01265 (Gaspar) to 'go 4311,986'=1
+14:00:240:'rodrigo10' commands 'x go 4311,986'=1
+14:00:'rodrigo10' commands uid=015f2 (eL DiGuInhO) to 'go 4311,986'=1
+14:00:240:'rodrigo10' commands 'tele'=1
+14:00:240:'rodrigo10' commands 'add'=1
+14:00:240:'rodrigo10' commands 'go cidade'=1
+14:00:240:'rodrigo10' commands 'tele'=1
+14:00:240:'rodrigo10' commands 'tele'=1
+14:00:240:'rodrigo10' commands 'remove'=1
+14:00:'rodrigo10' commands uid=0126f (Baron) to 'remove'=1
+14:00:240:'rodrigo10' commands 'tele'=1
+14:01:240:'rodrigo10' commands 'tele'=1
+14:01:240:'rodrigo10' commands 'tele'=1
+14:01:240:'rodrigo10' commands 'where'=1
+14:01:240:'rodrigo10' commands 'x go 4310 977 10'=1
+14:01:'rodrigo10' commands uid=01265 (Gaspar) to 'go 4310 977 10'=1
+14:01:240:'rodrigo10' commands 'info'=1
+14:02:240:'rodrigo10' tweak uid=01265 (Orc) to 'NAME Orc'=1
+14:02:ERROR:Undefined keyword 'asve'
+14:02:GC: 2865 Objects accounted for
+14:02:World data saved   (save/sphereworld.scp).
+14:02:Player data saved  (save/spherechars.scp).
+14:02:Multi data saved   (save/spheremultis.scp).
+14:02:Context data saved (save/spheredata.scp).
+14:02:World save completed, took 0.3039 seconds
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'tele'=1
+14:02:240:'rodrigo10' commands 'add'=1
+14:03:240:'rodrigo10' commands 'add'=1
+14:03:240:'rodrigo10' commands 'dupe'=1
+14:03:240:'rodrigo10' commands 'dupe'=1
+14:03:240:'rodrigo10' commands 'remove'=1
+14:03:240:'rodrigo10' commands 'remove'=1
+14:03:'rodrigo10' commands uid=04000124e (brass sign) to 'remove'=1
+14:03:240:'rodrigo10' commands 'remove'=1
+14:03:'rodrigo10' commands uid=04000124f (wooden door) to 'remove'=1
+14:03:240:'rodrigo10' commands 'remove'=1
+14:03:248:Client disconnected [Total:1] ('5.197.130.229' 0/0)
+14:03:240:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+14:03:FATAL:Server terminated by error 5!
+
+14:03:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+14:03:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+14:03:Expansion maps supported: T2A, LBR, AOS, SE
+14:03:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+14:03:Indexing 259 scripts...
+14:03:Loading scripts/sphere_defs.scp
+14:03:Loading scripts/sphere_types.scp
+14:03:Loading scripts/sphere_book.scp
+14:03:Loading scripts/sphere_backward_compatibility.scp
+14:03:Loading scripts/sphere_events_human.scp
+14:03:Loading scripts/sphere_events_npcs.scp
+14:03:Loading scripts/npcs/spherechar_se.scp
+14:03:Loading scripts/npcs/spherechar_new_mounts.scp
+14:03:Loading scripts/npcs/spherechar_mondains_legacy.scp
+14:03:Loading scripts/npcs/spherechar_misc.scp
+14:03:Loading scripts/npcs/spherechar_lbr.scp
+14:03:Loading scripts/npcs/spherechar_human.scp
+14:03:Loading scripts/npcs/spherechar_evil.scp
+14:03:Loading scripts/npcs/spherechar_aos.scp
+14:03:Loading scripts/npcs/spherechar_anim.scp
+14:03:Loading scripts/npcs/spherechar.scp
+14:03:Loading scripts/sphere_admin.scp
+14:03:Loading scripts/sphere_dialog.scp
+14:03:Loading scripts/items/sphere_item_resources.scp
+14:03:Loading scripts/items/sphere_minor_artifacts.scp
+14:03:Loading scripts/items/sphere_item_vegetation.scp
+14:03:Loading scripts/items/sphere_item_unsorted.scp
+14:03:Loading scripts/items/sphere_item_treasure_maps.scp
+14:03:Loading scripts/items/sphere_item_ship_parts.scp
+14:03:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+14:03:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+14:03:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+14:03:Loading scripts/items/sphere_item_provisions_weapons.scp
+14:03:Loading scripts/items/sphere_item_provisions_potions.scp
+14:03:Loading scripts/items/sphere_item_provisions_ore.scp
+14:03:Loading scripts/items/sphere_item_provisions_misc.scp
+14:03:Loading scripts/items/sphere_item_provisions_jewelry.scp
+14:03:Loading scripts/items/sphere_item_provisions_deeds.scp
+14:03:Loading scripts/items/sphere_item_provisions_deed.scp
+14:03:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+14:03:Loading scripts/items/sphere_item_provisions_clothing.scp
+14:03:Loading scripts/items/sphere_item_provisions_beers.scp
+14:03:Loading scripts/items/sphere_item_provisions_armor_se.scp
+14:03:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+14:03:Loading scripts/items/sphere_item_provisions_armor_color.scp
+14:03:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+14:03:Loading scripts/items/sphere_item_provisions_armor.scp
+14:03:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+14:03:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+14:03:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+14:03:Loading scripts/items/sphere_item_profession_cartographer.scp
+14:03:Loading scripts/items/sphere_item_profession_barber.scp
+14:03:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+14:03:Loading scripts/items/sphere_item_profession.scp
+14:03:Loading scripts/items/sphere_item_multis_stairs.scp
+14:03:Loading scripts/items/sphere_item_multis_houses_ships.scp
+14:03:Loading scripts/items/sphere_item_multis_foundations.scp
+14:03:Loading scripts/items/sphere_item_ml_misc.scp
+14:03:Loading scripts/items/sphere_item_ml_floor_wall.scp
+14:03:Loading scripts/items/sphere_item_ml.scp
+14:03:Loading scripts/items/sphere_item_misc_se.scp
+14:03:Loading scripts/items/sphere_item_misc.scp
+14:03:Loading scripts/items/sphere_item_magic_weapon.scp
+14:03:Loading scripts/items/sphere_item_magic_wands.scp
+14:03:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+14:03:Loading scripts/items/sphere_item_magic_leather.scp
+14:03:Loading scripts/items/sphere_item_magic_armor.scp
+14:03:Loading scripts/items/sphere_item_icons_new.scp
+14:03:Loading scripts/items/sphere_item_ground_tiles.scp
+14:03:Loading scripts/items/sphere_item_eight_age.scp
+14:03:Loading scripts/items/sphere_item_deco_signs.scp
+14:03:Loading scripts/items/sphere_item_deco_misc.scp
+14:03:Loading scripts/items/sphere_item_deco_mini_houses.scp
+14:03:Loading scripts/items/sphere_item_deco_lightsources.scp
+14:03:Loading scripts/items/sphere_item_deco_furniture.scp
+14:03:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+14:03:Loading scripts/items/sphere_item_deco_evilitem.scp
+14:03:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+14:03:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+14:03:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+14:03:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+14:03:Loading scripts/items/sphere_item_christimas.scp
+14:03:Loading scripts/items/sphere_item_char_icons.scp
+14:03:Loading scripts/items/sphere_item_building_walls_se.scp
+14:03:Loading scripts/items/sphere_item_building_walls.scp
+14:03:Loading scripts/items/sphere_item_building_stairs_ml.scp
+14:03:Loading scripts/items/sphere_item_building_stairs.scp
+14:03:Loading scripts/items/sphere_item_building_roofs_se.scp
+14:03:Loading scripts/items/sphere_item_building_roofs_ml.scp
+14:03:Loading scripts/items/sphere_item_building_roofs_aos.scp
+14:03:Loading scripts/items/sphere_item_building_roofs.scp
+14:03:Loading scripts/items/sphere_item_building_other.scp
+14:03:Loading scripts/items/sphere_item_building_floors_se.scp
+14:03:Loading scripts/items/sphere_item_building_floors.scp
+14:03:Loading scripts/items/sphere_item_building_fence.scp
+14:03:Loading scripts/items/sphere_item_building_doors.scp
+14:03:Loading scripts/items/sphere_item_boulders_rocks.scp
+14:03:Loading scripts/items/sphere_item_aos_se.scp
+14:03:Loading scripts/items/sphere_item_animations.scp
+14:03:Loading scripts/sphere_region.scp
+14:03:Loading scripts/maps/sphere_map0.scp
+14:03:Loading scripts/maps/sphere_map1.scp
+14:03:Loading scripts/maps/sphere_map_points0.scp
+14:03:Loading scripts/maps/sphere_map_points1.scp
+14:03:Loading scripts/sphere_menu.scp
+14:03:Loading scripts/sphere_name.scp
+14:03:Loading scripts/sphere_skillmenu.scp
+14:03:Loading scripts/sphere_spawns.scp
+14:03:Loading scripts/sphere_speech.scp
+14:03:Loading scripts/sphere_skills.scp
+14:03:Loading scripts/sphere_spells.scp
+14:03:Loading scripts/sphere_newb.scp
+14:03:Loading scripts/sphere_template.scp
+14:03:Loading scripts/sphere_template_loot.scp
+14:03:Loading scripts/sphere_template_vend.scp
+14:03:Loading scripts/sphere_triggers.scp
+14:03:Loading scripts/sphere_serv_triggers.scp
+14:03:Loading scripts/speech/townyew.scp
+14:03:Loading scripts/speech/townwind.scp
+14:03:Loading scripts/speech/townvesper.scp
+14:03:Loading scripts/speech/towntrinsic.scp
+14:03:Loading scripts/speech/townskarabrae.scp
+14:03:Loading scripts/speech/townserphold.scp
+14:03:Loading scripts/speech/townnujelm.scp
+14:03:Loading scripts/speech/townmoonglow.scp
+14:03:Loading scripts/speech/townminoc.scp
+14:03:Loading scripts/speech/townmagincia.scp
+14:03:Loading scripts/speech/townjhelom.scp
+14:03:Loading scripts/speech/towncove.scp
+14:03:Loading scripts/speech/townbucsden.scp
+14:03:Loading scripts/speech/townbritain.scp
+14:03:Loading scripts/speech/spherespee.scp
+14:03:Loading scripts/speech/speakshopkeep.scp
+14:03:Loading scripts/speech/speakrehello.scp
+14:03:Loading scripts/speech/speakorc.scp
+14:03:Loading scripts/speech/speakneeds.scp
+14:03:Loading scripts/speech/speakmaster.scp
+14:03:Loading scripts/speech/speakhuman.scp
+14:03:Loading scripts/speech/speakhorse.scp
+14:03:Loading scripts/speech/jobweaver.scp
+14:03:Loading scripts/speech/jobweaponstrainer.scp
+14:03:Loading scripts/speech/jobweaponsmith.scp
+14:03:Loading scripts/speech/jobwaiter.scp
+14:03:Loading scripts/speech/jobvet.scp
+14:03:Loading scripts/speech/jobveggie.scp
+14:03:Loading scripts/speech/jobtinker.scp
+14:03:Loading scripts/speech/jobthief.scp
+14:03:Loading scripts/speech/jobtavernkeeper.scp
+14:03:Loading scripts/speech/jobtanner.scp
+14:03:Loading scripts/speech/jobshipwright.scp
+14:03:Loading scripts/speech/jobshepherd.scp
+14:03:Loading scripts/speech/jobservant.scp
+14:03:Loading scripts/speech/jobsculptor.scp
+14:03:Loading scripts/speech/jobscribe.scp
+14:03:Loading scripts/speech/jobscholar.scp
+14:03:Loading scripts/speech/jobsailor.scp
+14:03:Loading scripts/speech/jobrunner.scp
+14:03:Loading scripts/speech/jobrealtor.scp
+14:03:Loading scripts/speech/jobranger.scp
+14:03:Loading scripts/speech/jobrancher.scp
+14:03:Loading scripts/speech/jobprovisioner.scp
+14:03:Loading scripts/speech/jobprisoner.scp
+14:03:Loading scripts/speech/jobpriest.scp
+14:03:Loading scripts/speech/jobpirate.scp
+14:03:Loading scripts/speech/jobparliament.scp
+14:03:Loading scripts/speech/jobpaladin.scp
+14:03:Loading scripts/speech/joboverseer.scp
+14:03:Loading scripts/speech/jobnoble.scp
+14:03:Loading scripts/speech/jobmonk.scp
+14:03:Loading scripts/speech/jobminter.scp
+14:03:Loading scripts/speech/jobminer.scp
+14:03:Loading scripts/speech/jobmiller.scp
+14:03:Loading scripts/speech/jobmayor.scp
+14:03:Loading scripts/speech/jobmapmaker.scp
+14:03:Loading scripts/speech/jobMageShop.scp
+14:03:Loading scripts/speech/jobMageEvil.scp
+14:03:Loading scripts/speech/jobMage.scp
+14:03:Loading scripts/speech/joblaborer.scp
+14:03:Loading scripts/speech/jobjudge.scp
+14:03:Loading scripts/speech/jobjeweller.scp
+14:03:Loading scripts/speech/jobjailor.scp
+14:03:Loading scripts/speech/jobinnkeeper.scp
+14:03:Loading scripts/speech/jobherbalist.scp
+14:03:Loading scripts/speech/jobhealwand.scp
+14:03:Loading scripts/speech/jobhealer.scp
+14:03:Loading scripts/speech/jobGuard.scp
+14:03:Loading scripts/speech/jobglassblower.scp
+14:03:Loading scripts/speech/jobgambler.scp
+14:03:Loading scripts/speech/jobfurtrader.scp
+14:03:Loading scripts/speech/jobfarmer.scp
+14:03:Loading scripts/speech/jobcobbler.scp
+14:03:Loading scripts/speech/jobcashual.scp
+14:03:Loading scripts/speech/jobcarpenter.scp
+14:03:Loading scripts/speech/jobbutcher.scp
+14:03:Loading scripts/speech/jobBrigand.scp
+14:03:Loading scripts/speech/jobbowyer.scp
+14:03:Loading scripts/speech/jobblacksmith.scp
+14:03:Loading scripts/speech/jobbeggar.scp
+14:03:Loading scripts/speech/jobbeekeeper.scp
+14:03:Loading scripts/speech/jobbard.scp
+14:03:Loading scripts/speech/jobbanker.scp
+14:03:Loading scripts/speech/jobbaker.scp
+14:03:Loading scripts/speech/jobartist.scp
+14:03:Loading scripts/speech/jobarmourer.scp
+14:03:Loading scripts/speech/jobarchitect.scp
+14:03:Loading scripts/speech/jobanimal.scp
+14:03:Loading scripts/speech/jobalchemist.scp
+14:03:Loading scripts/speech/jobactor.scp
+14:03:Loading scripts/sphere_msgs.scp
+14:03:Loading scripts/stones/sphere_genericstone_types.scp
+14:03:Loading scripts/stones/sphere_genericstone_items.scp
+14:03:Loading scripts/stones/sphere_genericstone_functions.scp
+14:03:Loading scripts/stones/sphere_genericstone_config.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_types.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_speech.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_items.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_functions.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_events.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+14:03:Loading scripts/stones/guilds/sphere_guild_config.scp
+14:03:Loading scripts/stones/towns/sphere_town_types.scp
+14:03:Loading scripts/stones/towns/sphere_town_speech.scp
+14:03:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+14:03:Loading scripts/stones/towns/sphere_town_items.scp
+14:03:Loading scripts/stones/towns/sphere_town_functions_player.scp
+14:03:Loading scripts/stones/towns/sphere_town_functions.scp
+14:03:Loading scripts/stones/towns/sphere_town_events.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+14:03:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+14:03:Loading scripts/stones/towns/sphere_town_config.scp
+14:03:Loading scripts/war script/sistema_runebook.scp
+14:03:Loading scripts/war script/sistema_de_news.scp
+14:03:Loading scripts/war script/sistema_bandagem.scp
+14:03:Loading scripts/war script/sistema_arena_x1.scp
+14:03:Loading scripts/war script/roupas.scp
+14:03:Loading scripts/war script/plates.scp
+14:03:Loading scripts/war script/pisos e gates.scp
+14:03:Loading scripts/war script/pedra_votacao.scp
+14:03:Loading scripts/war script/pedras.scp
+14:03:Loading scripts/war script/Jail Staff.scp
+14:03:Loading scripts/war script/itens_uteis.scp
+14:03:Loading scripts/war script/itens_pvp.scp
+14:03:Loading scripts/war script/events.scp
+14:03:Loading scripts/war script/comandos.scp
+14:03:Loading scripts/war script/arena_warrior.scp
+14:03:Loading scripts/war script/areas.scp
+14:03:Loading scripts/war script/accountinfo.scp
+14:03:Loaded 54 client encryption keys.
+14:03:Server started on 'Rodrigo-PC' port 2593.
+14:03:Monitoring IP '5.208.195.198'.
+14:03:Monitoring IP '10.0.0.4'.
+14:03:Loading save/spheredata...
+14:03:WARNING:'save/spherestatics.scp' not found...
+14:03:WARNING:Can't Load save/spherestatics
+14:03:Loading save/spheremultis...
+14:03:Loading save/sphereworld...
+14:03:Loading save/spherechars...
+14:03:GC: 2865 Objects accounted for
+14:03:Auto-complete dictionary loaded (contains 142 words).
+14:03:Option flags: CommandSysmessages + NoHouseMuteSpeech
+14:03:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+14:03:Startup complete. items=2846, chars=19
+14:03:Press '?' for console commands
+14:04:230:Client connected [Total:1] ('5.208.195.198' 1/1)
+14:04:230:Login 'rodrigo10'
+14:04:234:Client connected [Total:2] ('127.0.0.1' 1/1)
+14:04:230:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+14:04:234:Login 'rodrigo10'
+14:04:234:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+14:04:234:'rodrigo10' commands 'page'=1
+14:05:GC: 2866 Objects accounted for
+14:05:World data saved   (save/sphereworld.scp).
+14:05:Player data saved  (save/spherechars.scp).
+14:05:Multi data saved   (save/spheremultis.scp).
+14:05:Context data saved (save/spheredata.scp).
+14:05:World save completed, took 0.8485 seconds
+14:05:234:'rodrigo10' commands 'save'=1
+14:05:234:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+14:05:FATAL:Server terminated by error 5!
+
+14:15:Sphere Version 0.56b-Nightly [WIN32] by www.sphereserver.com, compiled at Sep  9 2008 (16:35:28)
+14:15:WARNING: --- WARNING ---
+
+This is a nightly build of SphereServer. This build is to be used
+for testing and/or bug reporting ONLY. DO NOT run this build on a
+live shard unless you know what you are doing!
+Nightly builds are automatically made every night from source and
+might contain errors, might be unstable or even destroy your
+shard as they are mostly untested!
+ ---------------------------------
+
+14:15:Expansion maps supported: T2A, LBR, AOS, SE
+14:15:Allocating map sectors: 0=6144 1=6144 2=900 3=1280 4=32761
+14:15:Indexing 259 scripts...
+14:15:Loading scripts/sphere_defs.scp
+14:15:Loading scripts/sphere_types.scp
+14:15:Loading scripts/sphere_book.scp
+14:15:Loading scripts/sphere_backward_compatibility.scp
+14:15:Loading scripts/sphere_events_human.scp
+14:15:Loading scripts/sphere_events_npcs.scp
+14:15:Loading scripts/npcs/spherechar_se.scp
+14:15:Loading scripts/npcs/spherechar_new_mounts.scp
+14:15:Loading scripts/npcs/spherechar_mondains_legacy.scp
+14:15:Loading scripts/npcs/spherechar_misc.scp
+14:15:Loading scripts/npcs/spherechar_lbr.scp
+14:15:Loading scripts/npcs/spherechar_human.scp
+14:15:Loading scripts/npcs/spherechar_evil.scp
+14:15:Loading scripts/npcs/spherechar_aos.scp
+14:15:Loading scripts/npcs/spherechar_anim.scp
+14:15:Loading scripts/npcs/spherechar.scp
+14:15:Loading scripts/sphere_admin.scp
+14:15:Loading scripts/sphere_dialog.scp
+14:15:Loading scripts/items/sphere_item_resources.scp
+14:15:Loading scripts/items/sphere_minor_artifacts.scp
+14:15:Loading scripts/items/sphere_item_vegetation.scp
+14:15:Loading scripts/items/sphere_item_unsorted.scp
+14:15:Loading scripts/items/sphere_item_treasure_maps.scp
+14:15:Loading scripts/items/sphere_item_ship_parts.scp
+14:15:Loading scripts/items/sphere_item_provisions_weapons_se.scp
+14:15:Loading scripts/items/sphere_item_provisions_weapons_ml.scp
+14:15:Loading scripts/items/sphere_item_provisions_weapons_aos.scp
+14:15:Loading scripts/items/sphere_item_provisions_weapons.scp
+14:15:Loading scripts/items/sphere_item_provisions_potions.scp
+14:15:Loading scripts/items/sphere_item_provisions_ore.scp
+14:15:Loading scripts/items/sphere_item_provisions_misc.scp
+14:15:Loading scripts/items/sphere_item_provisions_jewelry.scp
+14:15:Loading scripts/items/sphere_item_provisions_deeds.scp
+14:15:Loading scripts/items/sphere_item_provisions_deed.scp
+14:15:Loading scripts/items/sphere_item_provisions_clothing_ml.scp
+14:15:Loading scripts/items/sphere_item_provisions_clothing.scp
+14:15:Loading scripts/items/sphere_item_provisions_beers.scp
+14:15:Loading scripts/items/sphere_item_provisions_armor_se.scp
+14:15:Loading scripts/items/sphere_item_provisions_armor_ml.scp
+14:15:Loading scripts/items/sphere_item_provisions_armor_color.scp
+14:15:Loading scripts/items/sphere_item_provisions_armor_aos.scp
+14:15:Loading scripts/items/sphere_item_provisions_armor.scp
+14:15:Loading scripts/items/sphere_item_provisions_alchemy_magic.scp
+14:15:Loading scripts/items/sphere_item_profession_tailor_tanner.scp
+14:15:Loading scripts/items/sphere_item_profession_cook_barkeep_baker.scp
+14:15:Loading scripts/items/sphere_item_profession_cartographer.scp
+14:15:Loading scripts/items/sphere_item_profession_barber.scp
+14:15:Loading scripts/items/sphere_item_profession_alchemist_mage.scp
+14:15:Loading scripts/items/sphere_item_profession.scp
+14:15:Loading scripts/items/sphere_item_multis_stairs.scp
+14:15:Loading scripts/items/sphere_item_multis_houses_ships.scp
+14:15:Loading scripts/items/sphere_item_multis_foundations.scp
+14:15:Loading scripts/items/sphere_item_ml_misc.scp
+14:15:Loading scripts/items/sphere_item_ml_floor_wall.scp
+14:15:Loading scripts/items/sphere_item_ml.scp
+14:15:Loading scripts/items/sphere_item_misc_se.scp
+14:15:Loading scripts/items/sphere_item_misc.scp
+14:15:Loading scripts/items/sphere_item_magic_weapon.scp
+14:15:Loading scripts/items/sphere_item_magic_wands.scp
+14:15:Loading scripts/items/sphere_item_magic_necromancer_aos.scp
+14:15:Loading scripts/items/sphere_item_magic_leather.scp
+14:15:Loading scripts/items/sphere_item_magic_armor.scp
+14:15:Loading scripts/items/sphere_item_icons_new.scp
+14:15:Loading scripts/items/sphere_item_ground_tiles.scp
+14:15:Loading scripts/items/sphere_item_eight_age.scp
+14:15:Loading scripts/items/sphere_item_deco_signs.scp
+14:15:Loading scripts/items/sphere_item_deco_misc.scp
+14:15:Loading scripts/items/sphere_item_deco_mini_houses.scp
+14:15:Loading scripts/items/sphere_item_deco_lightsources.scp
+14:15:Loading scripts/items/sphere_item_deco_furniture.scp
+14:15:Loading scripts/items/sphere_item_deco_fireplace_chimney_oven.scp
+14:15:Loading scripts/items/sphere_item_deco_evilitem.scp
+14:15:Loading scripts/items/sphere_item_deco_dungeons_traps_dead.scp
+14:15:Loading scripts/items/sphere_item_deco_curtains_banners_tapestries.scp
+14:15:Loading scripts/items/sphere_item_deco_carvings_statues.scp
+14:15:Loading scripts/items/sphere_item_deco_carpet_rugs.scp
+14:15:Loading scripts/items/sphere_item_christimas.scp
+14:15:Loading scripts/items/sphere_item_char_icons.scp
+14:15:Loading scripts/items/sphere_item_building_walls_se.scp
+14:15:Loading scripts/items/sphere_item_building_walls.scp
+14:15:Loading scripts/items/sphere_item_building_stairs_ml.scp
+14:15:Loading scripts/items/sphere_item_building_stairs.scp
+14:15:Loading scripts/items/sphere_item_building_roofs_se.scp
+14:15:Loading scripts/items/sphere_item_building_roofs_ml.scp
+14:15:Loading scripts/items/sphere_item_building_roofs_aos.scp
+14:15:Loading scripts/items/sphere_item_building_roofs.scp
+14:15:Loading scripts/items/sphere_item_building_other.scp
+14:15:Loading scripts/items/sphere_item_building_floors_se.scp
+14:15:Loading scripts/items/sphere_item_building_floors.scp
+14:15:Loading scripts/items/sphere_item_building_fence.scp
+14:15:Loading scripts/items/sphere_item_building_doors.scp
+14:15:Loading scripts/items/sphere_item_boulders_rocks.scp
+14:15:Loading scripts/items/sphere_item_aos_se.scp
+14:15:Loading scripts/items/sphere_item_animations.scp
+14:15:Loading scripts/sphere_region.scp
+14:15:Loading scripts/maps/sphere_map0.scp
+14:15:Loading scripts/maps/sphere_map1.scp
+14:15:Loading scripts/maps/sphere_map_points0.scp
+14:15:Loading scripts/maps/sphere_map_points1.scp
+14:15:Loading scripts/sphere_menu.scp
+14:15:Loading scripts/sphere_name.scp
+14:15:Loading scripts/sphere_skillmenu.scp
+14:15:Loading scripts/sphere_spawns.scp
+14:15:Loading scripts/sphere_speech.scp
+14:15:Loading scripts/sphere_skills.scp
+14:15:Loading scripts/sphere_spells.scp
+14:15:Loading scripts/sphere_newb.scp
+14:15:Loading scripts/sphere_template.scp
+14:15:Loading scripts/sphere_template_loot.scp
+14:15:Loading scripts/sphere_template_vend.scp
+14:15:Loading scripts/sphere_triggers.scp
+14:15:Loading scripts/sphere_serv_triggers.scp
+14:15:Loading scripts/speech/townyew.scp
+14:15:Loading scripts/speech/townwind.scp
+14:15:Loading scripts/speech/townvesper.scp
+14:15:Loading scripts/speech/towntrinsic.scp
+14:15:Loading scripts/speech/townskarabrae.scp
+14:15:Loading scripts/speech/townserphold.scp
+14:15:Loading scripts/speech/townnujelm.scp
+14:15:Loading scripts/speech/townmoonglow.scp
+14:15:Loading scripts/speech/townminoc.scp
+14:15:Loading scripts/speech/townmagincia.scp
+14:15:Loading scripts/speech/townjhelom.scp
+14:15:Loading scripts/speech/towncove.scp
+14:15:Loading scripts/speech/townbucsden.scp
+14:15:Loading scripts/speech/townbritain.scp
+14:15:Loading scripts/speech/spherespee.scp
+14:15:Loading scripts/speech/speakshopkeep.scp
+14:15:Loading scripts/speech/speakrehello.scp
+14:15:Loading scripts/speech/speakorc.scp
+14:15:Loading scripts/speech/speakneeds.scp
+14:15:Loading scripts/speech/speakmaster.scp
+14:15:Loading scripts/speech/speakhuman.scp
+14:15:Loading scripts/speech/speakhorse.scp
+14:15:Loading scripts/speech/jobweaver.scp
+14:15:Loading scripts/speech/jobweaponstrainer.scp
+14:15:Loading scripts/speech/jobweaponsmith.scp
+14:15:Loading scripts/speech/jobwaiter.scp
+14:15:Loading scripts/speech/jobvet.scp
+14:15:Loading scripts/speech/jobveggie.scp
+14:15:Loading scripts/speech/jobtinker.scp
+14:15:Loading scripts/speech/jobthief.scp
+14:15:Loading scripts/speech/jobtavernkeeper.scp
+14:15:Loading scripts/speech/jobtanner.scp
+14:15:Loading scripts/speech/jobshipwright.scp
+14:15:Loading scripts/speech/jobshepherd.scp
+14:15:Loading scripts/speech/jobservant.scp
+14:15:Loading scripts/speech/jobsculptor.scp
+14:15:Loading scripts/speech/jobscribe.scp
+14:15:Loading scripts/speech/jobscholar.scp
+14:15:Loading scripts/speech/jobsailor.scp
+14:15:Loading scripts/speech/jobrunner.scp
+14:15:Loading scripts/speech/jobrealtor.scp
+14:15:Loading scripts/speech/jobranger.scp
+14:15:Loading scripts/speech/jobrancher.scp
+14:15:Loading scripts/speech/jobprovisioner.scp
+14:15:Loading scripts/speech/jobprisoner.scp
+14:15:Loading scripts/speech/jobpriest.scp
+14:15:Loading scripts/speech/jobpirate.scp
+14:15:Loading scripts/speech/jobparliament.scp
+14:15:Loading scripts/speech/jobpaladin.scp
+14:15:Loading scripts/speech/joboverseer.scp
+14:15:Loading scripts/speech/jobnoble.scp
+14:15:Loading scripts/speech/jobmonk.scp
+14:15:Loading scripts/speech/jobminter.scp
+14:15:Loading scripts/speech/jobminer.scp
+14:15:Loading scripts/speech/jobmiller.scp
+14:15:Loading scripts/speech/jobmayor.scp
+14:15:Loading scripts/speech/jobmapmaker.scp
+14:15:Loading scripts/speech/jobMageShop.scp
+14:15:Loading scripts/speech/jobMageEvil.scp
+14:15:Loading scripts/speech/jobMage.scp
+14:15:Loading scripts/speech/joblaborer.scp
+14:15:Loading scripts/speech/jobjudge.scp
+14:15:Loading scripts/speech/jobjeweller.scp
+14:15:Loading scripts/speech/jobjailor.scp
+14:15:Loading scripts/speech/jobinnkeeper.scp
+14:15:Loading scripts/speech/jobherbalist.scp
+14:15:Loading scripts/speech/jobhealwand.scp
+14:15:Loading scripts/speech/jobhealer.scp
+14:15:Loading scripts/speech/jobGuard.scp
+14:15:Loading scripts/speech/jobglassblower.scp
+14:15:Loading scripts/speech/jobgambler.scp
+14:15:Loading scripts/speech/jobfurtrader.scp
+14:15:Loading scripts/speech/jobfarmer.scp
+14:15:Loading scripts/speech/jobcobbler.scp
+14:15:Loading scripts/speech/jobcashual.scp
+14:15:Loading scripts/speech/jobcarpenter.scp
+14:15:Loading scripts/speech/jobbutcher.scp
+14:15:Loading scripts/speech/jobBrigand.scp
+14:15:Loading scripts/speech/jobbowyer.scp
+14:15:Loading scripts/speech/jobblacksmith.scp
+14:15:Loading scripts/speech/jobbeggar.scp
+14:15:Loading scripts/speech/jobbeekeeper.scp
+14:15:Loading scripts/speech/jobbard.scp
+14:15:Loading scripts/speech/jobbanker.scp
+14:15:Loading scripts/speech/jobbaker.scp
+14:15:Loading scripts/speech/jobartist.scp
+14:15:Loading scripts/speech/jobarmourer.scp
+14:15:Loading scripts/speech/jobarchitect.scp
+14:15:Loading scripts/speech/jobanimal.scp
+14:15:Loading scripts/speech/jobalchemist.scp
+14:15:Loading scripts/speech/jobactor.scp
+14:15:Loading scripts/sphere_msgs.scp
+14:15:Loading scripts/stones/sphere_genericstone_types.scp
+14:15:Loading scripts/stones/sphere_genericstone_items.scp
+14:15:Loading scripts/stones/sphere_genericstone_functions.scp
+14:15:Loading scripts/stones/sphere_genericstone_config.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_types.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_speech.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_promptconsole.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_items.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_functions_player.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_functions.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_events.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_warfarestatus.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_warfaredeclare.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_warfareadmin.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_master.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_main.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_guildlist.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_charter.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_charlist.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_dlg_align.scp
+14:15:Loading scripts/stones/guilds/sphere_guild_config.scp
+14:15:Loading scripts/stones/towns/sphere_town_types.scp
+14:15:Loading scripts/stones/towns/sphere_town_speech.scp
+14:15:Loading scripts/stones/towns/sphere_town_promptconsole.scp
+14:15:Loading scripts/stones/towns/sphere_town_items.scp
+14:15:Loading scripts/stones/towns/sphere_town_functions_player.scp
+14:15:Loading scripts/stones/towns/sphere_town_functions.scp
+14:15:Loading scripts/stones/towns/sphere_town_events.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_warfarestatus.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_warfaredeclare.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_warfareadmin.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_townlist.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_master.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_main.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_charter.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_charlist.scp
+14:15:Loading scripts/stones/towns/sphere_town_dlg_align.scp
+14:15:Loading scripts/stones/towns/sphere_town_config.scp
+14:15:Loading scripts/war script/sistema_runebook.scp
+14:15:Loading scripts/war script/sistema_de_news.scp
+14:15:Loading scripts/war script/sistema_bandagem.scp
+14:15:Loading scripts/war script/sistema_arena_x1.scp
+14:15:Loading scripts/war script/roupas.scp
+14:15:Loading scripts/war script/plates.scp
+14:15:Loading scripts/war script/pisos e gates.scp
+14:15:Loading scripts/war script/pedra_votacao.scp
+14:15:Loading scripts/war script/pedras.scp
+14:15:Loading scripts/war script/Jail Staff.scp
+14:15:Loading scripts/war script/itens_uteis.scp
+14:15:Loading scripts/war script/itens_pvp.scp
+14:15:Loading scripts/war script/events.scp
+14:15:Loading scripts/war script/comandos.scp
+14:15:Loading scripts/war script/arena_warrior.scp
+14:15:Loading scripts/war script/areas.scp
+14:15:Loading scripts/war script/accountinfo.scp
+14:15:Loaded 54 client encryption keys.
+14:15:Server started on 'Rodrigo-PC' port 2593.
+14:15:Monitoring IP '5.208.195.198'.
+14:15:Monitoring IP '10.0.0.4'.
+14:15:Loading save/spheredata...
+14:15:WARNING:'save/spherestatics.scp' not found...
+14:15:WARNING:Can't Load save/spherestatics
+14:15:Loading save/spheremultis...
+14:15:Loading save/sphereworld...
+14:15:Loading save/spherechars...
+14:15:GC: 2866 Objects accounted for
+14:15:Auto-complete dictionary loaded (contains 142 words).
+14:15:Option flags: CommandSysmessages + NoHouseMuteSpeech
+14:15:Admin=me@my.email.com, URL=www.myshard.com, Lang=English, TZ=0
+14:15:Startup complete. items=2847, chars=19
+14:15:Press '?' for console commands
+14:15:230:Client connected [Total:1] ('5.208.195.198' 1/1)
+14:15:230:Login 'rodrigo10'
+14:15:234:Client connected [Total:2] ('127.0.0.1' 1/1)
+14:15:230:Client disconnected [Total:1] ('5.208.195.198' 0/0)
+14:15:234:Login 'rodrigo10'
+14:15:234:Setup_Start acct='rodrigo10', char='eL DiGuInhO', IP='127.0.0.1'
+14:16:234:'rodrigo10' commands 'tele'=1
+14:16:234:'rodrigo10' commands 'tele'=1
+14:16:ERROR:Undefined symbol 'i_dye_utub'
+14:16:ERROR:Undefined keyword 'add'
+14:16:234:'rodrigo10' commands 'add i_dye_utub'=1
+14:16:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'tele'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'add i_dye_tub'=1
+14:17:234:'rodrigo10' commands 'tele'=1
+14:17:234:'rodrigo10' commands 'setcolor 0800'=1
+14:17:'rodrigo10' commands uid=0400015d9 (dyeing tub) to 'color 0800'=1
+14:17:234:'rodrigo10' commands 'setcolor 0812'=1
+14:17:'rodrigo10' commands uid=0400015f0 (dyeing tub) to 'color 0812'=1
+14:18:234:'rodrigo10' commands 'info'=1
+14:18:234:'rodrigo10' commands 'dupe'=1
+14:18:'rodrigo10' commands uid=04000150a (Special Black & Special Blue) to 'dupe'=1
+14:18:234:'rodrigo10' commands 'tele'=1
+14:18:234:'rodrigo10' commands 'tele'=1
+14:18:234:'rodrigo10' commands 'info'=1
+14:18:234:'rodrigo10' commands 'kill'=1
+14:18:234:'rodrigo10' commands 'remove'=1
+14:18:234:'rodrigo10' commands 'dupe'=1
+14:18:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'dupe'=1
+14:18:234:'rodrigo10' commands 'dupe'=1
+14:18:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'dupe'=1
+14:18:234:'rodrigo10' commands 'dupe'=1
+14:18:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'dupe'=1
+14:18:234:'rodrigo10' commands 'dupe'=1
+14:18:'rodrigo10' commands uid=0400015bd (Special Black & Special Blue) to 'dupe'=1
+14:19:234:'rodrigo10' commands 'dupe'=1
+14:19:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'dupe'=1
+14:19:234:'rodrigo10' commands 'dupe'=1
+14:19:'rodrigo10' commands uid=0400015bd (Special Black & Special Blue) to 'dupe'=1
+14:19:234:'rodrigo10' commands 'dupe'=1
+14:19:'rodrigo10' commands uid=0400015bb (Special Black & Special Blue) to 'dupe'=1
+14:19:234:'rodrigo10' commands 'tele'=1
+14:19:234:'rodrigo10' commands 'dupe'=1
+14:19:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'dupe'=1
+14:19:234:'rodrigo10' commands 'tele'=1
+14:19:234:'rodrigo10' commands 'setcolor 0800'=1
+14:19:'rodrigo10' commands uid=0400015bc (Special Black & Special Blue) to 'color 0800'=1
+14:19:234:'rodrigo10' commands 'setcolor 0812'=1
+14:19:'rodrigo10' commands uid=0400015be (Special Black & Special Blue) to 'color 0812'=1
+14:20:234:'rodrigo10' commands 'setcolor 0810'=1
+14:20:'rodrigo10' commands uid=0400015ba (Special Black & Special Blue) to 'color 0810'=1
+14:20:234:'rodrigo10' commands 'setcolor 0480'=1
+14:20:'rodrigo10' commands uid=0400015bb (Special Black & Special Blue) to 'color 0480'=1
+14:20:234:'rodrigo10' commands 'setcolor 04d8'=1
+14:20:'rodrigo10' commands uid=0400015bd (Special Black & Special Blue) to 'color 04d8'=1
+14:20:234:'rodrigo10' commands 'setcolor 0801'=1
+14:20:'rodrigo10' commands uid=0400015b8 (Special Black & Special Blue) to 'color 0801'=1
+14:20:234:'rodrigo10' commands 'setcolor 0807'=1
+14:20:'rodrigo10' commands uid=0400015b9 (Special Black & Special Blue) to 'color 0807'=1
+14:21:234:'rodrigo10' commands 'setcolor 0794'=1
+14:21:'rodrigo10' commands uid=0400015b7 (Special Black & Special Blue) to 'color 0794'=1
+14:21:234:'rodrigo10' commands 'setcolor 0798'=1
+14:21:'rodrigo10' commands uid=0400015bf (Special Black & Special Blue) to 'color 0798'=1
+14:21:234:'rodrigo10' commands 'tele'=1
+14:22:234:'rodrigo10' commands 'tele'=1
+14:23:234:'rodrigo10' commands 'add i_bag'=1
+14:24:234:'rodrigo10' commands 'go cove'=1
+14:24:GC: 2875 Objects accounted for
+14:24:World data saved   (save/sphereworld.scp).
+14:24:Player data saved  (save/spherechars.scp).
+14:24:Multi data saved   (save/spheremultis.scp).
+14:24:Context data saved (save/spheredata.scp).
+14:24:World save completed, took 0.3163 seconds
+14:24:234:'rodrigo10' commands 'save'=1
+14:24:234:'rodrigo10' commands 'add i_arenas'=1
+14:25:234:'rodrigo10' commands 'remove'=1
+14:25:'rodrigo10' commands uid=0400015b0 (Arenas) to 'remove'=1
+14:25:ERROR:Undefined keyword 'off'
+14:25:234:'rodrigo10' commands 'off'=1
+14:26:234:'rodrigo10' commands 'go cidade'=1
+14:26:234:'rodrigo10' commands 'go cidade'=1
+14:26:234:'rodrigo10' commands 'go cidade'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'go cidade'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'go cidade'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'info'=1
+14:26:234:'rodrigo10' commands 'tele'=1
+14:26:234:'rodrigo10' commands 'kill'=1
+14:27:234:'rodrigo10' commands 'remove'=1
+14:27:234:'rodrigo10' commands 'go cidade'=1
+14:27:234:'rodrigo10' commands 'tele'=1
+14:27:234:'rodrigo10' commands 'remove'=1
+14:27:'rodrigo10' commands uid=01514 (Molech) to 'remove'=1
+14:27:234:'rodrigo10' commands 'tele'=1
+14:27:234:'rodrigo10' commands 'dupe'=1
+14:27:'rodrigo10' commands uid=04000127f (Cove [By Scorpion]) to 'dupe'=1
+14:28:ERROR:Undefined symbol 'i_sand_Stone'
+14:28:ERROR:Undefined keyword 'add'
+14:28:234:'rodrigo10' commands 'add i_sand_Stone'=1
+14:28:ERROR:Undefined symbol 'i_sand_stone'
+14:28:ERROR:Undefined keyword 'add'
+14:28:234:'rodrigo10' commands 'add i_sand_stone'=1
+14:28:234:'rodrigo10' commands 'tele'=1
+14:28:234:'rodrigo10' commands 'info'=1
+14:28:ERROR:Undefined symbol 'i_wall_sandsotne'
+14:28:ERROR:Undefined keyword 'add'
+14:28:234:'rodrigo10' commands 'add i_wall_sandsotne'=1
+14:28:234:'rodrigo10' commands 'add i_wall_sandstone'=1
+14:33:234:'rodrigo10' commands 'dupe'=1
+14:33:234:'rodrigo10' commands 'go cidade'=1
+14:33:234:'rodrigo10' commands 'remove'=1
+14:33:234:'rodrigo10' commands 'remove'=1
+14:33:234:'rodrigo10' commands 'remove'=1
+14:33:'rodrigo10' commands uid=04000149c (sandstone wall) to 'remove'=1
+14:33:GC: 2875 Objects accounted for
+14:33:World data saved   (save/sphereworld.scp).
+14:33:Player data saved  (save/spherechars.scp).
+14:33:Multi data saved   (save/spheremultis.scp).
+14:33:Context data saved (save/spheredata.scp).
+14:33:World save completed, took 0.0760 seconds
+14:33:234:'rodrigo10' commands 'save'=1
+14:34:ERROR:(sphere_menu.scp,53)Undefined symbol ''
+14:40:ERROR:Undefined keyword 'drink'
+14:40:234:'rodrigo10' commands 'drink mana'=1
+14:40:234:'rodrigo10' commands 'drinkmana'=1
+14:40:234:'rodrigo10' commands 'drinkheal'=1
+14:40:ERROR:Undefined keyword 'drink'
+14:40:234:'rodrigo10' commands 'drink bandage'=1
+14:41:GC: 2884 Objects accounted for
+14:41:World data saved   (save/sphereworld.scp).
+14:41:Player data saved  (save/spherechars.scp).
+14:41:Multi data saved   (save/spheremultis.scp).
+14:41:Context data saved (save/spheredata.scp).
+14:41:World save completed, took 0.5288 seconds
+14:41:234:'rodrigo10' commands 'save'=1
+14:41:234:Client disconnected [Total:0] ('127.0.0.1' 0/0)
+14:54:FATAL:Server terminated by error 5!

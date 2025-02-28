@@ -1,0 +1,742 @@
+[itemdef i_status]
+id=0ed6
+TYPE=T_normal
+WEIGHT=1
+name=Pedra Para Arrumar Status
+
+on=@create
+ATTR=010
+color=2
+
+ON=@DCLICK
+dialog arrumarstats
+
+[DIALOG arrumarstats]
+0, 0
+PAGE 0
+NOCLOSE
+resizepic 0 4 3500 441 244
+text 126 19 162 0
+text 173 54 270 1
+text 180 81 102 2
+text 180 103 102 3
+text 180 125 102 4
+button 58 200 249 248 1 0 1
+//text 59 175 32 5
+button 327 199 243 241 1 0 0
+//text 330 175 32 6
+
+[DIALOG arrumarstats TEXT]
+Pedra de Arrumar Status
+Seu Status:
+STR: <SRC.STR>
+INT: <SRC.INT>
+DEX: <SRC.DEX>
+
+[DIALOG arrumarstats BUTTON]
+on=1
+IF <DISTANCE>>2
+src.sysmessage @07a1 Encoste na Pedra!
+RETURN 1
+ENDIF
+SRC.FINDLAYER(1).UNEQUIP 
+SRC.FINDLAYER(2).UNEQUIP 
+SRC.FINDLAYER(3).UNEQUIP
+SRC.FINDLAYER(4).UNEQUIP 
+SRC.FINDLAYER(5).UNEQUIP
+SRC.FINDLAYER(6).UNEQUIP
+SRC.FINDLAYER(7).UNEQUIP
+SRC.FINDLAYER(8).UNEQUIP 
+SRC.FINDLAYER(10).UNEQUIP 
+SRC.FINDLAYER(12).UNEQUIP
+SRC.FINDLAYER(13).UNEQUIP
+SRC.FINDLAYER(17).UNEQUIP
+SRC.FINDLAYER(18).UNEQUIP
+SRC.FINDLAYER(19).UNEQUIP 
+SRC.FINDLAYER(20).UNEQUIP 
+SRC.FINDLAYER(22).UNEQUIP        
+SRC.FINDLAYER(23).UNEQUIP 
+SRC.FINDLAYER(24).UNEQUIP 
+src.str 100
+src.int 100
+src.dex 100
+src.allskills 100.0
+src.message *Status Recuperado*
+
+////// Voltar Para a Cidade /////////
+
+[ITEMDEF i_volta_city] 
+ID=0ed4
+TYPE=T_normal
+NAME=Cidade
+WEIGHT=1
+
+on=@click
+message @07a1 Cidade
+return 1
+
+ON=@CREATE
+COLOR=038
+ATTR=010
+
+ON=@DCLICK 
+IF <DISTANCE>>2
+message @07a1 Encoste na Pedra!
+	RETURN 1
+ENDIF
+
+IF (<src.hits> == 0)
+src.go 4311,986
+RETURN 1
+endif
+
+IF (<src.hits> < <src.str>)
+src.message @07a1 Voce so pode sair com Life Full!
+RETURN 1
+endif
+
+if (<src.flags> & statf_poisoned)
+src.message @07a1 Voce esta com poison!
+return 1
+endif
+src.go cidade
+return 1
+
+[ITEMDEF i_v_city] 
+ID=0ed4
+TYPE=T_normal
+NAME=Cidade
+WEIGHT=1
+
+on=@click
+message @07a1 Cidade
+return 1
+
+ON=@CREATE
+COLOR=038
+ATTR=010
+
+ON=@DCLICK 
+IF <DISTANCE>>2
+message @07a1 Encoste na Pedra!
+	RETURN 1
+endif
+src.go 4311,986
+return 1
+
+[ITEMDEF i_recuperar] 
+ID=i_gravestone_17
+TYPE=T_normal
+NAME=Hits/Mana/Stam
+WEIGHT=1
+
+on=@click
+message @07a1 <name>
+return 1
+
+ON=@CREATE
+COLOR=068
+ATTR=010
+
+ON=@DCLICK 
+IF <DISTANCE>>2
+message @07a1 Encoste na Pedra!
+	RETURN 1
+endif
+src.hits=<src.str>
+src.mana=<src.int>
+src.stam=<src.dex>
+src.message @07a1 Status Recuperado!
+return 1
+
+
+///////////////// Pedras de Itens/////////////
+
+/////////Plates
+
+
+[ITEMDEF i_plates_stone] 
+ID=0ed4
+NAME=Plates
+TYPE=T_NORMAL
+
+
+ON=@CREATE 
+COLOR=079a
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_plates
+return 1
+
+[DIALOG d_plates]
+20, 20
+resizepic 0 0 3600 250 250
+gumppic 170 170 00001581
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+
+[DIALOG d_plates TEXT]
+Pedra de Armaduras
+Order Platemail
+Chaos Platemail
+
+[DIALOG d_plates BUTTON]
+
+ONBUTTON=0
+
+ONBUTTON=1
+src.newitem i_order_platemail_arms
+src.act.equip
+SRC.ACT.CONT=<SRC.UID>
+src.newitem i_order_plate_helm
+src.act.equip
+src.newitem i_order_platemail_leggings
+src.act.equip
+src.newitem i_order_platemail_gorget
+src.act.equip
+src.newitem i_order_platemail
+src.act.equip
+src.newitem i_order_platemail_gauntlets
+src.act.equip
+src.newitem i_Order_HEATER_SHIELD
+src.act.equip
+return 1
+
+ONBUTTON=2
+src.newitem i_chaos_platemail_arms
+src.act.equip
+SRC.ACT.CONT=<SRC.UID>
+src.newitem i_chaos_plate_helm
+src.act.equip
+src.newitem i_chaos_platemail_leggings
+src.act.equip
+src.newitem i_chaos_platemail_gorget
+src.act.equip
+src.newitem i_chaos_platemail
+src.act.equip
+src.newitem i_chaos_platemail_gauntlets
+src.act.equip
+src.newitem i_chaos_HEATER_SHIELD
+src.act.equip
+return 1
+
+
+///////Roupas
+
+[ITEMDEF i_roupas_stone] 
+ID=0ed4
+NAME=Roupas
+TYPE=T_NORMAL
+
+
+ON=@CREATE 
+COLOR=079a
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_roupas
+return 1
+
+[DIALOG d_roupas]
+20, 20
+resizepic 0 0 3600 250 350
+gumppic 170 170 00001581
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+text 54 125 595 3
+text 54 155 595 4
+text 54 185 595 5
+text 54 215 595 6
+text 54 245 595 7
+text 54 275 595 8
+text 54 305 595 9
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+button 20 120 000025fa 000025fc 1 0 3
+button 20 150 000025fa 000025fc 1 0 4
+button 20 180 000025fa 000025fc 1 0 5
+button 20 210 000025fa 000025fc 1 0 6
+button 20 240 000025fa 000025fc 1 0 7
+button 20 270 000025fa 000025fc 1 0 8
+button 20 300 000025fa 000025fc 1 0 9
+
+[DIALOG d_roupas TEXT]
+Pedra de Roupas
+Bear Mask of Mana
+Sash of Str
+Robe of Bless
+Cape of Meditation
+Ring of Force
+Spellbook Full
+Half Apron
+Mantle
+Cure Robe
+
+[DIALOG d_roupas BUTTON]
+
+ONBUTTON=1
+src.newitem i_mana_bear
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=2
+src.newitem i_sash_str
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=3
+src.newitem i_robe_of_bless
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=4
+src.newitem i_cape_int
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=5
+src.newitem i_ring_str
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=6
+src.newitem i_spellbook_full
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=7
+src.newitem i_h_apron
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=8
+src.newitem i_mantle
+src.act.equip
+src.dialog d_roupas
+return 1
+
+ONBUTTON=9
+//src.newitem i_robe_cure
+//src.act.equip
+src.dialog d_roupas
+src.sysmessage @0791 Item indisponivel.
+return 1
+
+
+
+//////////Pocoes
+
+[ITEMDEF i_pocoes_stone] 
+ID=0ed4
+NAME=Pocoes
+TYPE=T_NORMAL
+
+
+ON=@CREATE 
+COLOR=079a
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_pocoes
+return 1
+
+[DIALOG d_pocoes]
+20, 20
+resizepic 0 0 3600 250 380
+gumppic 173 170 00001581
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+text 54 125 595 3
+text 54 155 595 4
+text 54 185 595 5
+text 54 215 595 6
+text 54 245 595 7
+text 54 275 595 8
+text 54 305 595 9
+text 54 335 595 10
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+button 20 120 000025fa 000025fc 1 0 3
+button 20 150 000025fa 000025fc 1 0 4
+button 20 180 000025fa 000025fc 1 0 5
+button 20 210 000025fa 000025fc 1 0 6
+button 20 240 000025fa 000025fc 1 0 7
+button 20 270 000025fa 000025fc 1 0 8
+button 20 300 000025fa 000025fc 1 0 9
+button 20 330 000025fa 000025fc 1 0 10
+
+
+[DIALOG d_pocoes TEXT]
+Pedra de Pocoes
+Total Mana Refresh
+Total Heal
+Invisibility
+Cure Potion
+Lesser Explosion
+Total Refresh
+Bandages
+Flame Strike Scroll
+Deadly Poison Potion
+Shrink Potion
+
+[DIALOG d_pocoes BUTTON]
+
+ONBUTTON=1
+src.newitem i_pot_mana,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=2
+src.newitem i_pot_heal,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=3
+src.newitem i_pot_invis,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=4
+src.newitem i_pot_cure,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=5
+src.newitem i_pot_exx,1
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=6
+src.newitem i_pot_refresh,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=7
+src.newitem i_bandage_ws,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=8
+src.newitem i_fs_scroll,500
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=9
+src.newitem i_d_poison
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+ONBUTTON=10
+src.newitem i_p_Shrink,100
+src.act.bounce
+src.dialog d_pocoes
+return 1
+
+////////Animais
+
+[ITEMDEF i_animais_stone] 
+ID=0ed4
+NAME=Montaria
+TYPE=T_NORMAL
+
+
+ON=@CREATE 
+COLOR=079a
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_animais
+return 1
+
+[DIALOG d_animais]
+20, 20
+resizepic 0 0 3600 250 250
+gumppic 170 170 00001581
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+text 54 125 595 3
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+button 20 120 000025fa 000025fc 1 0 3
+
+[DIALOG d_animais TEXT]
+Pedra de Montarias
+Horse
+Llama
+Ostard
+
+[DIALOG d_animais BUTTON]
+
+ONBUTTON=0
+
+ONBUTTON=1
+src.newitem i_pet_horse_tan
+src.act.bounce
+src.act.attr 020
+return 1
+
+ONBUTTON=2
+src.newitem i_pet_llama
+src.act.bounce
+src.act.attr 020
+return 1
+
+ONBUTTON=3
+src.newitem i_pet_OSTARD_Forest
+src.act.bounce
+src.act.attr 020
+return 1
+
+[itemdef i_inicio]
+id=01183
+TYPE=T_normal
+WEIGHT=1
+name=Entrar Ws
+
+on=@create
+color=07ab
+attr=010
+
+ON=@DCLICK
+SRC.FINDLAYER(1).UNEQUIP 
+SRC.FINDLAYER(2).UNEQUIP 
+SRC.FINDLAYER(3).UNEQUIP
+SRC.FINDLAYER(4).UNEQUIP 
+SRC.FINDLAYER(5).UNEQUIP
+SRC.FINDLAYER(6).UNEQUIP
+SRC.FINDLAYER(7).UNEQUIp
+SRC.FINDLAYER(8).UNEQUIP
+SRC.FINDLAYER(9).UNEQUIP
+SRC.FINDLAYER(10).UNEQUIP
+SRC.FINDLAYER(11).UNEQUIP
+SRC.FINDLAYER(12).UNEQUIP
+SRC.FINDLAYER(13).UNEQUIP
+SRC.FINDLAYER(14).UNEQUIP
+SRC.FINDLAYER(15).UNEQUIP
+SRC.FINDLAYER(16).UNEQUIP
+SRC.FINDLAYER(17).UNEQUIP
+SRC.FINDLAYER(18).UNEQUIP
+SRC.FINDLAYER(19).UNEQUIP 
+SRC.FINDLAYER(20).UNEQUIP
+SRC.FINDLAYER(22).UNEQUIP        
+SRC.FINDLAYER(23).UNEQUIP 
+SRC.FINDLAYER(24).UNEQUIP
+SRC.SPELLEFFECT s_dispel, 100.0
+src.str 100
+src.int 100
+src.dex 100
+src.allskills 100.0
+src.hits 100
+src.mana 100
+src.stam 100
+src.go 4311,986
+src.message @025 Prepare to Fight!
+return 1
+
+[ITEMDEF i_armas_stone] 
+ID=0ed4
+NAME=Armas
+TYPE=T_NORMAL
+
+
+ON=@CREATE 
+COLOR=079a
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_armas
+return 1
+
+[DIALOG d_armas]
+20, 20
+resizepic 0 0 3600 250 250
+gumppic 170 170 00001581
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+text 54 125 595 3
+text 54 155 595 4
+text 54 185 595 5
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+button 20 120 000025fa 000025fc 1 0 3
+button 20 150 000025fa 000025fc 1 0 4
+button 20 180 000025fa 000025fc 1 0 5
+
+[DIALOG d_armas TEXT]
+Pedra de Armas
+Kryss Vanq
+Short Spear Vanq
+Katana Vanq
+Bow Vanq
+Arrows
+
+[DIALOG d_armas BUTTON]
+
+ONBUTTON=0
+
+ONBUTTON=1
+src.newitem i_k_vanq
+src.act.bounce
+return 1
+
+ONBUTTON=2
+src.newitem i_ss_vanq
+src.act.bounce
+return 1
+
+ONBUTTON=3
+src.newitem i_ka_vanq
+src.act.bounce
+return 1
+
+ONBUTTON=4
+src.newitem i_bow_ws
+src.act.bounce
+return 1
+
+ONBUTTON=5
+src.newitem i_arrow,500
+src.act.bounce
+return 1
+
+
+
+[ITEMDEF i_arenas] 
+ID=0ed4
+NAME=Arenas
+TYPE=T_NORMAL
+
+ON=@CREATE 
+COLOR=079c
+attr=010
+
+ON=@CLICK
+message @07a1 <name>
+return 1
+
+ON=@DCLICK 
+dialog d_arenas
+return 1
+
+[DIALOG d_arenas]
+20, 20
+resizepic 0 0 3600 450 320
+
+text 30 20 250 0
+text 54 65 595 1
+text 54 95 595 2
+text 54 125 595 3
+text 54 155 595 4
+text 54 185 595 5
+text 54 215 595 6
+text 54 245 595 7
+text 54 275 595 8
+/////parte 2
+text 260 20 250 9
+text 294 65 595 10
+text 294 95 595 11
+text 294 125 595 12
+
+button 20 60 000025fa 000025fc 1 0 1
+button 20 90 000025fa 000025fc 1 0 2
+button 20 120 000025fa 000025fc 1 0 3
+button 20 150 000025fa 000025fc 1 0 4
+button 20 180 000025fa 000025fc 1 0 5
+button 20 210 000025fa 000025fc 1 0 6
+button 20 240 000025fa 000025fc 1 0 7
+button 20 270 000025fa 000025fc 1 0 8
+//////parte 2
+button 260 60 000025fa 000025fc 1 0 9
+button 260 90 000025fa 000025fc 1 0 10
+button 260 120 000025fa 000025fc 1 0 11
+
+[DIALOG d_arenas TEXT]
+Arenas Simultaneas
+Arena 1
+Arena 2
+Arena 3
+Arena 4
+Arena 5
+Arena 6 
+Arena 7
+Arena 8
+Outras Arenas
+Arena 10 do aws
+Arena 3 do aws
+Arena Smirnoff
+
+[DIALOG d_arenas BUTTON]
+
+ONBUTTON=1
+src.action=-1
+src.go 5530,1183
+say @07a1 [1]
+return 1
+
+ONBUTTON=9
+src.action=-1
+src.go 5210,1749,0,1
+say @07a1 [10 aws]
+return 1
+
+ONBUTTON=11
+src.action=-1
+src.go 5985,541
+say @07a1 [Smirnoff]
+return 1
+
+[EOF]
