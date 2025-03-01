@@ -501,16 +501,19 @@ text 30 20 250 0
 text 54 65 595 1
 text 54 95 595 2
 text 54 125 595 3
+text 54 155 595 4
 
 button 20 60 000025fa 000025fc 1 0 1
 button 20 90 000025fa 000025fc 1 0 2
 button 20 120 000025fa 000025fc 1 0 3
+button 20 150 000025fa 000025fc 1 0 4
 
 [DIALOG d_animais TEXT]
 Pedra de Montarias
 Horse
 Llama
 Ostard
+Zoz
 
 [DIALOG d_animais BUTTON]
 
@@ -530,6 +533,12 @@ return 1
 
 ONBUTTON=3
 src.newitem i_pet_OSTARD_Forest
+src.act.bounce
+src.act.attr 020
+return 1
+
+ONBUTTON=4
+src.newitem i_pet_ostard_zostrich
 src.act.bounce
 src.act.attr 020
 return 1
