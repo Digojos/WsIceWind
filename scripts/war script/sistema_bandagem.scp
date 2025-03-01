@@ -32,23 +32,23 @@ TYPE=t_bandage
 WEIGHT=0
 
 ON=@Dclick
-TARGET @077a Quem voce gostaria de curar?
+TARGET @00FF Quem voce gostaria de curar?
 return 1
 
 ON=@Targon_Char
 link = <src.targ.uid>
 if (<SRC.FINDID(cura_bandage).uid>)
-SRC.SYSMESSAGE @07a1 Voce deve esperar para fazer outra acao.
+SRC.SYSMESSAGE @00FF Voce deve esperar para fazer outra acao.
 return 1
 endif
 
 if (<SRC.FINDID(m_bandage_ress).uid>)
-SRC.SYSMESSAGE @07a1 Voce deve esperar para fazer outra acao.
+SRC.SYSMESSAGE @00FF Voce deve esperar para fazer outra acao.
 return 1
 endif
 
 IF (<SRC.TARG.DISTANCE>>2)
- SRC.SYSMESSAGE @07BD <src.targ.name> esta muito distante.
+ SRC.SYSMESSAGE @00FF <src.targ.name> esta muito distante.
  return 1
 endif
 
@@ -79,11 +79,11 @@ NEWITEM cura_bandage
 NEW.CONT=<src.targ.uid>
 NEW.equip
 NEW.timer=4,5
-SRC.SYSMESSAGE @6A5 Voce comecou a curar...
+SRC.SYSMESSAGE @0E Voce comecou a curar...
 src.consume 1 i_bandage_ws
 return 1
 else
-src.sysmessage @6D3 <src.targ.name> nao precisa ser curado.
+src.sysmessage @00FF <src.targ.name> nao precisa ser curado.
 return 1
 endif
 endif
@@ -118,12 +118,12 @@ local.curar=25
 ENDDO
 if (<hits> >= <eval <str>-<local.curar>>)
 hits=<str>
-SYSMESSAGE @0480 Voce curou <eval <hits>-<eval <local.antes>>> hits.
+SYSMESSAGE @00FF Voce curou <eval <hits>-<eval <local.antes>>> hits.
 Effect 3,i_fx_BLESS_EFFECT,1,16,0
 return 1
 else
 hits = <eval <hits>+<eval <local.curar>>>
-SYSMESSAGE @0480 Voce curou <eval <local.curar>> hits.
+SYSMESSAGE @00FF Voce curou <eval <local.curar>> hits.
 Effect 3,i_fx_BLESS_EFFECT,1,16,0
 return 1
 endif
